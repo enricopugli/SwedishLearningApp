@@ -1,0 +1,1001 @@
+Swedish,English,Category
+bröd,bread,food
+smör,butter,food
+ost,cheese,food
+mjölk,milk,food
+ägg,egg,food
+kött,meat,food
+fisk,fish,food
+kyckling,chicken,food
+nötkött,beef,food
+fläsk,pork,food
+lax,salmon,food
+räka,shrimp,food
+sill,herring,food
+potatis,potato,food
+morot,carrot,food
+lök,onion,food
+vitlök,garlic,food
+tomat,tomato,food
+gurka,cucumber,food
+paprika,bell pepper,food
+sallad,lettuce,food
+svamp,mushroom,food
+spenat,spinach,food
+broccoli,broccoli,food
+blomkål,cauliflower,food
+kål,cabbage,food
+ärta,pea,food
+böna,bean,food
+majs,corn,food
+ris,rice,food
+pasta,pasta,food
+nudlar,noodles,food
+soppa,soup,food
+smörgås,sandwich,food
+pizza,pizza,food
+hamburgare,hamburger,food
+äpple,apple,food
+päron,pear,food
+banan,banana,food
+apelsin,orange,food
+citron,lemon,food
+jordgubbe,strawberry,food
+hallon,raspberry,food
+blåbär,blueberry,food
+vindruva,grape,food
+vattenmelon,watermelon,food
+mango,mango,food
+ananas,pineapple,food
+körsbär,cherry,food
+persika,peach,food
+plommon,plum,food
+nöt,nut,food
+mandel,almond,food
+valnöt,walnut,food
+hasselnöt,hazelnut,food
+jordnöt,peanut,food
+honung,honey,food
+sylt,jam,food
+socker,sugar,food
+salt,salt,food
+peppar,pepper,food
+senap,mustard,food
+ketchup,ketchup,food
+majonnäs,mayonnaise,food
+olja,oil,food
+vinäger,vinegar,food
+mjöl,flour,food
+grädde,cream,food
+yoghurt,yogurt,food
+glass,ice cream,food
+kaka,cookie,food
+tårta,cake,food
+choklad,chocolate,food
+godis,candy,food
+chips,chips,food
+köttbullar,meatballs,food
+husmanskost,traditional home cooking,food
+frukost,breakfast,food
+lunch,lunch,food
+middag,dinner,food
+måltid,meal,food
+vatten,water,drink
+juice,juice,drink
+kaffe,coffee,drink
+te,tea,drink
+öl,beer,drink
+vin,wine,drink
+whisky,whisky,drink
+vodka,vodka,drink
+cocktail,cocktail,drink
+läsk,soda,drink
+cider,cider,drink
+champagne,champagne,drink
+lemonad,lemonade,drink
+smoothie,smoothie,drink
+milkshake,milkshake,drink
+huvud,head,body
+hår,hair,body
+ansikte,face,body
+öga,eye,body
+öra,ear,body
+näsa,nose,body
+mun,mouth,body
+tand,tooth,body
+tunga,tongue,body
+läpp,lip,body
+kind,cheek,body
+hals,neck,body
+axel,shoulder,body
+arm,arm,body
+armbåge,elbow,body
+handled,wrist,body
+hand,hand,body
+finger,finger,body
+tumme,thumb,body
+nagel,nail,body
+bröst,chest,body
+mage,stomach,body
+rygg,back,body
+midja,waist,body
+höft,hip,body
+ben,leg,body
+lår,thigh,body
+knä,knee,body
+vad,calf,body
+fot,foot,body
+tå,toe,body
+hud,skin,body
+blod,blood,body
+hjärta,heart,body
+lunga,lung,body
+lever,liver,body
+hjärna,brain,body
+muskel,muscle,body
+skelett,skeleton,body
+led,joint,body
+sjukhus,hospital,health
+apotek,pharmacy,health
+medicin,medicine,health
+tablett,tablet,health
+recept,prescription,health
+allergi,allergy,health
+feber,fever,health
+förkylning,cold,health
+influensa,flu,health
+huvudvärk,headache,health
+ont,pain,health
+sår,wound,health
+operation,surgery,health
+vaccin,vaccine,health
+hälsa,health,health
+blodtryck,blood pressure,health
+kost,diet,health
+näring,nutrition,health
+vitamin,vitamin,health
+mineral,mineral,health
+tröja,sweater,clothing
+skjorta,shirt,clothing
+byxa,trousers,clothing
+kjol,skirt,clothing
+klänning,dress,clothing
+jacka,jacket,clothing
+kappa,coat,clothing
+skor,shoes,clothing
+stövlar,boots,clothing
+sandaler,sandals,clothing
+strumpor,socks,clothing
+underkläder,underwear,clothing
+mössa,beanie,clothing
+hatt,hat,clothing
+halsduk,scarf,clothing
+handskar,gloves,clothing
+bälte,belt,clothing
+plånbok,wallet,clothing
+väska,bag,clothing
+ryggsäck,backpack,clothing
+glasögon,glasses,clothing
+ring,ring,clothing
+halsband,necklace,clothing
+armband,bracelet,clothing
+klocka,watch,clothing
+hus,house,home
+lägenhet,apartment,home
+rum,room,home
+kök,kitchen,home
+vardagsrum,living room,home
+sovrum,bedroom,home
+badrum,bathroom,home
+toalett,toilet,home
+hall,hallway,home
+balkong,balcony,home
+trädgård,garden,home
+källare,basement,home
+vind,attic,home
+garage,garage,home
+dörr,door,home
+fönster,window,home
+golv,floor,home
+tak,ceiling,home
+vägg,wall,home
+trappa,stairs,home
+soffa,sofa,furniture
+stol,chair,furniture
+bord,table,furniture
+säng,bed,furniture
+skrivbord,desk,furniture
+bokhylla,bookshelf,furniture
+garderob,wardrobe,furniture
+byrå,chest of drawers,furniture
+matta,rug,furniture
+lampa,lamp,furniture
+spegel,mirror,furniture
+badkar,bathtub,furniture
+diskmaskin,dishwasher,furniture
+tvättmaskin,washing machine,furniture
+torktumlare,dryer,furniture
+kylskåp,refrigerator,furniture
+frys,freezer,furniture
+spis,stove,furniture
+ugn,oven,furniture
+mikrovågsugn,microwave,furniture
+mamma,mom,family
+pappa,dad,family
+mor,mother,family
+far,father,family
+barn,child,family
+son,son,family
+dotter,daughter,family
+bror,brother,family
+syster,sister,family
+farfar,paternal grandfather,family
+farmor,paternal grandmother,family
+morfar,maternal grandfather,family
+mormor,maternal grandmother,family
+farbror,uncle (father's side),family
+faster,aunt (father's side),family
+morbror,uncle (mother's side),family
+moster,aunt (mother's side),family
+kusin,cousin,family
+make,husband,family
+fru,wife,family
+sambo,live-in partner,family
+pojke,boy,family
+flicka,girl,family
+bebis,baby,family
+tonåring,teenager,family
+vuxen,adult,family
+äldre,elderly person,family
+släkt,relatives,family
+syskon,siblings,family
+tvillingar,twins,family
+hund,dog,animals
+katt,cat,animals
+häst,horse,animals
+ko,cow,animals
+gris,pig,animals
+får,sheep,animals
+get,goat,animals
+höna,hen,animals
+kanin,rabbit,animals
+mus,mouse,animals
+råtta,rat,animals
+hamster,hamster,animals
+papegoja,parrot,animals
+fågel,bird,animals
+örn,eagle,animals
+uggla,owl,animals
+pingvin,penguin,animals
+lejon,lion,animals
+tiger,tiger,animals
+elefant,elephant,animals
+giraff,giraffe,animals
+björn,bear,animals
+varg,wolf,animals
+räv,fox,animals
+hjort,deer,animals
+älg,moose,animals
+apa,monkey,animals
+gorilla,gorilla,animals
+krokodil,crocodile,animals
+orm,snake,animals
+ödla,lizard,animals
+groda,frog,animals
+sköldpadda,turtle,animals
+haj,shark,animals
+delfin,dolphin,animals
+val,whale,animals
+bläckfisk,octopus,animals
+bi,bee,animals
+fjäril,butterfly,animals
+myra,ant,animals
+fluga,fly,animals
+mygga,mosquito,animals
+spindel,spider,animals
+mask,worm,animals
+lama,llama,animals
+flamingo,flamingo,animals
+skog,forest,nature
+träd,tree,nature
+blomma,flower,nature
+gräs,grass,nature
+berg,mountain,nature
+dal,valley,nature
+flod,river,nature
+sjö,lake,nature
+hav,sea,nature
+strand,beach,nature
+ö,island,nature
+halvö,peninsula,nature
+klippa,cliff,nature
+sten,stone,nature
+sand,sand,nature
+jord,soil,nature
+buske,bush,nature
+löv,leaf,nature
+rot,root,nature
+gren,branch,nature
+frö,seed,nature
+mossa,moss,nature
+ormbunke,fern,nature
+näckros,water lily,nature
+kotte,pine cone,nature
+älv,large river,nature
+bäck,stream,nature
+vattenfall,waterfall,nature
+grotta,cave,nature
+öken,desert,nature
+vulkan,volcano,nature
+sol,sun,weather
+regn,rain,weather
+snö,snow,weather
+vind,wind,weather
+storm,storm,weather
+åska,thunder,weather
+blixt,lightning,weather
+dimma,fog,weather
+moln,cloud,weather
+hagel,hail,weather
+frost,frost,weather
+is,ice,weather
+regnbåge,rainbow,weather
+tornado,tornado,weather
+orkan,hurricane,weather
+skyfall,downpour,weather
+temperatur,temperature,weather
+termometer,thermometer,weather
+barometer,barometer,weather
+prognos,forecast,weather
+sekund,second,time
+minut,minute,time
+timme,hour,time
+dag,day,time
+vecka,week,time
+månad,month,time
+år,year,time
+decennium,decade,time
+århundrade,century,time
+morgon,morning,time
+förmiddag,late morning,time
+middag,noon,time
+eftermiddag,afternoon,time
+kväll,evening,time
+natt,night,time
+midnatt,midnight,time
+måndag,Monday,time
+tisdag,Tuesday,time
+onsdag,Wednesday,time
+torsdag,Thursday,time
+fredag,Friday,time
+lördag,Saturday,time
+söndag,Sunday,time
+januari,January,time
+februari,February,time
+mars,March,time
+april,April,time
+maj,May,time
+juni,June,time
+juli,July,time
+augusti,August,time
+september,September,time
+oktober,October,time
+november,November,time
+december,December,time
+vår,spring,time
+sommar,summer,time
+höst,autumn,time
+vinter,winter,time
+kalender,calendar,time
+helg,weekend,time
+vardag,weekday,time
+framtid,future,time
+nutid,present,time
+dåtid,past,time
+årstid,season,time
+tidszon,time zone,time
+röd,red,colors
+blå,blue,colors
+grön,green,colors
+gul,yellow,colors
+orange,orange,colors
+lila,purple,colors
+rosa,pink,colors
+brun,brown,colors
+svart,black,colors
+vit,white,colors
+grå,gray,colors
+beige,beige,colors
+turkos,turquoise,colors
+guld,gold,colors
+silver,silver,colors
+jobb,job,work
+karriär,career,work
+chef,boss,work
+kollega,colleague,work
+anställd,employee,work
+arbetsgivare,employer,work
+möte,meeting,work
+kontor,office,work
+fabrik,factory,work
+företag,company,work
+projekt,project,work
+uppgift,task,work
+lön,salary,work
+skatt,tax,work
+faktura,invoice,work
+kontrakt,contract,work
+rapport,report,work
+presentation,presentation,work
+intervju,interview,work
+ansökan,application,work
+erfarenhet,experience,work
+kompetens,competence,work
+ansvar,responsibility,work
+deadline,deadline,work
+sjukskrivning,sick leave,work
+övertid,overtime,work
+pension,pension,work
+fackförening,trade union,work
+chefskap,management,work
+arbetsmarknad,labor market,work
+läkare,doctor,profession
+sjuksköterska,nurse,profession
+ingenjör,engineer,profession
+advokat,lawyer,profession
+arkitekt,architect,profession
+konstnär,artist,profession
+musiker,musician,profession
+skådespelare,actor,profession
+författare,author,profession
+journalist,journalist,profession
+fotograf,photographer,profession
+kock,chef,profession
+bagare,baker,profession
+frisör,hairdresser,profession
+elektriker,electrician,profession
+rörmokare,plumber,profession
+snickare,carpenter,profession
+mekaniker,mechanic,profession
+pilot,pilot,profession
+polis,police officer,profession
+brandman,firefighter,profession
+psykolog,psychologist,profession
+vetenskapsman,scientist,profession
+programmerare,programmer,profession
+designer,designer,profession
+tandläkare,dentist,profession
+veterinär,veterinarian,profession
+apotekare,pharmacist,profession
+sekreterare,secretary,profession
+direktör,director,profession
+skola,school,school
+klassrum,classroom,school
+elev,student,school
+bok,book,school
+penna,pen,school
+papper,paper,school
+anteckningsbok,notebook,school
+läxa,homework,school
+prov,test,school
+betyg,grade,school
+lektion,lesson,school
+schema,schedule,school
+rast,break,school
+bibliotek,library,school
+gymnasium,high school,school
+universitet,university,school
+kurs,course,school
+examen,exam,school
+matematik,mathematics,school
+svenska,Swedish language,school
+engelska,English language,school
+historia,history,school
+geografi,geography,school
+biologi,biology,school
+kemi,chemistry,school
+fysik,physics,school
+idrott,physical education,school
+stipendium,scholarship,school
+föreläsning,lecture,school
+uppsats,essay,school
+fotboll,football,sports
+basket,basketball,sports
+tennis,tennis,sports
+simning,swimming,sports
+cykling,cycling,sports
+löpning,running,sports
+skidåkning,skiing,sports
+ishockey,ice hockey,sports
+golf,golf,sports
+boxning,boxing,sports
+kampsport,martial arts,sports
+yoga,yoga,sports
+gym,gym,sports
+träning,workout,sports
+match,match,sports
+tävling,competition,sports
+lag,team,sports
+spelare,player,sports
+tränare,coach,sports
+mål,goal,sports
+poäng,score,sports
+seger,victory,sports
+förlust,defeat,sports
+stadion,stadium,sports
+boll,ball,sports
+nät,net,sports
+racket,racket,sports
+handboll,handball,sports
+volleyboll,volleyball,sports
+friidrott,athletics,sports
+rodd,rowing,sports
+segling,sailing,sports
+klättring,climbing,sports
+vandring,hiking,sports
+simhall,swimming pool,sports
+rekord,record,sports
+medalj,medal,sports
+mästare,champion,sports
+turnering,tournament,sports
+straff,penalty,sports
+skridsko,ice skate,sports
+slalom,slalom,sports
+friluftsliv,outdoor life,sports
+löparskor,running shoes,sports
+läsning,reading,hobbies
+skrivande,writing,hobbies
+målning,painting,hobbies
+teckning,drawing,hobbies
+fotografering,photography,hobbies
+matlagning,cooking,hobbies
+bakning,baking,hobbies
+trädgårdsarbete,gardening,hobbies
+stickning,knitting,hobbies
+sömnad,sewing,hobbies
+dans,dancing,hobbies
+teater,theater,hobbies
+spel,gaming,hobbies
+pussel,puzzle,hobbies
+schack,chess,hobbies
+fiske,fishing,hobbies
+jakt,hunting,hobbies
+ridning,horse riding,hobbies
+camping,camping,hobbies
+samling,collecting,hobbies
+modellbygge,model building,hobbies
+träsnideri,woodcarving,hobbies
+keramik,ceramics,hobbies
+vinprovning,wine tasting,hobbies
+origami,origami,hobbies
+dator,computer,technology
+laptop,laptop,technology
+telefon,phone,technology
+smartphone,smartphone,technology
+surfplatta,tablet,technology
+skärm,screen,technology
+tangentbord,keyboard,technology
+mus,mouse (computer),technology
+skrivare,printer,technology
+kamera,camera,technology
+internet,internet,technology
+wifi,wifi,technology
+app,app,technology
+program,software,technology
+hemsida,website,technology
+e-post,email,technology
+lösenord,password,technology
+data,data,technology
+fil,file,technology
+mapp,folder,technology
+server,server,technology
+nätverk,network,technology
+bluetooth,bluetooth,technology
+batteri,battery,technology
+laddare,charger,technology
+hörlurar,headphones,technology
+högtalare,speaker,technology
+TV,TV,technology
+radio,radio,technology
+robot,robot,technology
+artificiell intelligens,artificial intelligence,technology
+sociala medier,social media,technology
+videospel,video game,technology
+strömning,streaming,technology
+satellit,satellite,technology
+bil,car,transport
+buss,bus,transport
+tåg,train,transport
+tunnelbana,subway,transport
+spårvagn,tram,transport
+taxi,taxi,transport
+cykel,bicycle,transport
+motorcykel,motorcycle,transport
+flygplan,airplane,transport
+helikopter,helicopter,transport
+båt,boat,transport
+fartyg,ship,transport
+lastbil,truck,transport
+ambulans,ambulance,transport
+station,station,transport
+flygplats,airport,transport
+hamn,harbor,transport
+väg,road,transport
+motorväg,highway,transport
+bro,bridge,transport
+tunnel,tunnel,transport
+parkering,parking,transport
+trafik,traffic,transport
+körkort,driver's license,transport
+bensin,gasoline,transport
+elbil,electric car,transport
+kollektivtrafik,public transport,transport
+hållplats,bus stop,transport
+avgång,departure,transport
+ankomst,arrival,transport
+stad,city,places
+by,village,places
+land,country,places
+park,park,places
+torg,square,places
+gata,street,places
+restaurang,restaurant,places
+café,café,places
+bar,bar,places
+hotell,hotel,places
+museum,museum,places
+bio,cinema,places
+kyrka,church,places
+moské,mosque,places
+bank,bank,places
+post,post office,places
+polisstation,police station,places
+zoo,zoo,places
+nöjespark,amusement park,places
+köpcentrum,shopping mall,places
+marknad,market,places
+lekplats,playground,places
+slott,castle,places
+rådhus,city hall,places
+ambassad,embassy,places
+fyr,lighthouse,places
+tempel,temple,places
+fängelse,prison,places
+bondgård,farm,places
+naturreservat,nature reserve,places
+glad,happy,emotions
+ledsen,sad,emotions
+arg,angry,emotions
+rädd,scared,emotions
+förvånad,surprised,emotions
+äcklad,disgusted,emotions
+stolt,proud,emotions
+skamsen,ashamed,emotions
+ensam,lonely,emotions
+orolig,anxious,emotions
+lugn,calm,emotions
+kär,in love,emotions
+avundsjuk,jealous,emotions
+nöjd,satisfied,emotions
+besviken,disappointed,emotions
+förvirrad,confused,emotions
+trött,tired,emotions
+uttråkad,bored,emotions
+tacksam,grateful,emotions
+nervös,nervous,emotions
+ivrig,eager,emotions
+lycklig,happy/blissful,emotions
+hoppfull,hopeful,emotions
+stor,big,adjectives
+liten,small,adjectives
+lång,long/tall,adjectives
+kort,short,adjectives
+bred,wide,adjectives
+smal,narrow,adjectives
+tjock,thick,adjectives
+tunn,thin,adjectives
+tung,heavy,adjectives
+lätt,light/easy,adjectives
+hård,hard,adjectives
+mjuk,soft,adjectives
+varm,warm,adjectives
+kall,cold,adjectives
+het,hot,adjectives
+sval,cool,adjectives
+snabb,fast,adjectives
+långsam,slow,adjectives
+ny,new,adjectives
+gammal,old,adjectives
+ung,young,adjectives
+modern,modern,adjectives
+ren,clean,adjectives
+smutsig,dirty,adjectives
+vacker,beautiful,adjectives
+ful,ugly,adjectives
+söt,cute/sweet,adjectives
+rolig,funny,adjectives
+tråkig,boring,adjectives
+intressant,interesting,adjectives
+viktig,important,adjectives
+billig,cheap,adjectives
+dyr,expensive,adjectives
+bra,good,adjectives
+dålig,bad,adjectives
+rätt,correct,adjectives
+fel,wrong,adjectives
+säker,safe,adjectives
+farlig,dangerous,adjectives
+öppen,open,adjectives
+stängd,closed,adjectives
+full,full,adjectives
+tom,empty,adjectives
+stark,strong,adjectives
+svag,weak,adjectives
+smart,smart,adjectives
+dum,stupid,adjectives
+rik,rich,adjectives
+fattig,poor,adjectives
+fri,free,adjectives
+upptagen,busy,adjectives
+pigg,alert/lively,adjectives
+hungrig,hungry,adjectives
+mätt,full (after eating),adjectives
+törstig,thirsty,adjectives
+sömnig,sleepy,adjectives
+frisk,healthy,adjectives
+sjuk,sick,adjectives
+nyfiken,curious,adjectives
+försiktig,careful,adjectives
+modig,brave,adjectives
+feg,cowardly,adjectives
+lat,lazy,adjectives
+flitig,hardworking,adjectives
+äventyrlig,adventurous,adjectives
+perfekt,perfect,adjectives
+hemsk,terrible,adjectives
+underbar,wonderful,adjectives
+fantastisk,fantastic,adjectives
+otrolig,incredible,adjectives
+vanlig,common/ordinary,adjectives
+ovanlig,unusual,adjectives
+noggrann,thorough/careful,adjectives
+kreativ,creative,adjectives
+praktisk,practical,adjectives
+pris,price,shopping
+rabatt,discount,shopping
+rea,sale,shopping
+kassan,checkout,shopping
+kvitto,receipt,shopping
+kreditkort,credit card,shopping
+kontanter,cash,shopping
+varuhus,department store,shopping
+märke,brand,shopping
+storlek,size,shopping
+mode,fashion,shopping
+trend,trend,shopping
+erbjudande,deal/offer,shopping
+retur,return,shopping
+garanti,guarantee,shopping
+musik,music,music
+sång,song,music
+låt,track,music
+album,album,music
+artist,artist,music
+band,band,music
+konsert,concert,music
+gitarr,guitar,music
+piano,piano,music
+trummor,drums,music
+bas,bass,music
+violin,violin,music
+flöjt,flute,music
+trumpet,trumpet,music
+saxofon,saxophone,music
+mikrofon,microphone,music
+playlist,playlist,music
+rock,rock,music
+pop,pop,music
+jazz,jazz,music
+klassisk musik,classical music,music
+rap,rap,music
+opera,opera,music
+musikfestival,music festival,music
+körmusik,choral music,music
+konst,art,art & culture
+skulptur,sculpture,art & culture
+fotografi,photography,art & culture
+film,film,art & culture
+litteratur,literature,art & culture
+poesi,poetry,art & culture
+roman,novel,art & culture
+novell,short story,art & culture
+galleri,gallery,art & culture
+utställning,exhibition,art & culture
+kulturhus,cultural center,art & culture
+kalligrafi,calligraphy,art & culture
+animation,animation,art & culture
+grafik,graphic design,art & culture
+karneval,carnival,art & culture
+politik,politics,politics
+regering,government,politics
+parlament,parliament,politics
+demokrati,democracy,politics
+val,election,politics
+röstning,voting,politics
+parti,party,politics
+minister,minister,politics
+president,president,politics
+kung,king,politics
+drottning,queen,politics
+lag,law,politics
+rättighet,right,politics
+frihet,freedom,politics
+jämlikhet,equality,politics
+ekonomi,economy,economy
+pengar,money,economy
+investering,investment,economy
+aktie,stock/share,economy
+inflation,inflation,economy
+handel,trade,economy
+export,export,economy
+import,import,economy
+budget,budget,economy
+ränta,interest rate,economy
+skuld,debt,economy
+vinst,profit,economy
+förlust,loss,economy
+valuta,currency,economy
+skatt,tax,economy
+pass,passport,travel
+visum,visa,travel
+bagage,luggage,travel
+resväska,suitcase,travel
+hotellbokning,hotel booking,travel
+biljett,ticket,travel
+avgång,departure,travel
+ankomst,arrival,travel
+karta,map,travel
+guide,guide,travel
+turist,tourist,travel
+semester,vacation,travel
+resa,trip,travel
+destination,destination,travel
+souvenir,souvenir,travel
+turism,tourism,travel
+reseförsäkring,travel insurance,travel
+incheckning,check-in,travel
+vetenskap,science,science
+forskning,research,science
+experiment,experiment,science
+teori,theory,science
+hypotes,hypothesis,science
+laboratorium,laboratory,science
+kemikalie,chemical,science
+element,element,science
+atom,atom,science
+molekyl,molecule,science
+energi,energy,science
+kraft,force,science
+gravitation,gravity,science
+evolution,evolution,science
+gen,gene,science
+DNA,DNA,science
+cell,cell,science
+raket,rocket,science
+rymden,outer space,science
+planet,planet,science
+galax,galaxy,science
+miljö,environment,environment
+klimat,climate,environment
+klimatförändring,climate change,environment
+förorening,pollution,environment
+utsläpp,emissions,environment
+återvinning,recycling,environment
+hållbarhet,sustainability,environment
+förnybar energi,renewable energy,environment
+solenergi,solar energy,environment
+vindkraft,wind power,environment
+utrotningshotad,endangered,environment
+ekosystem,ecosystem,environment
+växthuseffekt,greenhouse effect,environment
+ozon,ozone,environment
+biologisk mångfald,biodiversity,environment
+samhälle,society,society
+gemenskap,community,society
+tradition,tradition,society
+religion,religion,society
+immigration,immigration,society
+integration,integration,society
+diskriminering,discrimination,society
+rasism,racism,society
+jämställdhet,gender equality,society
+mänskliga rättigheter,human rights,society
+välgörenhet,charity,society
+volontär,volunteer,society
+rättvisa,justice,society
+solidaritet,solidarity,society
+mångfald,diversity,society
+kris,crisis,society
+konflikt,conflict,society
+fred,peace,society
+krig,war,society
+medborgare,citizen,society
+kniv,knife,kitchen
+gaffel,fork,kitchen
+sked,spoon,kitchen
+tallrik,plate,kitchen
+skål,bowl,kitchen
+kopp,cup,kitchen
+glas,glass,kitchen
+kastrull,pot,kitchen
+stekpanna,frying pan,kitchen
+skärbräda,cutting board,kitchen
+vispare,whisk,kitchen
+korkskruv,corkscrew,kitchen
+flaska,bottle,kitchen
+burk,jar,kitchen
+durkslag,colander,kitchen
+bakplåt,baking sheet,kitchen
+mixer,blender,kitchen
+vattenkokare,kettle,kitchen
+toaster,toaster,kitchen
+basilika,basil,kitchen
+persilja,parsley,kitchen
+koriander,coriander,kitchen
+timjan,thyme,kitchen
+rosmarin,rosemary,kitchen
+oregano,oregano,kitchen
+kanel,cinnamon,kitchen
+ingefära,ginger,kitchen
+gurkmeja,turmeric,kitchen
+spiskummin,cumin,kitchen
+lagerblad,bay leaf,kitchen
+ett,one,numbers
+två,two,numbers
+tre,three,numbers
+fyra,four,numbers
+fem,five,numbers
+sex,six,numbers
+sju,seven,numbers
+åtta,eight,numbers
+nio,nine,numbers
+tio,ten,numbers
+tjugo,twenty,numbers
+hundra,hundred,numbers
+tusen,thousand,numbers
+miljon,million,numbers
+hälften,half,numbers
+kvart,quarter,numbers
+procent,percent,numbers
+summa,sum,numbers
+dubbel,double,numbers
+noll,zero,numbers
+ja,yes,basic
+nej,no,basic
+tack,thank you,basic
+förlåt,sorry,basic
+hej,hello,basic
+hejdå,goodbye,basic
+snälla,please (informal),basic
+varsågod,you're welcome,basic
+ursäkta,excuse me,basic
+välkommen,welcome,basic
+vänligen,please (formal),basic
+jordbävning,earthquake,nature
+tsunami,tsunami,nature
+glaciär,glacier,nature
+korall,coral,nature
+alger,algae,nature
+fitness,fitness,health
+övervikt,overweight,health
+undersökning,examination,health
+apotek,pharmacy,health
+smärtstillare,painkiller,health
+butiksägare,shop owner,profession
+revisor,accountant,profession
+statsminister,prime minister,politics
+grundlag,constitution,politics
+nattklubb,nightclub,places
+löneförhandling,salary negotiation,work
+spegelbild,reflection,adjectives
+gästfri,hospitable,adjectives
