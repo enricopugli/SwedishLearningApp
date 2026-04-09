@@ -467,6 +467,95 @@ function renderBrowseList() {
     '<p class="browse-empty">No results found</p>';
 }
 
+// ─── User-added words ─────────────────────────────────────────────────────────
+function loadUserWords(key) {
+  try { return JSON.parse(localStorage.getItem(key) || '[]'); } catch { return []; }
+}
+function saveUserWords(key, arr) { localStorage.setItem(key, JSON.stringify(arr)); }
+
+let addModalType = 'vocab';
+
+function showAddModal() {
+  addModalType = browseType === 'verbs' ? 'verb' : 'vocab';
+  document.getElementById('add-modal-title').textContent =
+    addModalType === 'verb' ? 'Add Verb' : 'Add Word';
+  document.getElementById('add-form-vocab').style.display = addModalType === 'vocab' ? '' : 'none';
+  document.getElementById('add-form-verb').style.display  = addModalType === 'verb'  ? '' : 'none';
+
+  // Populate category suggestions
+  const dl = document.getElementById('cat-suggestions');
+  dl.innerHTML = allCategories.map(c => `<option value="${escapeHtml(c)}">`).join('');
+
+  // Clear fields
+  ['add-sv','add-en','add-cat','add-inf','add-verb-en','add-verb-accepted',
+   'add-presens','add-preteritum','add-supinum','add-imperativ'].forEach(id => {
+    const el = document.getElementById(id);
+    if (el) el.value = '';
+  });
+
+  document.getElementById('add-modal').classList.add('open');
+  setTimeout(() => {
+    const first = addModalType === 'vocab'
+      ? document.getElementById('add-sv')
+      : document.getElementById('add-inf');
+    first.focus();
+  }, 50);
+}
+
+function closeAddModal(e) {
+  if (e && e.target !== document.getElementById('add-modal')) return;
+  document.getElementById('add-modal').classList.remove('open');
+}
+
+function submitAddForm() {
+  if (addModalType === 'vocab') {
+    const sv  = document.getElementById('add-sv').value.trim();
+    const en  = document.getElementById('add-en').value.trim();
+    const cat = document.getElementById('add-cat').value.trim();
+    if (!sv || !en) { alert('Swedish and English fields are required.'); return; }
+
+    const userVocab = loadUserWords('svUserVocab');
+    const newWord = {
+      _id: 'u_' + Date.now(),
+      Swedish: sv, English: en, Category: cat,
+      _attempts: 0, _correct: 0, _user: true,
+    };
+    userVocab.push(newWord);
+    saveUserWords('svUserVocab', userVocab);
+    allVocab.push(newWord);
+    if (cat && !allCategories.includes(cat)) {
+      allCategories = [...allCategories, cat].sort();
+      renderCategoryChips();
+    }
+    updateVocabStats();
+  } else {
+    const inf      = document.getElementById('add-inf').value.trim();
+    const en       = document.getElementById('add-verb-en').value.trim();
+    const accepted = document.getElementById('add-verb-accepted').value.trim() || en;
+    if (!inf || !en) { alert('Infinitive and English fields are required.'); return; }
+
+    const userVerbs = loadUserWords('svUserVerbs');
+    const newVerb = {
+      _id: 'u_' + Date.now(),
+      'Infinitiv':              inf,
+      'Presens':                document.getElementById('add-presens').value.trim()    || '-',
+      'Preteritum':             document.getElementById('add-preteritum').value.trim() || '-',
+      'Supinum':                document.getElementById('add-supinum').value.trim()    || '-',
+      'Imperativ':              document.getElementById('add-imperativ').value.trim()  || '-',
+      'Engelsk översättning':   en,
+      'Acceptable answers':     accepted,
+      _attempts: 0, _correct: 0, _user: true,
+    };
+    userVerbs.push(newVerb);
+    saveUserWords('svUserVerbs', userVerbs);
+    allVerbs.push(newVerb);
+    updateVerbStats();
+  }
+
+  document.getElementById('add-modal').classList.remove('open');
+  renderBrowseList();
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 async function init() {
   try {
@@ -489,6 +578,25 @@ async function init() {
       _attempts: vocabProgress[v._id]?.attempts || 0,
       _correct:  vocabProgress[v._id]?.correct  || 0,
     }));
+
+    // Merge user-added words
+    const userVocab = loadUserWords('svUserVocab');
+    userVocab.forEach(w => {
+      allVocab.push({
+        ...w,
+        _attempts: vocabProgress[w._id]?.attempts || w._attempts || 0,
+        _correct:  vocabProgress[w._id]?.correct  || w._correct  || 0,
+      });
+    });
+
+    const userVerbs = loadUserWords('svUserVerbs');
+    userVerbs.forEach(v => {
+      allVerbs.push({
+        ...v,
+        _attempts: verbProgress[v._id]?.attempts || v._attempts || 0,
+        _correct:  verbProgress[v._id]?.correct  || v._correct  || 0,
+      });
+    });
 
     allCategories = [...new Set(allVocab.map(w => w['Category']).filter(Boolean))].sort();
 

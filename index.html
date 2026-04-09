@@ -200,6 +200,53 @@
     }
     .browse-forms { font-size: 0.78rem; color: var(--sub); margin-top: 4px; }
     .browse-empty { color: var(--sub); text-align: center; padding: 2rem 0; font-size: 0.9rem; }
+
+    /* ── Add button ── */
+    .btn-add {
+      background: var(--yellow); border: none; color: var(--text);
+      font-size: 0.85rem; font-weight: 700; font-family: inherit;
+      padding: 7px 14px; border-radius: 20px; cursor: pointer;
+    }
+    .btn-add:active { opacity: 0.8; }
+
+    /* ── Modal ── */
+    .modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.45); z-index: 100; align-items: flex-end;
+    }
+    .modal-overlay.open { display: flex; }
+    .modal {
+      background: var(--bg); border-radius: 24px 24px 0 0;
+      padding: 24px 20px 40px; width: 100%; max-height: 90dvh; overflow-y: auto;
+    }
+    .modal-header {
+      display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px;
+    }
+    .modal-title { font-size: 1.1rem; font-weight: 800; color: var(--text); }
+    .modal-close {
+      background: #e2e8f0; border: none; border-radius: 50%;
+      width: 32px; height: 32px; font-size: 1rem; cursor: pointer;
+      display: flex; align-items: center; justify-content: center;
+    }
+    .form-group { margin-bottom: 14px; }
+    .form-group label { display: block; font-size: 0.78rem; font-weight: 700; color: var(--sub); text-transform: uppercase; letter-spacing: 0.07em; margin-bottom: 6px; }
+    .form-group input {
+      width: 100%; padding: 13px 14px; border: 2px solid #dde1e7; border-radius: 12px;
+      font-size: 1rem; font-family: inherit; color: var(--text);
+      background: var(--card); outline: none;
+    }
+    .form-group input:focus { border-color: var(--blue); }
+    .form-group .hint { font-size: 0.75rem; color: var(--sub); margin-top: 4px; }
+    .form-section-label {
+      font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+      letter-spacing: 0.09em; color: var(--sub); margin: 18px 0 10px;
+    }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+    .disclaimer {
+      background: #fffbeb; border: 1px solid #fde68a; border-radius: 12px;
+      padding: 12px 14px; font-size: 0.8rem; color: #92400e; margin: 18px 0 20px;
+      line-height: 1.45;
+    }
   </style>
 </head>
 <body>
@@ -394,7 +441,10 @@
       <h1>Browse</h1>
       <div class="sub" id="browse-count"></div>
     </div>
-    <button onclick="showScreen('home')" style="background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:0.85rem; font-weight:600; font-family:inherit; padding:7px 14px; border-radius:20px; cursor:pointer;">&#x2190; Back</button>
+    <div style="display:flex; gap:8px; align-items:center;">
+      <button class="btn-add" onclick="showAddModal()">+ Add</button>
+      <button onclick="showScreen('home')" style="background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:0.85rem; font-weight:600; font-family:inherit; padding:7px 14px; border-radius:20px; cursor:pointer;">&#x2190; Back</button>
+    </div>
   </div>
   <div class="content">
     <div class="toggle-group">
@@ -413,6 +463,76 @@
 
     <div id="browse-list"></div>
 
+  </div>
+</div>
+
+<!-- ─── ADD WORD MODAL ──────────────────────────────────────────────────────── -->
+<div id="add-modal" class="modal-overlay" onclick="closeAddModal(event)">
+  <div class="modal">
+    <div class="modal-header">
+      <span class="modal-title" id="add-modal-title">Add Word</span>
+      <button class="modal-close" onclick="closeAddModal()">&#x2715;</button>
+    </div>
+
+    <!-- Vocab form -->
+    <div id="add-form-vocab">
+      <div class="form-group">
+        <label>Swedish *</label>
+        <input type="text" id="add-sv" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e.g. hund">
+      </div>
+      <div class="form-group">
+        <label>English *</label>
+        <input type="text" id="add-en" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="e.g. dog">
+        <div class="hint">Separate multiple accepted answers with |</div>
+      </div>
+      <div class="form-group">
+        <label>Category</label>
+        <input type="text" id="add-cat" list="cat-suggestions" autocomplete="off" spellcheck="false" placeholder="e.g. animals">
+        <datalist id="cat-suggestions"></datalist>
+      </div>
+    </div>
+
+    <!-- Verb form -->
+    <div id="add-form-verb" style="display:none">
+      <div class="form-group">
+        <label>Infinitive *</label>
+        <input type="text" id="add-inf" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e.g. att springa">
+      </div>
+      <div class="form-group">
+        <label>English *</label>
+        <input type="text" id="add-verb-en" autocomplete="off" autocorrect="off" spellcheck="false" placeholder="e.g. to run">
+      </div>
+      <div class="form-group">
+        <label>Acceptable answers</label>
+        <input type="text" id="add-verb-accepted" autocomplete="off" spellcheck="false" placeholder="e.g. run|to run">
+        <div class="hint">Leave blank to use the English field. Separate alternatives with |</div>
+      </div>
+      <p class="form-section-label">Conjugation (optional)</p>
+      <div class="form-row">
+        <div class="form-group">
+          <label>Presens</label>
+          <input type="text" id="add-presens" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e.g. springer">
+        </div>
+        <div class="form-group">
+          <label>Preteritum</label>
+          <input type="text" id="add-preteritum" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e.g. sprang">
+        </div>
+        <div class="form-group">
+          <label>Supinum</label>
+          <input type="text" id="add-supinum" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e.g. sprungit">
+        </div>
+        <div class="form-group">
+          <label>Imperativ</label>
+          <input type="text" id="add-imperativ" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false" placeholder="e.g. spring">
+        </div>
+      </div>
+    </div>
+
+    <div class="disclaimer">
+      &#9888;&#xFE0F; Added words are saved in your browser's local storage. They will be lost if you clear your browser data or cache.
+    </div>
+
+    <button class="btn btn-primary" onclick="submitAddForm()">Save</button>
   </div>
 </div>
 
