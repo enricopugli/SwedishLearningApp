@@ -185,16 +185,23 @@ function getFilteredVocab() {
   return allVocab.filter(w => selectedCategories.has(w['Category']));
 }
 
+function setCategoryFilter(enabled) {
+  document.getElementById('cat-filter-all-btn').classList.toggle('active', !enabled);
+  document.getElementById('cat-filter-pick-btn').classList.toggle('active', enabled);
+  document.getElementById('category-chips-wrap').style.display = enabled ? '' : 'none';
+  if (!enabled) {
+    selectedCategories.clear();
+    updateVocabStats();
+  }
+}
+
 function renderCategoryChips() {
   const container = document.getElementById('category-chips');
-  const noneSelected = selectedCategories.size === 0;
-  let html = `<button class="chip ${noneSelected ? 'active' : ''}" data-cat="__all__">All</button>`;
-  html += allCategories.map(cat => {
+  container.innerHTML = allCategories.map(cat => {
     const active = selectedCategories.has(cat);
     const label = cat.charAt(0).toUpperCase() + cat.slice(1);
     return `<button class="chip ${active ? 'active' : ''}" data-cat="${escapeHtml(cat)}">${escapeHtml(label)}</button>`;
   }).join('');
-  container.innerHTML = html;
 }
 
 function updateVerbStats() {
@@ -868,8 +875,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const chip = e.target.closest('.chip');
     if (!chip) return;
     const cat = chip.dataset.cat;
-    if (cat === '__all__') selectedCategories.clear();
-    else selectedCategories.has(cat) ? selectedCategories.delete(cat) : selectedCategories.add(cat);
+    selectedCategories.has(cat) ? selectedCategories.delete(cat) : selectedCategories.add(cat);
     renderCategoryChips();
     updateVocabStats();
   });

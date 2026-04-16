@@ -516,6 +516,14 @@
     <button onclick="showScreen('home')" style="background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:0.85rem; font-weight:600; font-family:inherit; padding:7px 14px; border-radius:20px; cursor:pointer;">&#x2190; Back</button>
   </div>
   <div class="content">
+    <div class="toggle-group" style="margin-bottom:10px">
+      <button class="toggle-btn active" id="cat-filter-all-btn" onclick="setCategoryFilter(false)">All words</button>
+      <button class="toggle-btn" id="cat-filter-pick-btn" onclick="setCategoryFilter(true)">Filter by category</button>
+    </div>
+    <div id="category-chips-wrap" style="display:none; margin-bottom:14px">
+      <div class="chips" id="category-chips"></div>
+    </div>
+
     <div class="num-picker">
       <label>Questions per session</label>
       <div class="controls">
@@ -524,9 +532,6 @@
         <button onclick="changeNumQ(5)" aria-label="More">&#43;</button>
       </div>
     </div>
-
-    <p class="section-label">Filter by category</p>
-    <div class="chips" id="category-chips"></div>
 
     <p class="section-label">Choose a mode</p>
 
