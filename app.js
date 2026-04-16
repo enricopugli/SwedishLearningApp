@@ -642,6 +642,127 @@ function submitAddForm() {
   renderBrowseList();
 }
 
+// ─── Match mode ───────────────────────────────────────────────────────────
+const MATCH_BATCH = 6;
+let matchState = null;
+
+function startMatchSession(type) {
+  lastSessionType = type === 'verbs' ? 'verbs' : 'vocab';
+  const pool = type === 'verbs'
+    ? shuffle(allVerbs)
+    : shuffle(getFilteredVocab());
+
+  matchState = {
+    type,
+    pool,
+    batchIndex: 0,
+    totalMatched: 0,
+    totalPairs: Math.min(pool.length, Math.ceil(pool.length / MATCH_BATCH) * MATCH_BATCH),
+    selectedSv: null,
+    selectedEn: null,
+    locked: false,
+  };
+
+  showScreen('match');
+  renderMatchBatch();
+}
+
+function renderMatchBatch() {
+  const { pool, batchIndex, totalMatched } = matchState;
+  const start = batchIndex * MATCH_BATCH;
+  const batch = pool.slice(start, start + MATCH_BATCH);
+  if (!batch.length) { showMatchScore(); return; }
+
+  matchState.currentBatch = batch;
+  matchState.remaining = batch.length;
+  matchState.selectedSv = null;
+  matchState.selectedEn = null;
+  matchState.locked = false;
+
+  const totalBatches = Math.ceil(pool.length / MATCH_BATCH);
+  const currentBatch = batchIndex + 1;
+  document.getElementById('match-progress-text').textContent = `Batch ${currentBatch}/${totalBatches}`;
+  document.getElementById('match-progress-fill').style.width = `${(batchIndex / totalBatches) * 100}%`;
+  document.getElementById('match-pair-text').textContent = `Match ${batch.length} pairs`;
+
+  const svWords = shuffle(batch.map((item, i) => ({ id: i, text: matchState.type === 'verbs' ? primaryForm(item) : item.Swedish })));
+  const enWords = shuffle(batch.map((item, i) => ({ id: i, text: matchState.type === 'verbs' ? item['Engelsk översättning'] : item.English.split('|')[0] })));
+
+  document.getElementById('match-col-sv').innerHTML = svWords.map(w =>
+    `<button class="match-btn" data-id="${w.id}" data-side="sv" onclick="selectMatchItem(this)">${escapeHtml(w.text)}</button>`
+  ).join('');
+  document.getElementById('match-col-en').innerHTML = enWords.map(w =>
+    `<button class="match-btn" data-id="${w.id}" data-side="en" onclick="selectMatchItem(this)">${escapeHtml(w.text)}</button>`
+  ).join('');
+}
+
+function selectMatchItem(btn) {
+  if (matchState.locked || btn.classList.contains('matched')) return;
+  const side = btn.dataset.side;
+  const id = parseInt(btn.dataset.id);
+
+  // Deselect previous selection on same side
+  const prevKey = side === 'sv' ? 'selectedSv' : 'selectedEn';
+  if (matchState[prevKey] !== null) {
+    const col = side === 'sv' ? 'match-col-sv' : 'match-col-en';
+    document.querySelectorAll(`#${col} .match-btn`).forEach(b => b.classList.remove('selected'));
+  }
+
+  btn.classList.add('selected');
+  matchState[prevKey] = { id, btn };
+
+  if (matchState.selectedSv && matchState.selectedEn) {
+    checkMatchPair();
+  }
+}
+
+function checkMatchPair() {
+  matchState.locked = true;
+  const { selectedSv, selectedEn } = matchState;
+  const correct = selectedSv.id === selectedEn.id;
+
+  if (correct) {
+    selectedSv.btn.classList.remove('selected');
+    selectedEn.btn.classList.remove('selected');
+    selectedSv.btn.classList.add('correct');
+    selectedEn.btn.classList.add('correct');
+    matchState.totalMatched++;
+    matchState.remaining--;
+
+    setTimeout(() => {
+      selectedSv.btn.classList.add('matched');
+      selectedEn.btn.classList.add('matched');
+      matchState.selectedSv = null;
+      matchState.selectedEn = null;
+      matchState.locked = false;
+
+      if (matchState.remaining === 0) {
+        matchState.batchIndex++;
+        setTimeout(renderMatchBatch, 300);
+      }
+    }, 500);
+  } else {
+    selectedSv.btn.classList.add('wrong');
+    selectedEn.btn.classList.add('wrong');
+
+    setTimeout(() => {
+      selectedSv.btn.classList.remove('selected', 'wrong');
+      selectedEn.btn.classList.remove('selected', 'wrong');
+      matchState.selectedSv = null;
+      matchState.selectedEn = null;
+      matchState.locked = false;
+    }, 600);
+  }
+}
+
+function showMatchScore() {
+  const total = matchState.pool.length;
+  document.getElementById('score-fraction').textContent = `${total}/${total}`;
+  document.getElementById('score-pct').textContent = 'All matched — Bra jobbat!';
+  document.getElementById('missed-section').style.display = 'none';
+  showScreen('score');
+}
+
 // ─── Pronunciation ────────────────────────────────────────────────────────
 function speak(text) {
   if (!text || !window.speechSynthesis) return;
