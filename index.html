@@ -487,6 +487,14 @@
         <div class="desc">Give a specific verb form</div>
       </div>
     </button>
+    <div class="num-picker">
+      <label>Match pairs</label>
+      <div class="controls">
+        <button onclick="changeNumMatch(-6)" aria-label="Fewer">&#8722;</button>
+        <span class="num-match-display">12</span>
+        <button onclick="changeNumMatch(6)" aria-label="More">&#43;</button>
+      </div>
+    </div>
     <button class="mode-btn" onclick="startMatchSession('verbs')">
       <div class="icon">&#x1F500;</div>
       <div>
@@ -550,6 +558,14 @@
       </div>
     </div>
 
+    <div class="num-picker">
+      <label>Match pairs</label>
+      <div class="controls">
+        <button onclick="changeNumMatch(-6)" aria-label="Fewer">&#8722;</button>
+        <span class="num-match-display">12</span>
+        <button onclick="changeNumMatch(6)" aria-label="More">&#43;</button>
+      </div>
+    </div>
     <button class="mode-btn" onclick="startMatchSession('vocab')">
       <div class="icon">&#x1F500;</div>
       <div>

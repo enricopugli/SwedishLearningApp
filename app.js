@@ -150,7 +150,8 @@ const VOCAB_FNS = { 'sv-en': qVocabSvEn, 'en-sv': qVocabEnSv };
 // ─── App state ────────────────────────────────────────────────────────────────
 let allVerbs = [], allVocab = [], allCategories = [];
 let verbProgress = {}, vocabProgress = {};
-let numQ = 10;
+let numQ = parseInt(localStorage.getItem('svNumQ') || '10');
+let numMatch = parseInt(localStorage.getItem('svNumMatch') || '12');
 let multipleChoice = false;
 let selectedCategories = new Set();
 let lastMode = 'sv-en', lastVocabMode = 'sv-en', lastSessionType = 'verbs';
@@ -165,7 +166,14 @@ function showScreen(id) {
 
 function changeNumQ(delta) {
   numQ = Math.max(5, Math.min(50, numQ + delta));
+  localStorage.setItem('svNumQ', numQ);
   document.querySelectorAll('.num-q-display').forEach(el => el.textContent = numQ);
+}
+
+function changeNumMatch(delta) {
+  numMatch = Math.max(6, Math.min(30, numMatch + delta));
+  localStorage.setItem('svNumMatch', numMatch);
+  document.querySelectorAll('.num-match-display').forEach(el => el.textContent = numMatch);
 }
 
 function setMultipleChoice(val) {
@@ -646,16 +654,16 @@ let matchState = null;
 
 function startMatchSession(type) {
   lastSessionType = type === 'verbs' ? 'verbs' : 'vocab';
-  const pool = type === 'verbs'
-    ? shuffle(allVerbs)
-    : shuffle(getFilteredVocab());
+  const pool = (type === 'verbs'
+    ? weightedSample(allVerbs, numMatch)
+    : weightedSample(getFilteredVocab(), numMatch));
 
   matchState = {
     type,
     pool,
     batchIndex: 0,
     totalMatched: 0,
-    totalPairs: Math.min(pool.length, Math.ceil(pool.length / MATCH_BATCH) * MATCH_BATCH),
+    totalPairs: pool.length,
     selectedSv: null,
     selectedEn: null,
     locked: false,
@@ -848,6 +856,9 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  document.querySelectorAll('.num-q-display').forEach(el => el.textContent = numQ);
+  document.querySelectorAll('.num-match-display').forEach(el => el.textContent = numMatch);
+
   document.getElementById('mc-options').addEventListener('click', e => {
     const btn = e.target.closest('.mc-btn');
     if (btn && !btn.disabled) selectOption(btn.dataset.value, btn);
