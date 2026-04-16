@@ -642,6 +642,30 @@ function submitAddForm() {
   renderBrowseList();
 }
 
+// ─── Pronunciation ────────────────────────────────────────────────────────
+function speak(text) {
+  if (!text || !window.speechSynthesis) return;
+  window.speechSynthesis.cancel();
+  const utt = new SpeechSynthesisUtterance(text);
+  utt.lang = 'sv-SE';
+  utt.rate = 0.9;
+
+  // Try to find a Swedish voice; fall back to default
+  const voices = window.speechSynthesis.getVoices();
+  const svVoice = voices.find(v => v.lang.startsWith('sv'));
+  if (svVoice) utt.voice = svVoice;
+
+  window.speechSynthesis.speak(utt);
+}
+
+function speakCurrent() {
+  if (!session) return;
+  const item = session.questions[session.index];
+  const q = session._q;
+  // Always speak the Swedish word/form
+  speak(q.word);
+}
+
 // ─── Boot ─────────────────────────────────────────────────────────────────────
 async function init() {
   try {
