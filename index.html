@@ -88,6 +88,20 @@
     }
     .toggle-btn.active { background: var(--card); color: var(--blue); box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
 
+    /* ── Mode button inline actions ── */
+    .mode-btn-wrap { background: var(--card); border-radius: var(--radius); margin-bottom: 10px; box-shadow: 0 1px 4px rgba(0,0,0,0.07); overflow: hidden; }
+    .mode-btn-wrap .mode-btn { border-radius: 0; box-shadow: none; margin-bottom: 0; border-bottom: 1px solid #f0f0f0; }
+    .mode-btn-wrap .mode-btn:last-child { border-bottom: none; }
+    .mode-actions { display: flex; gap: 0; border-top: 1px solid #f0f0f0; }
+    .mode-action-btn {
+      flex: 1; padding: 11px 8px; border: none; background: transparent;
+      font-size: 0.82rem; font-weight: 600; font-family: inherit; color: var(--sub);
+      cursor: pointer; transition: all 0.15s; border-right: 1px solid #f0f0f0;
+    }
+    .mode-action-btn:last-child { border-right: none; }
+    .mode-action-btn:hover { background: #f8f9fa; color: var(--blue); }
+    .mode-action-btn:active { background: #e8f0fb; }
+
     /* ── Category chips ── */
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
     .chip {
@@ -436,27 +450,36 @@
       </div>
     </div>
 
-    <div class="toggle-group">
-      <button class="toggle-btn toggle-type active" onclick="setMultipleChoice(false)">Type answer</button>
-      <button class="toggle-btn toggle-mc" onclick="setMultipleChoice(true)">Multiple choice</button>
-    </div>
-
     <p class="section-label">Choose a mode</p>
 
-    <button class="mode-btn" onclick="startSession('sv-en')">
-      <div class="icon">&#x1F1F8;&#x1F1EA;</div>
-      <div>
-        <div class="title">Swedish &#x2192; English</div>
-        <div class="desc">Translate the verb to English</div>
+    <div class="mode-btn-wrap">
+      <div class="mode-btn">
+        <div class="icon">&#x1F1F8;&#x1F1EA;</div>
+        <div>
+          <div class="title">Swedish &#x2192; English</div>
+          <div class="desc">Translate the verb to English</div>
+        </div>
       </div>
-    </button>
-    <button class="mode-btn" onclick="startSession('en-sv')">
-      <div class="icon">&#x1F1EC;&#x1F1E7;</div>
-      <div>
-        <div class="title">English &#x2192; Swedish</div>
-        <div class="desc">Give the Swedish infinitive</div>
+      <div class="mode-actions">
+        <button class="mode-action-btn" onclick="setMultipleChoice(false); startSession('sv-en')">Type answer</button>
+        <button class="mode-action-btn" onclick="setMultipleChoice(true); startSession('sv-en')">Multiple choice</button>
       </div>
-    </button>
+    </div>
+
+    <div class="mode-btn-wrap">
+      <div class="mode-btn">
+        <div class="icon">&#x1F1EC;&#x1F1E7;</div>
+        <div>
+          <div class="title">English &#x2192; Swedish</div>
+          <div class="desc">Give the Swedish infinitive</div>
+        </div>
+      </div>
+      <div class="mode-actions">
+        <button class="mode-action-btn" onclick="setMultipleChoice(false); startSession('en-sv')">Type answer</button>
+        <button class="mode-action-btn" onclick="setMultipleChoice(true); startSession('en-sv')">Multiple choice</button>
+      </div>
+    </div>
+
     <button class="mode-btn" onclick="startSession('conjugate')">
       <div class="icon">&#x1F4DD;</div>
       <div>
@@ -494,30 +517,39 @@
       </div>
     </div>
 
-    <div class="toggle-group">
-      <button class="toggle-btn toggle-type active" onclick="setMultipleChoice(false)">Type answer</button>
-      <button class="toggle-btn toggle-mc" onclick="setMultipleChoice(true)">Multiple choice</button>
-    </div>
-
     <p class="section-label">Filter by category</p>
     <div class="chips" id="category-chips"></div>
 
     <p class="section-label">Choose a mode</p>
 
-    <button class="mode-btn" onclick="startVocabSession('sv-en')">
-      <div class="icon">&#x1F1F8;&#x1F1EA;</div>
-      <div>
-        <div class="title">Swedish &#x2192; English</div>
-        <div class="desc">Translate the word to English</div>
+    <div class="mode-btn-wrap">
+      <div class="mode-btn">
+        <div class="icon">&#x1F1F8;&#x1F1EA;</div>
+        <div>
+          <div class="title">Swedish &#x2192; English</div>
+          <div class="desc">Translate the word to English</div>
+        </div>
       </div>
-    </button>
-    <button class="mode-btn" onclick="startVocabSession('en-sv')">
-      <div class="icon">&#x1F1EC;&#x1F1E7;</div>
-      <div>
-        <div class="title">English &#x2192; Swedish</div>
-        <div class="desc">Give the Swedish word</div>
+      <div class="mode-actions">
+        <button class="mode-action-btn" onclick="setMultipleChoice(false); startVocabSession('sv-en')">Type answer</button>
+        <button class="mode-action-btn" onclick="setMultipleChoice(true); startVocabSession('sv-en')">Multiple choice</button>
       </div>
-    </button>
+    </div>
+
+    <div class="mode-btn-wrap">
+      <div class="mode-btn">
+        <div class="icon">&#x1F1EC;&#x1F1E7;</div>
+        <div>
+          <div class="title">English &#x2192; Swedish</div>
+          <div class="desc">Give the Swedish word</div>
+        </div>
+      </div>
+      <div class="mode-actions">
+        <button class="mode-action-btn" onclick="setMultipleChoice(false); startVocabSession('en-sv')">Type answer</button>
+        <button class="mode-action-btn" onclick="setMultipleChoice(true); startVocabSession('en-sv')">Multiple choice</button>
+      </div>
+    </div>
+
     <button class="mode-btn" onclick="startMatchSession('vocab')">
       <div class="icon">&#x1F500;</div>
       <div>

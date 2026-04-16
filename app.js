@@ -170,8 +170,6 @@ function changeNumQ(delta) {
 
 function setMultipleChoice(val) {
   multipleChoice = val;
-  document.querySelectorAll('.toggle-type').forEach(el => el.classList.toggle('active', !val));
-  document.querySelectorAll('.toggle-mc').forEach(el => el.classList.toggle('active', val));
 }
 
 function getFilteredVocab() {
