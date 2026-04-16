@@ -382,6 +382,92 @@ function backToMenu() {
   showScreen(lastSessionType === 'vocab' ? 'vocab' : 'menu');
 }
 
+// ─── Resources ────────────────────────────────────────────────────────────────
+const RESOURCES = [
+  {
+    icon: '🎙️',
+    title: 'Svenska med Oskar',
+    desc: 'Podcast in easy Swedish — great for beginners and intermediate learners',
+    url: 'https://creators.spotify.com/pod/profile/lattsvenskamedoskar/',
+  },
+  {
+    icon: '📺',
+    title: 'SVT Nyheter på lätt svenska',
+    desc: 'Daily Swedish news written and read in simple language',
+    url: 'https://www.svtplay.se/nyheter-pa-latt-svenska',
+  },
+];
+
+(function renderResources() {
+  const list = document.getElementById('resources-list');
+  if (!list) return;
+  list.innerHTML = RESOURCES.map(r => `
+    <a class="resource-card" href="${r.url}" target="_blank" rel="noopener noreferrer">
+      <div class="resource-icon">${r.icon}</div>
+      <div class="resource-info">
+        <div class="resource-title">${escapeHtml(r.title)}</div>
+        <div class="resource-desc">${escapeHtml(r.desc)}</div>
+      </div>
+      <div class="resource-arrow">&#x2192;</div>
+    </a>
+  `).join('');
+})();
+
+// ─── Grammar ──────────────────────────────────────────────────────────────────
+let grammarLoaded = false;
+
+async function showGrammar() {
+  showScreen('grammar');
+  if (grammarLoaded) return;
+  try {
+    const html = await fetch('./grammar.html').then(r => r.text());
+    const body = document.getElementById('grammar-body');
+    body.innerHTML = html;
+    postProcessGrammar(body);
+    grammarLoaded = true;
+  } catch {
+    document.getElementById('grammar-body').innerHTML =
+      '<p style="color:var(--sub);padding:2rem 0;text-align:center">Could not load grammar notes.</p>';
+  }
+}
+
+function postProcessGrammar(root) {
+  // 1. Wrap every <table> in a scrollable div
+  root.querySelectorAll('table').forEach(t => {
+    const wrap = document.createElement('div');
+    wrap.className = 'table-wrap';
+    t.parentNode.insertBefore(wrap, t);
+    wrap.appendChild(t);
+  });
+
+  // 2. Mark rule paragraphs (contain ✓ or ✗) and [to do] paragraphs
+  root.querySelectorAll('p').forEach(p => {
+    const text = p.textContent;
+    if (text.includes('[to do]')) p.classList.add('grammar-todo');
+    else if (text.includes('✓') || text.includes('✗') || text.includes('→')) {
+      p.classList.add('grammar-rule');
+    }
+  });
+
+  // 3. Build jump nav from h2 headings and prepend it
+  const headings = root.querySelectorAll('h2');
+  if (headings.length) {
+    const nav = document.createElement('nav');
+    nav.className = 'grammar-nav';
+    headings.forEach(h => {
+      const a = document.createElement('a');
+      a.href = '#';
+      a.textContent = h.textContent;
+      a.addEventListener('click', e => {
+        e.preventDefault();
+        h.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+      nav.appendChild(a);
+    });
+    root.prepend(nav);
+  }
+}
+
 // ─── Browse ───────────────────────────────────────────────────────────────────
 let browseType = 'vocab';
 let browseCategories = new Set();

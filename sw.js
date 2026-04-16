@@ -1,5 +1,5 @@
-const CACHE = 'svverbs-v10';
-const ASSETS = ['./', './index.html', './app.js', './manifest.json', './verbs.csv', './vocabulary.csv'];
+const CACHE = 'svverbs-v2';
+const ASSETS = ['./', './index.html', './app.js', './manifest.json', './verbs.csv', './vocabulary.csv', './grammar.html'];
 
 self.addEventListener('install', e => {
   e.waitUntil(

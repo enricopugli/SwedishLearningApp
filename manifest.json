@@ -1,7 +1,7 @@
 {
-  "name": "Svenska Verb Trainer",
-  "short_name": "Verb Trainer",
-  "description": "Practice Swedish verb conjugation and vocabulary",
+  "name": "Svensk Trainer",
+  "short_name": "Svensk Trainer",
+  "description": "Practice Swedish verb conjugation, vocabulary and grammar",
   "start_url": "./",
   "display": "standalone",
   "background_color": "#006AA7",
