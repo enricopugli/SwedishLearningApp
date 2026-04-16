@@ -671,6 +671,9 @@ function startMatchSession(type) {
     batchIndex: 0,
     totalMatched: 0,
     totalPairs: pool.length,
+    score: 0,
+    missed: [],
+    wrongIds: new Set(),
     selectedSv: null,
     selectedEn: null,
     locked: false,
@@ -688,6 +691,7 @@ function renderMatchBatch() {
 
   matchState.currentBatch = batch;
   matchState.remaining = batch.length;
+  matchState.wrongIds = new Set();
   matchState.selectedSv = null;
   matchState.selectedEn = null;
   matchState.locked = false;
@@ -742,6 +746,23 @@ function checkMatchPair() {
     matchState.totalMatched++;
     matchState.remaining--;
 
+    // Record progress
+    const item = matchState.currentBatch[selectedSv.id];
+    const firstTry = !matchState.wrongIds.has(selectedSv.id);
+    const progressKey = matchState.type === 'verbs' ? 'svVerbProgress' : 'svVocabProgress';
+    const progressMap = matchState.type === 'verbs' ? verbProgress : vocabProgress;
+    item._attempts++;
+    if (firstTry) {
+      item._correct++;
+      matchState.score++;
+    } else {
+      const svText = matchState.type === 'verbs' ? primaryForm(item) : item.Swedish;
+      const enText = matchState.type === 'verbs' ? item['Engelsk översättning'] : item.English.split('|')[0];
+      matchState.missed.push({ word: svText, answer: enText });
+    }
+    progressMap[item._id] = { attempts: item._attempts, correct: item._correct };
+    saveProgress(progressKey, progressMap);
+
     setTimeout(() => {
       selectedSv.btn.classList.add('matched');
       selectedEn.btn.classList.add('matched');
@@ -755,6 +776,7 @@ function checkMatchPair() {
       }
     }, 500);
   } else {
+    matchState.wrongIds.add(selectedSv.id);
     selectedSv.btn.classList.add('wrong');
     selectedEn.btn.classList.add('wrong');
 
@@ -769,10 +791,32 @@ function checkMatchPair() {
 }
 
 function showMatchScore() {
-  const total = matchState.pool.length;
-  document.getElementById('score-fraction').textContent = `${total}/${total}`;
-  document.getElementById('score-pct').textContent = 'All matched — Bra jobbat!';
-  document.getElementById('missed-section').style.display = 'none';
+  const total = matchState.totalPairs;
+  const score = matchState.score;
+  const pct = Math.round(score / total * 100);
+  const msg = pct >= 80 ? 'Bra jobbat!' : pct >= 50 ? 'Fortsätt öva!' : 'Öva mer!';
+
+  document.getElementById('score-fraction').textContent = `${score}/${total}`;
+  document.getElementById('score-pct').textContent = `${pct}% — ${msg}`;
+
+  const missedSection = document.getElementById('missed-section');
+  const missedList = document.getElementById('missed-list');
+  if (matchState.missed.length > 0) {
+    missedSection.style.display = 'block';
+    missedList.innerHTML = matchState.missed.map(m =>
+      `<div class="missed-item">
+        <span class="missed-word">${escapeHtml(m.word)}</span>
+        <span class="missed-arrow">→</span>
+        <span class="missed-answer">${escapeHtml(m.answer)}</span>
+      </div>`
+    ).join('');
+  } else {
+    missedSection.style.display = 'none';
+  }
+
+  if (matchState.type === 'verbs') updateVerbStats();
+  else updateVocabStats();
+
   showScreen('score');
 }
 
