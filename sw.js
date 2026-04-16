@@ -1,4 +1,4 @@
-const CACHE = 'svverbs-v3';
+const CACHE = 'svverbs-v4';
 const ASSETS = ['./', './index.html', './app.js', './manifest.json', './verbs.csv', './vocabulary.csv', './grammar.html'];
 
 self.addEventListener('install', e => {
@@ -12,6 +12,7 @@ self.addEventListener('activate', e => {
     caches.keys()
       .then(keys => Promise.all(keys.filter(k => k !== CACHE).map(k => caches.delete(k))))
       .then(() => self.clients.claim())
+      .then(() => self.clients.matchAll().then(clients => clients.forEach(c => c.postMessage('sw-updated'))))
   );
 });
 

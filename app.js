@@ -723,6 +723,9 @@ async function init() {
 
 if ('serviceWorker' in navigator) {
   window.addEventListener('load', () => navigator.serviceWorker.register('sw.js').catch(() => {}));
+  navigator.serviceWorker.addEventListener('message', e => {
+    if (e.data === 'sw-updated') window.location.reload();
+  });
 }
 
 document.addEventListener('DOMContentLoaded', () => {
