@@ -704,7 +704,10 @@ function renderBrowseList() {
     let pool = allVerbs;
     if (query) pool = pool.filter(v =>
       norm(primaryForm(v)).includes(query) ||
-      norm(v['Engelsk \u00f6vers\u00e4ttning'] || '').includes(query)
+      norm(v['Engelsk \u00f6vers\u00e4ttning'] || '').includes(query) ||
+      ['Infinitiv', 'Imperativ', 'Presens', 'Preteritum', 'Supinum'].some(f =>
+        v[f] && !isDash(v[f]) && norm(v[f]).includes(query)
+      )
     );
     pool = [...pool].sort((a, b) => primaryForm(a).localeCompare(primaryForm(b), 'sv'));
     document.getElementById('browse-count').textContent = `${pool.length} verb${pool.length !== 1 ? 's' : ''}`;
