@@ -1,1054 +1,1054 @@
-Swedish,English,Category
-bröd,bread,food
-smör,butter,food
-ost,cheese,food
-mjölk,milk,food
-ägg,egg,food
-kött,meat,food
-fisk,fish,food
-kyckling,chicken,food
-nötkött,beef,food
-fläsk,pork,food
-lax,salmon,food
-räka,shrimp,food
-sill,herring,food
-potatis,potato,food
-morot,carrot,food
-lök,onion,food
-vitlök,garlic,food
-tomat,tomato,food
-gurka,cucumber,food
-paprika,bell pepper,food
-sallad,lettuce,food
-svamp,mushroom,food
-spenat,spinach,food
-broccoli,broccoli,food
-blomkål,cauliflower,food
-kål,cabbage,food
-ärta,pea,food
-böna,bean,food
-majs,corn,food
-ris,rice,food
-pasta,pasta,food
-nudlar,noodles,food
-soppa,soup,food
-smörgås,sandwich,food
-pizza,pizza,food
-hamburgare,hamburger,food
-äpple,apple,food
-päron,pear,food
-banan,banana,food
-apelsin,orange,food
-citron,lemon,food
-jordgubbe,strawberry,food
-hallon,raspberry,food
-blåbär,blueberry,food
-vindruva,grape,food
-vattenmelon,watermelon,food
-mango,mango,food
-ananas,pineapple,food
-körsbär,cherry,food
-persika,peach,food
-plommon,plum,food
-nöt,nut,food
-mandel,almond,food
-valnöt,walnut,food
-hasselnöt,hazelnut,food
-jordnöt,peanut,food
-honung,honey,food
-sylt,jam,food
-socker,sugar,food
-salt,salt,food
-peppar,pepper,food
-senap,mustard,food
-ketchup,ketchup,food
-majonnäs,mayonnaise,food
-olja,oil,food
-vinäger,vinegar,food
-mjöl,flour,food
-grädde,cream,food
-yoghurt,yogurt,food
-glass,ice cream,food
-kaka,cookie,food
-tårta,cake,food
-choklad,chocolate,food
-godis,candy,food
-chips,chips,food
-köttbullar,meatballs,food
-husmanskost,traditional home cooking,food
-frukost,breakfast,food
-lunch,lunch,food
-middag,dinner,food
-måltid,meal,food
-vatten,water,drink
-juice,juice,drink
-kaffe,coffee,drink
-te,tea,drink
-öl,beer,drink
-vin,wine,drink
-whisky,whisky,drink
-vodka,vodka,drink
-cocktail,cocktail,drink
-läsk,soda,drink
-cider,cider,drink
-champagne,champagne,drink
-lemonad,lemonade,drink
-smoothie,smoothie,drink
-milkshake,milkshake,drink
-huvud,head,body
-hår,hair,body
-ansikte,face,body
-öga,eye,body
-öra,ear,body
-näsa,nose,body
-mun,mouth,body
-tand,tooth,body
-tunga,tongue,body
-läpp,lip,body
-kind,cheek,body
-hals,neck,body
-axel,shoulder,body
-arm,arm,body
-armbåge,elbow,body
-handled,wrist,body
-hand,hand,body
-finger,finger,body
-tumme,thumb,body
-nagel,nail,body
-bröst,chest,body
-mage,stomach,body
-rygg,back,body
-midja,waist,body
-höft,hip,body
-ben,leg,body
-lår,thigh,body
-knä,knee,body
-vad,calf,body
-fot,foot,body
-tå,toe,body
-hud,skin,body
-blod,blood,body
-hjärta,heart,body
-lunga,lung,body
-lever,liver,body
-hjärna,brain,body
-muskel,muscle,body
-skelett,skeleton,body
-led,joint,body
-sjukhus,hospital,health
-apotek,pharmacy,health
-medicin,medicine,health
-tablett,tablet,health
-recept,prescription,health
-allergi,allergy,health
-feber,fever,health
-förkylning,cold,health
-influensa,flu,health
-huvudvärk,headache,health
-ont,pain,health
-sår,wound,health
-operation,surgery,health
-vaccin,vaccine,health
-hälsa,health,health
-blodtryck,blood pressure,health
-kost,diet,health
-näring,nutrition,health
-vitamin,vitamin,health
-mineral,mineral,health
-tröja,sweater,clothing
-skjorta,shirt,clothing
-byxa,trousers,clothing
-kjol,skirt,clothing
-klänning,dress,clothing
-jacka,jacket,clothing
-kappa,coat,clothing
-skor,shoes,clothing
-stövlar,boots,clothing
-sandaler,sandals,clothing
-strumpor,socks,clothing
-underkläder,underwear,clothing
-mössa,beanie,clothing
-hatt,hat,clothing
-halsduk,scarf,clothing
-handskar,gloves,clothing
-bälte,belt,clothing
-plånbok,wallet,clothing
-väska,bag,clothing
-ryggsäck,backpack,clothing
-glasögon,glasses,clothing
-ring,ring,clothing
-halsband,necklace,clothing
-armband,bracelet,clothing
-klocka,watch,clothing
-hus,house,home
-lägenhet,apartment,home
-rum,room,home
-kök,kitchen,home
-vardagsrum,living room,home
-sovrum,bedroom,home
-badrum,bathroom,home
-toalett,toilet,home
-hall,hallway,home
-balkong,balcony,home
-trädgård,garden,home
-källare,basement,home
-vind,attic,home
-garage,garage,home
-dörr,door,home
-fönster,window,home
-golv,floor,home
-tak,ceiling,home
-vägg,wall,home
-trappa,stairs,home
-soffa,sofa,furniture
-stol,chair,furniture
-bord,table,furniture
-säng,bed,furniture
-skrivbord,desk,furniture
-bokhylla,bookshelf,furniture
-garderob,wardrobe,furniture
-byrå,chest of drawers,furniture
-matta,rug,furniture
-lampa,lamp,furniture
-spegel,mirror,furniture
-badkar,bathtub,furniture
-diskmaskin,dishwasher,furniture
-tvättmaskin,washing machine,furniture
-torktumlare,dryer,furniture
-kylskåp,refrigerator,furniture
-frys,freezer,furniture
-spis,stove,furniture
-ugn,oven,furniture
-mikrovågsugn,microwave,furniture
-mamma,mom,family
-pappa,dad,family
-mor,mother,family
-far,father,family
-barn,child,family
-son,son,family
-dotter,daughter,family
-bror,brother,family
-syster,sister,family
-farfar,paternal grandfather,family
-farmor,paternal grandmother,family
-morfar,maternal grandfather,family
-mormor,maternal grandmother,family
-farbror,uncle (father's side),family
-faster,aunt (father's side),family
-morbror,uncle (mother's side),family
-moster,aunt (mother's side),family
-kusin,cousin,family
-make,husband,family
-fru,wife,family
-sambo,live-in partner,family
-pojke,boy,family
-flicka,girl,family
-bebis,baby,family
-tonåring,teenager,family
-vuxen,adult,family
-äldre,elderly person,family
-släkt,relatives,family
-syskon,siblings,family
-tvillingar,twins,family
-hund,dog,animals
-katt,cat,animals
-häst,horse,animals
-ko,cow,animals
-gris,pig,animals
-får,sheep,animals
-get,goat,animals
-höna,hen,animals
-kanin,rabbit,animals
-mus,mouse,animals
-råtta,rat,animals
-hamster,hamster,animals
-papegoja,parrot,animals
-fågel,bird,animals
-örn,eagle,animals
-uggla,owl,animals
-pingvin,penguin,animals
-lejon,lion,animals
-tiger,tiger,animals
-elefant,elephant,animals
-giraff,giraffe,animals
-björn,bear,animals
-varg,wolf,animals
-räv,fox,animals
-hjort,deer,animals
-älg,moose,animals
-apa,monkey,animals
-gorilla,gorilla,animals
-krokodil,crocodile,animals
-orm,snake,animals
-ödla,lizard,animals
-groda,frog,animals
-sköldpadda,turtle,animals
-haj,shark,animals
-delfin,dolphin,animals
-val,whale,animals
-bläckfisk,octopus,animals
-bi,bee,animals
-fjäril,butterfly,animals
-myra,ant,animals
-fluga,fly,animals
-mygga,mosquito,animals
-spindel,spider,animals
-mask,worm,animals
-lama,llama,animals
-flamingo,flamingo,animals
-skog,forest,nature
-träd,tree,nature
-blomma,flower,nature
-gräs,grass,nature
-berg,mountain,nature
-dal,valley,nature
-flod,river,nature
-sjö,lake,nature
-hav,sea,nature
-strand,beach,nature
-ö,island,nature
-halvö,peninsula,nature
-klippa,cliff,nature
-sten,stone,nature
-sand,sand,nature
-jord,soil,nature
-buske,bush,nature
-löv,leaf,nature
-rot,root,nature
-gren,branch,nature
-frö,seed,nature
-mossa,moss,nature
-ormbunke,fern,nature
-näckros,water lily,nature
-kotte,pine cone,nature
-älv,large river,nature
-bäck,stream,nature
-vattenfall,waterfall,nature
-grotta,cave,nature
-öken,desert,nature
-vulkan,volcano,nature
-sol,sun,weather
-regn,rain,weather
-snö,snow,weather
-vind,wind,weather
-storm,storm,weather
-åska,thunder,weather
-blixt,lightning,weather
-dimma,fog,weather
-moln,cloud,weather
-hagel,hail,weather
-frost,frost,weather
-is,ice,weather
-regnbåge,rainbow,weather
-tornado,tornado,weather
-orkan,hurricane,weather
-skyfall,downpour,weather
-temperatur,temperature,weather
-termometer,thermometer,weather
-barometer,barometer,weather
-prognos,forecast,weather
-sekund,second,time
-minut,minute,time
-timme,hour,time
-dag,day,time
-vecka,week,time
-månad,month,time
-år,year,time
-decennium,decade,time
-århundrade,century,time
-morgon,morning,time
-förmiddag,late morning,time
-middag,noon,time
-eftermiddag,afternoon,time
-kväll,evening,time
-natt,night,time
-midnatt,midnight,time
-måndag,Monday,time
-tisdag,Tuesday,time
-onsdag,Wednesday,time
-torsdag,Thursday,time
-fredag,Friday,time
-lördag,Saturday,time
-söndag,Sunday,time
-januari,January,time
-februari,February,time
-mars,March,time
-april,April,time
-maj,May,time
-juni,June,time
-juli,July,time
-augusti,August,time
-september,September,time
-oktober,October,time
-november,November,time
-december,December,time
-vår,spring,time
-sommar,summer,time
-höst,autumn,time
-vinter,winter,time
-kalender,calendar,time
-helg,weekend,time
-vardag,weekday,time
-framtid,future,time
-nutid,present,time
-dåtid,past,time
-årstid,season,time
-tidszon,time zone,time
-röd,red,colors
-blå,blue,colors
-grön,green,colors
-gul,yellow,colors
-orange,orange,colors
-lila,purple,colors
-rosa,pink,colors
-brun,brown,colors
-svart,black,colors
-vit,white,colors
-grå,gray,colors
-beige,beige,colors
-turkos,turquoise,colors
-guld,gold,colors
-silver,silver,colors
-jobb,job,work
-karriär,career,work
-chef,boss,work
-kollega,colleague,work
-anställd,employee,work
-arbetsgivare,employer,work
-möte,meeting,work
-kontor,office,work
-fabrik,factory,work
-företag,company,work
-projekt,project,work
-uppgift,task,work
-lön,salary,work
-skatt,tax,work
-faktura,invoice,work
-kontrakt,contract,work
-rapport,report,work
-presentation,presentation,work
-intervju,interview,work
-ansökan,application,work
-erfarenhet,experience,work
-kompetens,competence,work
-ansvar,responsibility,work
-deadline,deadline,work
-sjukskrivning,sick leave,work
-övertid,overtime,work
-pension,pension,work
-fackförening,trade union,work
-chefskap,management,work
-arbetsmarknad,labor market,work
-läkare,doctor,profession
-sjuksköterska,nurse,profession
-ingenjör,engineer,profession
-advokat,lawyer,profession
-arkitekt,architect,profession
-konstnär,artist,profession
-musiker,musician,profession
-skådespelare,actor,profession
-författare,author,profession
-journalist,journalist,profession
-fotograf,photographer,profession
-kock,chef,profession
-bagare,baker,profession
-frisör,hairdresser,profession
-elektriker,electrician,profession
-rörmokare,plumber,profession
-snickare,carpenter,profession
-mekaniker,mechanic,profession
-pilot,pilot,profession
-polis,police officer,profession
-brandman,firefighter,profession
-psykolog,psychologist,profession
-vetenskapsman,scientist,profession
-programmerare,programmer,profession
-designer,designer,profession
-tandläkare,dentist,profession
-veterinär,veterinarian,profession
-apotekare,pharmacist,profession
-sekreterare,secretary,profession
-direktör,director,profession
-skola,school,school
-klassrum,classroom,school
-elev,student,school
-bok,book,school
-penna,pen,school
-papper,paper,school
-anteckningsbok,notebook,school
-läxa,homework,school
-prov,test,school
-betyg,grade,school
-lektion,lesson,school
-schema,schedule,school
-rast,break,school
-bibliotek,library,school
-gymnasium,high school,school
-universitet,university,school
-kurs,course,school
-examen,exam,school
-matematik,mathematics,school
-svenska,Swedish language,school
-engelska,English language,school
-historia,history,school
-geografi,geography,school
-biologi,biology,school
-kemi,chemistry,school
-fysik,physics,school
-idrott,physical education,school
-stipendium,scholarship,school
-föreläsning,lecture,school
-uppsats,essay,school
-fotboll,football,sports
-basket,basketball,sports
-tennis,tennis,sports
-simning,swimming,sports
-cykling,cycling,sports
-löpning,running,sports
-skidåkning,skiing,sports
-ishockey,ice hockey,sports
-golf,golf,sports
-boxning,boxing,sports
-kampsport,martial arts,sports
-yoga,yoga,sports
-gym,gym,sports
-träning,workout,sports
-match,match,sports
-tävling,competition,sports
-lag,team,sports
-spelare,player,sports
-tränare,coach,sports
-mål,goal,sports
-poäng,score,sports
-seger,victory,sports
-förlust,defeat,sports
-stadion,stadium,sports
-boll,ball,sports
-nät,net,sports
-racket,racket,sports
-handboll,handball,sports
-volleyboll,volleyball,sports
-friidrott,athletics,sports
-rodd,rowing,sports
-segling,sailing,sports
-klättring,climbing,sports
-vandring,hiking,sports
-simhall,swimming pool,sports
-rekord,record,sports
-medalj,medal,sports
-mästare,champion,sports
-turnering,tournament,sports
-straff,penalty,sports
-skridsko,ice skate,sports
-slalom,slalom,sports
-friluftsliv,outdoor life,sports
-löparskor,running shoes,sports
-läsning,reading,hobbies
-skrivande,writing,hobbies
-målning,painting,hobbies
-teckning,drawing,hobbies
-fotografering,photography,hobbies
-matlagning,cooking,hobbies
-bakning,baking,hobbies
-trädgårdsarbete,gardening,hobbies
-stickning,knitting,hobbies
-sömnad,sewing,hobbies
-dans,dancing,hobbies
-teater,theater,hobbies
-spel,gaming,hobbies
-pussel,puzzle,hobbies
-schack,chess,hobbies
-fiske,fishing,hobbies
-jakt,hunting,hobbies
-ridning,horse riding,hobbies
-camping,camping,hobbies
-samling,collecting,hobbies
-modellbygge,model building,hobbies
-träsnideri,woodcarving,hobbies
-keramik,ceramics,hobbies
-vinprovning,wine tasting,hobbies
-origami,origami,hobbies
-dator,computer,technology
-laptop,laptop,technology
-telefon,phone,technology
-smartphone,smartphone,technology
-surfplatta,tablet,technology
-skärm,screen,technology
-tangentbord,keyboard,technology
-mus,mouse (computer),technology
-skrivare,printer,technology
-kamera,camera,technology
-internet,internet,technology
-wifi,wifi,technology
-app,app,technology
-program,software,technology
-hemsida,website,technology
-e-post,email,technology
-lösenord,password,technology
-data,data,technology
-fil,file,technology
-mapp,folder,technology
-server,server,technology
-nätverk,network,technology
-bluetooth,bluetooth,technology
-batteri,battery,technology
-laddare,charger,technology
-hörlurar,headphones,technology
-högtalare,speaker,technology
-TV,TV,technology
-radio,radio,technology
-robot,robot,technology
-artificiell intelligens,artificial intelligence,technology
-sociala medier,social media,technology
-videospel,video game,technology
-strömning,streaming,technology
-satellit,satellite,technology
-bil,car,transport
-buss,bus,transport
-tåg,train,transport
-tunnelbana,subway,transport
-spårvagn,tram,transport
-taxi,taxi,transport
-cykel,bicycle,transport
-motorcykel,motorcycle,transport
-flygplan,airplane,transport
-helikopter,helicopter,transport
-båt,boat,transport
-fartyg,ship,transport
-lastbil,truck,transport
-ambulans,ambulance,transport
-station,station,transport
-flygplats,airport,transport
-hamn,harbor,transport
-väg,road,transport
-motorväg,highway,transport
-bro,bridge,transport
-tunnel,tunnel,transport
-parkering,parking,transport
-trafik,traffic,transport
-körkort,driver's license,transport
-bensin,gasoline,transport
-elbil,electric car,transport
-kollektivtrafik,public transport,transport
-hållplats,bus stop,transport
-avgång,departure,transport
-ankomst,arrival,transport
-stad,city,places
-by,village,places
-land,country,places
-park,park,places
-torg,square,places
-gata,street,places
-restaurang,restaurant,places
-café,café,places
-bar,bar,places
-hotell,hotel,places
-museum,museum,places
-bio,cinema,places
-kyrka,church,places
-moské,mosque,places
-bank,bank,places
-post,post office,places
-polisstation,police station,places
-zoo,zoo,places
-nöjespark,amusement park,places
-köpcentrum,shopping mall,places
-marknad,market,places
-lekplats,playground,places
-slott,castle,places
-rådhus,city hall,places
-ambassad,embassy,places
-fyr,lighthouse,places
-tempel,temple,places
-fängelse,prison,places
-bondgård,farm,places
-naturreservat,nature reserve,places
-glad,happy,emotions
-ledsen,sad,emotions
-arg,angry,emotions
-rädd,scared,emotions
-förvånad,surprised,emotions
-äcklad,disgusted,emotions
-stolt,proud,emotions
-skamsen,ashamed,emotions
-ensam,lonely,emotions
-orolig,anxious,emotions
-lugn,calm,emotions
-kär,in love,emotions
-avundsjuk,jealous,emotions
-nöjd,satisfied,emotions
-besviken,disappointed,emotions
-förvirrad,confused,emotions
-trött,tired,emotions
-uttråkad,bored,emotions
-tacksam,grateful,emotions
-nervös,nervous,emotions
-ivrig,eager,emotions
-lycklig,happy/blissful,emotions
-hoppfull,hopeful,emotions
-stor,big,adjectives
-liten,small,adjectives
-lång,long/tall,adjectives
-kort,short,adjectives
-bred,wide,adjectives
-smal,narrow,adjectives
-tjock,thick,adjectives
-tunn,thin,adjectives
-tung,heavy,adjectives
-lätt,light/easy,adjectives
-hård,hard,adjectives
-mjuk,soft,adjectives
-varm,warm,adjectives
-kall,cold,adjectives
-het,hot,adjectives
-sval,cool,adjectives
-snabb,fast,adjectives
-långsam,slow,adjectives
-ny,new,adjectives
-gammal,old,adjectives
-ung,young,adjectives
-modern,modern,adjectives
-ren,clean,adjectives
-smutsig,dirty,adjectives
-vacker,beautiful,adjectives
-ful,ugly,adjectives
-söt,cute/sweet,adjectives
-rolig,funny,adjectives
-tråkig,boring,adjectives
-intressant,interesting,adjectives
-viktig,important,adjectives
-billig,cheap,adjectives
-dyr,expensive,adjectives
-bra,good,adjectives
-dålig,bad,adjectives
-rätt,correct,adjectives
-fel,wrong,adjectives
-säker,safe,adjectives
-farlig,dangerous,adjectives
-öppen,open,adjectives
-stängd,closed,adjectives
-full,full,adjectives
-tom,empty,adjectives
-stark,strong,adjectives
-svag,weak,adjectives
-smart,smart,adjectives
-dum,stupid,adjectives
-rik,rich,adjectives
-fattig,poor,adjectives
-fri,free,adjectives
-upptagen,busy,adjectives
-pigg,alert/lively,adjectives
-hungrig,hungry,adjectives
-mätt,full (after eating),adjectives
-törstig,thirsty,adjectives
-sömnig,sleepy,adjectives
-frisk,healthy,adjectives
-sjuk,sick,adjectives
-nyfiken,curious,adjectives
-försiktig,careful,adjectives
-modig,brave,adjectives
-feg,cowardly,adjectives
-lat,lazy,adjectives
-flitig,hardworking,adjectives
-äventyrlig,adventurous,adjectives
-perfekt,perfect,adjectives
-hemsk,terrible,adjectives
-underbar,wonderful,adjectives
-fantastisk,fantastic,adjectives
-otrolig,incredible,adjectives
-vanlig,common/ordinary,adjectives
-ovanlig,unusual,adjectives
-noggrann,thorough/careful,adjectives
-kreativ,creative,adjectives
-praktisk,practical,adjectives
-pris,price,shopping
-rabatt,discount,shopping
-rea,sale,shopping
-kassan,checkout,shopping
-kvitto,receipt,shopping
-kreditkort,credit card,shopping
-kontanter,cash,shopping
-varuhus,department store,shopping
-märke,brand,shopping
-storlek,size,shopping
-mode,fashion,shopping
-trend,trend,shopping
-erbjudande,deal/offer,shopping
-retur,return,shopping
-garanti,guarantee,shopping
-musik,music,music
-sång,song,music
-låt,track,music
-album,album,music
-artist,artist,music
-band,band,music
-konsert,concert,music
-gitarr,guitar,music
-piano,piano,music
-trummor,drums,music
-bas,bass,music
-violin,violin,music
-flöjt,flute,music
-trumpet,trumpet,music
-saxofon,saxophone,music
-mikrofon,microphone,music
-playlist,playlist,music
-rock,rock,music
-pop,pop,music
-jazz,jazz,music
-klassisk musik,classical music,music
-rap,rap,music
-opera,opera,music
-musikfestival,music festival,music
-körmusik,choral music,music
-konst,art,art & culture
-skulptur,sculpture,art & culture
-fotografi,photography,art & culture
-film,film,art & culture
-litteratur,literature,art & culture
-poesi,poetry,art & culture
-roman,novel,art & culture
-novell,short story,art & culture
-galleri,gallery,art & culture
-utställning,exhibition,art & culture
-kulturhus,cultural center,art & culture
-kalligrafi,calligraphy,art & culture
-animation,animation,art & culture
-grafik,graphic design,art & culture
-karneval,carnival,art & culture
-politik,politics,politics
-regering,government,politics
-parlament,parliament,politics
-demokrati,democracy,politics
-val,election,politics
-röstning,voting,politics
-parti,party,politics
-minister,minister,politics
-president,president,politics
-kung,king,politics
-drottning,queen,politics
-lag,law,politics
-rättighet,right,politics
-frihet,freedom,politics
-jämlikhet,equality,politics
-ekonomi,economy,economy
-pengar,money,economy
-investering,investment,economy
-aktie,stock/share,economy
-inflation,inflation,economy
-handel,trade,economy
-export,export,economy
-import,import,economy
-budget,budget,economy
-ränta,interest rate,economy
-skuld,debt,economy
-vinst,profit,economy
-förlust,loss,economy
-valuta,currency,economy
-skatt,tax,economy
-pass,passport,travel
-visum,visa,travel
-bagage,luggage,travel
-resväska,suitcase,travel
-hotellbokning,hotel booking,travel
-biljett,ticket,travel
-avgång,departure,travel
-ankomst,arrival,travel
-karta,map,travel
-guide,guide,travel
-turist,tourist,travel
-semester,vacation,travel
-resa,trip,travel
-destination,destination,travel
-souvenir,souvenir,travel
-turism,tourism,travel
-reseförsäkring,travel insurance,travel
-incheckning,check-in,travel
-vetenskap,science,science
-forskning,research,science
-experiment,experiment,science
-teori,theory,science
-hypotes,hypothesis,science
-laboratorium,laboratory,science
-kemikalie,chemical,science
-element,element,science
-atom,atom,science
-molekyl,molecule,science
-energi,energy,science
-kraft,force,science
-gravitation,gravity,science
-evolution,evolution,science
-gen,gene,science
-DNA,DNA,science
-cell,cell,science
-raket,rocket,science
-rymden,outer space,science
-planet,planet,science
-galax,galaxy,science
-miljö,environment,environment
-klimat,climate,environment
-klimatförändring,climate change,environment
-förorening,pollution,environment
-utsläpp,emissions,environment
-återvinning,recycling,environment
-hållbarhet,sustainability,environment
-förnybar energi,renewable energy,environment
-solenergi,solar energy,environment
-vindkraft,wind power,environment
-utrotningshotad,endangered,environment
-ekosystem,ecosystem,environment
-växthuseffekt,greenhouse effect,environment
-ozon,ozone,environment
-biologisk mångfald,biodiversity,environment
-samhälle,society,society
-gemenskap,community,society
-tradition,tradition,society
-religion,religion,society
-immigration,immigration,society
-integration,integration,society
-diskriminering,discrimination,society
-rasism,racism,society
-jämställdhet,gender equality,society
-mänskliga rättigheter,human rights,society
-välgörenhet,charity,society
-volontär,volunteer,society
-rättvisa,justice,society
-solidaritet,solidarity,society
-mångfald,diversity,society
-kris,crisis,society
-konflikt,conflict,society
-fred,peace,society
-krig,war,society
-medborgare,citizen,society
-kniv,knife,kitchen
-gaffel,fork,kitchen
-sked,spoon,kitchen
-tallrik,plate,kitchen
-skål,bowl,kitchen
-kopp,cup,kitchen
-glas,glass,kitchen
-kastrull,pot,kitchen
-stekpanna,frying pan,kitchen
-skärbräda,cutting board,kitchen
-vispare,whisk,kitchen
-korkskruv,corkscrew,kitchen
-flaska,bottle,kitchen
-burk,jar,kitchen
-durkslag,colander,kitchen
-bakplåt,baking sheet,kitchen
-mixer,blender,kitchen
-vattenkokare,kettle,kitchen
-toaster,toaster,kitchen
-basilika,basil,kitchen
-persilja,parsley,kitchen
-koriander,coriander,kitchen
-timjan,thyme,kitchen
-rosmarin,rosemary,kitchen
-oregano,oregano,kitchen
-kanel,cinnamon,kitchen
-ingefära,ginger,kitchen
-gurkmeja,turmeric,kitchen
-spiskummin,cumin,kitchen
-lagerblad,bay leaf,kitchen
-ett,one,numbers
-två,two,numbers
-tre,three,numbers
-fyra,four,numbers
-fem,five,numbers
-sex,six,numbers
-sju,seven,numbers
-åtta,eight,numbers
-nio,nine,numbers
-tio,ten,numbers
-tjugo,twenty,numbers
-hundra,hundred,numbers
-tusen,thousand,numbers
-miljon,million,numbers
-hälften,half,numbers
-kvart,quarter,numbers
-procent,percent,numbers
-summa,sum,numbers
-dubbel,double,numbers
-noll,zero,numbers
-ja,yes,basic
-nej,no,basic
-tack,thank you,basic
-förlåt,sorry,basic
-hej,hello,basic
-hejdå,goodbye,basic
-snälla,please (informal),basic
-varsågod,you're welcome,basic
-ursäkta,excuse me,basic
-välkommen,welcome,basic
-vänligen,please (formal),basic
-jordbävning,earthquake,nature
-tsunami,tsunami,nature
-glaciär,glacier,nature
-korall,coral,nature
-alger,algae,nature
-fitness,fitness,health
-övervikt,overweight,health
-undersökning,examination,health
-apotek,pharmacy,health
-smärtstillare,painkiller,health
-butiksägare,shop owner,profession
-revisor,accountant,profession
-statsminister,prime minister,politics
-grundlag,constitution,politics
-nattklubb,nightclub,places
-löneförhandling,salary negotiation,work
-spegelbild,reflection,adjectives
-gästfri,hospitable,adjectives
-blöja,nappy/diaper,childcare
-napp,pacifier/dummy,childcare
-barnvagn,pram/stroller,childcare
-spjälsäng,cot/crib,childcare
-nappflaska,baby bottle,childcare
-välling,infant cereal/porridge,childcare
-förskola,preschool,childcare
-dagis,daycare (informal),childcare
-barnvakt,babysitter,childcare
-leksak,toy,childcare
-matstol,highchair,childcare
-vagga,cradle,childcare
-sparkdräkt,babygro/sleepsuit,childcare
-amning,breastfeeding,childcare
-tupplur,nap,childcare
-blöjbyte,nappy change,childcare
-babymonitor,baby monitor,childcare
-napphållare,dummy clip,childcare
-hosta,cough,health
-förkyld,having a cold,health
-vantar,gloves,clothing
-torkskåp,drying cabinet,furniture
-uppsättning,set,basic
-en del,some/a part of,basic
-några,some/a few,basic
-en sak,a thing / an item,basic
-möjligtvis,possibly,basic
-stjärna,star,nature
-lådan,the box,home
-redan,already,basic
-blöt,wet,adjectives
-ju,you know / of course,basic
-verkligen,really / truly,basic
-iskallt,ice cold,adjectives
-en verktygslåda,toolbox,tools
-en såg,saw,tools
-en hammare,hammer,tools
-en spik,nail,tools
-en tång,pliers / tongs,tools
-en tumstock,folding ruler,tools
-en koja,hut / den / treehouse,home
-fartlig,exciting / dangerous,adjectives
-en lek,game / play,hobbies
-flyger högt,flies high,basic
-en helikopter,helicopter,transport
-ett äventyr,adventure,basic
-en djungel,jungle,nature
-ett djur,animal,animals
-en fantasi,fantasy / imagination,basic
-en verklighet,reality,basic
-ha tråkigt,to be bored,basic
-pallen,the stool / the pallet,furniture
-trasig,broken,adjectives
+Swedish,English,Category,Example
+bröd,bread,food,Jag äter bröd till frukost.
+smör,butter,food,Jag äter smör till frukost.
+ost,cheese,food,Jag äter ost till frukost.
+mjölk,milk,food,Jag äter mjölk till frukost.
+ägg,egg,food,Jag äter ägg till frukost.
+kött,meat,food,Jag äter kött till frukost.
+fisk,fish,food,Jag äter fisk till frukost.
+kyckling,chicken,food,Jag äter kyckling till frukost.
+nötkött,beef,food,Jag äter nötkött till frukost.
+fläsk,pork,food,Jag äter fläsk till frukost.
+lax,salmon,food,Jag äter lax till frukost.
+räka,shrimp,food,Jag äter räka till frukost.
+sill,herring,food,Jag äter sill till frukost.
+potatis,potato,food,Jag äter potatis till frukost.
+morot,carrot,food,Jag äter morot till frukost.
+lök,onion,food,Jag äter lök till frukost.
+vitlök,garlic,food,Jag äter vitlök till frukost.
+tomat,tomato,food,Jag äter tomat till frukost.
+gurka,cucumber,food,Jag äter gurka till frukost.
+paprika,bell pepper,food,Jag äter paprika till frukost.
+sallad,lettuce,food,Jag äter sallad till frukost.
+svamp,mushroom,food,Jag äter svamp till frukost.
+spenat,spinach,food,Jag äter spenat till frukost.
+broccoli,broccoli,food,Jag äter broccoli till frukost.
+blomkål,cauliflower,food,Jag äter blomkål till frukost.
+kål,cabbage,food,Jag äter kål till frukost.
+ärta,pea,food,Jag äter ärta till frukost.
+böna,bean,food,Jag äter böna till frukost.
+majs,corn,food,Jag äter majs till frukost.
+ris,rice,food,Jag äter ris till frukost.
+pasta,pasta,food,Jag äter pasta till frukost.
+nudlar,noodles,food,Jag äter nudlar till frukost.
+soppa,soup,food,Jag äter soppa till frukost.
+smörgås,sandwich,food,Jag äter smörgås till frukost.
+pizza,pizza,food,Jag äter pizza till frukost.
+hamburgare,hamburger,food,Jag äter hamburgare till frukost.
+äpple,apple,food,Jag äter äpple till frukost.
+päron,pear,food,Jag äter päron till frukost.
+banan,banana,food,Jag äter banan till frukost.
+apelsin,orange,food,Jag äter apelsin till frukost.
+citron,lemon,food,Jag äter citron till frukost.
+jordgubbe,strawberry,food,Jag äter jordgubbe till frukost.
+hallon,raspberry,food,Jag äter hallon till frukost.
+blåbär,blueberry,food,Jag äter blåbär till frukost.
+vindruva,grape,food,Jag äter vindruva till frukost.
+vattenmelon,watermelon,food,Jag äter vattenmelon till frukost.
+mango,mango,food,Jag äter mango till frukost.
+ananas,pineapple,food,Jag äter ananas till frukost.
+körsbär,cherry,food,Jag äter körsbär till frukost.
+persika,peach,food,Jag äter persika till frukost.
+plommon,plum,food,Jag äter plommon till frukost.
+nöt,nut,food,Jag äter nöt till frukost.
+mandel,almond,food,Jag äter mandel till frukost.
+valnöt,walnut,food,Jag äter valnöt till frukost.
+hasselnöt,hazelnut,food,Jag äter hasselnöt till frukost.
+jordnöt,peanut,food,Jag äter jordnöt till frukost.
+honung,honey,food,Jag äter honung till frukost.
+sylt,jam,food,Jag äter sylt till frukost.
+socker,sugar,food,Jag äter socker till frukost.
+salt,salt,food,Jag äter salt till frukost.
+peppar,pepper,food,Jag äter peppar till frukost.
+senap,mustard,food,Jag äter senap till frukost.
+ketchup,ketchup,food,Jag äter ketchup till frukost.
+majonnäs,mayonnaise,food,Jag äter majonnäs till frukost.
+olja,oil,food,Jag äter olja till frukost.
+vinäger,vinegar,food,Jag äter vinäger till frukost.
+mjöl,flour,food,Jag äter mjöl till frukost.
+grädde,cream,food,Jag äter grädde till frukost.
+yoghurt,yogurt,food,Jag äter yoghurt till frukost.
+glass,ice cream,food,Jag äter glass till frukost.
+kaka,cookie,food,Jag äter kaka till frukost.
+tårta,cake,food,Jag äter tårta till frukost.
+choklad,chocolate,food,Jag äter choklad till frukost.
+godis,candy,food,Jag äter godis till frukost.
+chips,chips,food,Jag äter chips till frukost.
+köttbullar,meatballs,food,Jag äter köttbullar till frukost.
+husmanskost,traditional home cooking,food,Jag äter husmanskost till frukost.
+frukost,breakfast,food,Jag äter frukost till frukost.
+lunch,lunch,food,Jag äter lunch till frukost.
+middag,dinner,food,Jag äter middag till frukost.
+måltid,meal,food,Jag äter måltid till frukost.
+vatten,water,drink,Jag dricker vatten varje morgon.
+juice,juice,drink,Jag dricker juice varje morgon.
+kaffe,coffee,drink,Jag dricker kaffe varje morgon.
+te,tea,drink,Jag dricker te varje morgon.
+öl,beer,drink,Jag dricker öl varje morgon.
+vin,wine,drink,Jag dricker vin varje morgon.
+whisky,whisky,drink,Jag dricker whisky varje morgon.
+vodka,vodka,drink,Jag dricker vodka varje morgon.
+cocktail,cocktail,drink,Jag dricker cocktail varje morgon.
+läsk,soda,drink,Jag dricker läsk varje morgon.
+cider,cider,drink,Jag dricker cider varje morgon.
+champagne,champagne,drink,Jag dricker champagne varje morgon.
+lemonad,lemonade,drink,Jag dricker lemonad varje morgon.
+smoothie,smoothie,drink,Jag dricker smoothie varje morgon.
+milkshake,milkshake,drink,Jag dricker milkshake varje morgon.
+huvud,head,body,Min huvud gör ont idag.
+hår,hair,body,Min hår gör ont idag.
+ansikte,face,body,Min ansikte gör ont idag.
+öga,eye,body,Min öga gör ont idag.
+öra,ear,body,Min öra gör ont idag.
+näsa,nose,body,Min näsa gör ont idag.
+mun,mouth,body,Min mun gör ont idag.
+tand,tooth,body,Min tand gör ont idag.
+tunga,tongue,body,Min tunga gör ont idag.
+läpp,lip,body,Min läpp gör ont idag.
+kind,cheek,body,Min kind gör ont idag.
+hals,neck,body,Min hals gör ont idag.
+axel,shoulder,body,Min axel gör ont idag.
+arm,arm,body,Min arm gör ont idag.
+armbåge,elbow,body,Min armbåge gör ont idag.
+handled,wrist,body,Min handled gör ont idag.
+hand,hand,body,Min hand gör ont idag.
+finger,finger,body,Min finger gör ont idag.
+tumme,thumb,body,Min tumme gör ont idag.
+nagel,nail,body,Min nagel gör ont idag.
+bröst,chest,body,Min bröst gör ont idag.
+mage,stomach,body,Min mage gör ont idag.
+rygg,back,body,Min rygg gör ont idag.
+midja,waist,body,Min midja gör ont idag.
+höft,hip,body,Min höft gör ont idag.
+ben,leg,body,Min ben gör ont idag.
+lår,thigh,body,Min lår gör ont idag.
+knä,knee,body,Min knä gör ont idag.
+vad,calf,body,Min vad gör ont idag.
+fot,foot,body,Min fot gör ont idag.
+tå,toe,body,Min tå gör ont idag.
+hud,skin,body,Min hud gör ont idag.
+blod,blood,body,Min blod gör ont idag.
+hjärta,heart,body,Min hjärta gör ont idag.
+lunga,lung,body,Min lunga gör ont idag.
+lever,liver,body,Min lever gör ont idag.
+hjärna,brain,body,Min hjärna gör ont idag.
+muskel,muscle,body,Min muskel gör ont idag.
+skelett,skeleton,body,Min skelett gör ont idag.
+led,joint,body,Min led gör ont idag.
+sjukhus,hospital,health,sjukhus är viktigt för god hälsa.
+apotek,pharmacy,health,apotek är viktigt för god hälsa.
+medicin,medicine,health,medicin är viktigt för god hälsa.
+tablett,tablet,health,tablett är viktigt för god hälsa.
+recept,prescription,health,recept är viktigt för god hälsa.
+allergi,allergy,health,allergi är viktigt för god hälsa.
+feber,fever,health,feber är viktigt för god hälsa.
+förkylning,cold,health,förkylning är viktigt för god hälsa.
+influensa,flu,health,influensa är viktigt för god hälsa.
+huvudvärk,headache,health,huvudvärk är viktigt för god hälsa.
+ont,pain,health,ont är viktigt för god hälsa.
+sår,wound,health,sår är viktigt för god hälsa.
+operation,surgery,health,operation är viktigt för god hälsa.
+vaccin,vaccine,health,vaccin är viktigt för god hälsa.
+hälsa,health,health,hälsa är viktigt för god hälsa.
+blodtryck,blood pressure,health,blodtryck är viktigt för god hälsa.
+kost,diet,health,kost är viktigt för god hälsa.
+näring,nutrition,health,näring är viktigt för god hälsa.
+vitamin,vitamin,health,vitamin är viktigt för god hälsa.
+mineral,mineral,health,mineral är viktigt för god hälsa.
+tröja,sweater,clothing,Hon hade en fin tröja på sig.
+skjorta,shirt,clothing,Hon hade en fin skjorta på sig.
+byxa,trousers,clothing,Hon hade en fin byxa på sig.
+kjol,skirt,clothing,Hon hade en fin kjol på sig.
+klänning,dress,clothing,Hon hade en fin klänning på sig.
+jacka,jacket,clothing,Hon hade en fin jacka på sig.
+kappa,coat,clothing,Hon hade en fin kappa på sig.
+skor,shoes,clothing,Hon hade en fin skor på sig.
+stövlar,boots,clothing,Hon hade en fin stövlar på sig.
+sandaler,sandals,clothing,Hon hade en fin sandaler på sig.
+strumpor,socks,clothing,Hon hade en fin strumpor på sig.
+underkläder,underwear,clothing,Hon hade en fin underkläder på sig.
+mössa,beanie,clothing,Hon hade en fin mössa på sig.
+hatt,hat,clothing,Hon hade en fin hatt på sig.
+halsduk,scarf,clothing,Hon hade en fin halsduk på sig.
+handskar,gloves,clothing,Hon hade en fin handskar på sig.
+bälte,belt,clothing,Hon hade en fin bälte på sig.
+plånbok,wallet,clothing,Hon hade en fin plånbok på sig.
+väska,bag,clothing,Hon hade en fin väska på sig.
+ryggsäck,backpack,clothing,Hon hade en fin ryggsäck på sig.
+glasögon,glasses,clothing,Hon hade en fin glasögon på sig.
+ring,ring,clothing,Hon hade en fin ring på sig.
+halsband,necklace,clothing,Hon hade en fin halsband på sig.
+armband,bracelet,clothing,Hon hade en fin armband på sig.
+klocka,watch,clothing,Hon hade en fin klocka på sig.
+hus,house,home,Vi renoverar hus hemma.
+lägenhet,apartment,home,Vi renoverar lägenhet hemma.
+rum,room,home,Vi renoverar rum hemma.
+kök,kitchen,home,Vi renoverar kök hemma.
+vardagsrum,living room,home,Vi renoverar vardagsrum hemma.
+sovrum,bedroom,home,Vi renoverar sovrum hemma.
+badrum,bathroom,home,Vi renoverar badrum hemma.
+toalett,toilet,home,Vi renoverar toalett hemma.
+hall,hallway,home,Vi renoverar hall hemma.
+balkong,balcony,home,Vi renoverar balkong hemma.
+trädgård,garden,home,Vi renoverar trädgård hemma.
+källare,basement,home,Vi renoverar källare hemma.
+vind,attic,home,Vi renoverar vind hemma.
+garage,garage,home,Vi renoverar garage hemma.
+dörr,door,home,Vi renoverar dörr hemma.
+fönster,window,home,Vi renoverar fönster hemma.
+golv,floor,home,Vi renoverar golv hemma.
+tak,ceiling,home,Vi renoverar tak hemma.
+vägg,wall,home,Vi renoverar vägg hemma.
+trappa,stairs,home,Vi renoverar trappa hemma.
+soffa,sofa,furniture,Det finns en soffa i vardagsrummet.
+stol,chair,furniture,Det finns en stol i vardagsrummet.
+bord,table,furniture,Det finns en bord i vardagsrummet.
+säng,bed,furniture,Det finns en säng i vardagsrummet.
+skrivbord,desk,furniture,Det finns en skrivbord i vardagsrummet.
+bokhylla,bookshelf,furniture,Det finns en bokhylla i vardagsrummet.
+garderob,wardrobe,furniture,Det finns en garderob i vardagsrummet.
+byrå,chest of drawers,furniture,Det finns en byrå i vardagsrummet.
+matta,rug,furniture,Det finns en matta i vardagsrummet.
+lampa,lamp,furniture,Det finns en lampa i vardagsrummet.
+spegel,mirror,furniture,Det finns en spegel i vardagsrummet.
+badkar,bathtub,furniture,Det finns en badkar i vardagsrummet.
+diskmaskin,dishwasher,furniture,Det finns en diskmaskin i vardagsrummet.
+tvättmaskin,washing machine,furniture,Det finns en tvättmaskin i vardagsrummet.
+torktumlare,dryer,furniture,Det finns en torktumlare i vardagsrummet.
+kylskåp,refrigerator,furniture,Det finns en kylskåp i vardagsrummet.
+frys,freezer,furniture,Det finns en frys i vardagsrummet.
+spis,stove,furniture,Det finns en spis i vardagsrummet.
+ugn,oven,furniture,Det finns en ugn i vardagsrummet.
+mikrovågsugn,microwave,furniture,Det finns en mikrovågsugn i vardagsrummet.
+mamma,mom,family,Min mamma bor i Stockholm.
+pappa,dad,family,Min pappa bor i Stockholm.
+mor,mother,family,Min mor bor i Stockholm.
+far,father,family,Min far bor i Stockholm.
+barn,child,family,Min barn bor i Stockholm.
+son,son,family,Min son bor i Stockholm.
+dotter,daughter,family,Min dotter bor i Stockholm.
+bror,brother,family,Min bror bor i Stockholm.
+syster,sister,family,Min syster bor i Stockholm.
+farfar,paternal grandfather,family,Min farfar bor i Stockholm.
+farmor,paternal grandmother,family,Min farmor bor i Stockholm.
+morfar,maternal grandfather,family,Min morfar bor i Stockholm.
+mormor,maternal grandmother,family,Min mormor bor i Stockholm.
+farbror,uncle (father's side),family,Min farbror bor i Stockholm.
+faster,aunt (father's side),family,Min faster bor i Stockholm.
+morbror,uncle (mother's side),family,Min morbror bor i Stockholm.
+moster,aunt (mother's side),family,Min moster bor i Stockholm.
+kusin,cousin,family,Min kusin bor i Stockholm.
+make,husband,family,Min make bor i Stockholm.
+fru,wife,family,Min fru bor i Stockholm.
+sambo,live-in partner,family,Min sambo bor i Stockholm.
+pojke,boy,family,Min pojke bor i Stockholm.
+flicka,girl,family,Min flicka bor i Stockholm.
+bebis,baby,family,Min bebis bor i Stockholm.
+tonåring,teenager,family,Min tonåring bor i Stockholm.
+vuxen,adult,family,Min vuxen bor i Stockholm.
+äldre,elderly person,family,Min äldre bor i Stockholm.
+släkt,relatives,family,Min släkt bor i Stockholm.
+syskon,siblings,family,Min syskon bor i Stockholm.
+tvillingar,twins,family,Min tvillingar bor i Stockholm.
+hund,dog,animals,En hund lever ute i naturen.
+katt,cat,animals,En katt lever ute i naturen.
+häst,horse,animals,En häst lever ute i naturen.
+ko,cow,animals,En ko lever ute i naturen.
+gris,pig,animals,En gris lever ute i naturen.
+får,sheep,animals,En får lever ute i naturen.
+get,goat,animals,En get lever ute i naturen.
+höna,hen,animals,En höna lever ute i naturen.
+kanin,rabbit,animals,En kanin lever ute i naturen.
+mus,mouse,animals,En mus lever ute i naturen.
+råtta,rat,animals,En råtta lever ute i naturen.
+hamster,hamster,animals,En hamster lever ute i naturen.
+papegoja,parrot,animals,En papegoja lever ute i naturen.
+fågel,bird,animals,En fågel lever ute i naturen.
+örn,eagle,animals,En örn lever ute i naturen.
+uggla,owl,animals,En uggla lever ute i naturen.
+pingvin,penguin,animals,En pingvin lever ute i naturen.
+lejon,lion,animals,En lejon lever ute i naturen.
+tiger,tiger,animals,En tiger lever ute i naturen.
+elefant,elephant,animals,En elefant lever ute i naturen.
+giraff,giraffe,animals,En giraff lever ute i naturen.
+björn,bear,animals,En björn lever ute i naturen.
+varg,wolf,animals,En varg lever ute i naturen.
+räv,fox,animals,En räv lever ute i naturen.
+hjort,deer,animals,En hjort lever ute i naturen.
+älg,moose,animals,En älg lever ute i naturen.
+apa,monkey,animals,En apa lever ute i naturen.
+gorilla,gorilla,animals,En gorilla lever ute i naturen.
+krokodil,crocodile,animals,En krokodil lever ute i naturen.
+orm,snake,animals,En orm lever ute i naturen.
+ödla,lizard,animals,En ödla lever ute i naturen.
+groda,frog,animals,En groda lever ute i naturen.
+sköldpadda,turtle,animals,En sköldpadda lever ute i naturen.
+haj,shark,animals,En haj lever ute i naturen.
+delfin,dolphin,animals,En delfin lever ute i naturen.
+val,whale,animals,En val lever ute i naturen.
+bläckfisk,octopus,animals,En bläckfisk lever ute i naturen.
+bi,bee,animals,En bi lever ute i naturen.
+fjäril,butterfly,animals,En fjäril lever ute i naturen.
+myra,ant,animals,En myra lever ute i naturen.
+fluga,fly,animals,En fluga lever ute i naturen.
+mygga,mosquito,animals,En mygga lever ute i naturen.
+spindel,spider,animals,En spindel lever ute i naturen.
+mask,worm,animals,En mask lever ute i naturen.
+lama,llama,animals,En lama lever ute i naturen.
+flamingo,flamingo,animals,En flamingo lever ute i naturen.
+skog,forest,nature,En skog syns ute i naturen.
+träd,tree,nature,En träd syns ute i naturen.
+blomma,flower,nature,En blomma syns ute i naturen.
+gräs,grass,nature,En gräs syns ute i naturen.
+berg,mountain,nature,En berg syns ute i naturen.
+dal,valley,nature,En dal syns ute i naturen.
+flod,river,nature,En flod syns ute i naturen.
+sjö,lake,nature,En sjö syns ute i naturen.
+hav,sea,nature,En hav syns ute i naturen.
+strand,beach,nature,En strand syns ute i naturen.
+ö,island,nature,En ö syns ute i naturen.
+halvö,peninsula,nature,En halvö syns ute i naturen.
+klippa,cliff,nature,En klippa syns ute i naturen.
+sten,stone,nature,En sten syns ute i naturen.
+sand,sand,nature,En sand syns ute i naturen.
+jord,soil,nature,En jord syns ute i naturen.
+buske,bush,nature,En buske syns ute i naturen.
+löv,leaf,nature,En löv syns ute i naturen.
+rot,root,nature,En rot syns ute i naturen.
+gren,branch,nature,En gren syns ute i naturen.
+frö,seed,nature,En frö syns ute i naturen.
+mossa,moss,nature,En mossa syns ute i naturen.
+ormbunke,fern,nature,En ormbunke syns ute i naturen.
+näckros,water lily,nature,En näckros syns ute i naturen.
+kotte,pine cone,nature,En kotte syns ute i naturen.
+älv,large river,nature,En älv syns ute i naturen.
+bäck,stream,nature,En bäck syns ute i naturen.
+vattenfall,waterfall,nature,En vattenfall syns ute i naturen.
+grotta,cave,nature,En grotta syns ute i naturen.
+öken,desert,nature,En öken syns ute i naturen.
+vulkan,volcano,nature,En vulkan syns ute i naturen.
+sol,sun,weather,Det är sol ute idag.
+regn,rain,weather,Det är regn ute idag.
+snö,snow,weather,Det är snö ute idag.
+vind,wind,weather,Det är vind ute idag.
+storm,storm,weather,Det är storm ute idag.
+åska,thunder,weather,Det är åska ute idag.
+blixt,lightning,weather,Det är blixt ute idag.
+dimma,fog,weather,Det är dimma ute idag.
+moln,cloud,weather,Det är moln ute idag.
+hagel,hail,weather,Det är hagel ute idag.
+frost,frost,weather,Det är frost ute idag.
+is,ice,weather,Det är is ute idag.
+regnbåge,rainbow,weather,Det är regnbåge ute idag.
+tornado,tornado,weather,Det är tornado ute idag.
+orkan,hurricane,weather,Det är orkan ute idag.
+skyfall,downpour,weather,Det är skyfall ute idag.
+temperatur,temperature,weather,Det är temperatur ute idag.
+termometer,thermometer,weather,Det är termometer ute idag.
+barometer,barometer,weather,Det är barometer ute idag.
+prognos,forecast,weather,Det är prognos ute idag.
+sekund,second,time,Mötet varar i en sekund.
+minut,minute,time,Mötet varar i en minut.
+timme,hour,time,Mötet varar i en timme.
+dag,day,time,Mötet varar i en dag.
+vecka,week,time,Mötet varar i en vecka.
+månad,month,time,Mötet varar i en månad.
+år,year,time,Mötet varar i en år.
+decennium,decade,time,Mötet varar i en decennium.
+århundrade,century,time,Mötet varar i en århundrade.
+morgon,morning,time,Mötet varar i en morgon.
+förmiddag,late morning,time,Mötet varar i en förmiddag.
+middag,noon,time,Mötet varar i en middag.
+eftermiddag,afternoon,time,Mötet varar i en eftermiddag.
+kväll,evening,time,Mötet varar i en kväll.
+natt,night,time,Mötet varar i en natt.
+midnatt,midnight,time,Mötet varar i en midnatt.
+måndag,Monday,time,Mötet varar i en måndag.
+tisdag,Tuesday,time,Mötet varar i en tisdag.
+onsdag,Wednesday,time,Mötet varar i en onsdag.
+torsdag,Thursday,time,Mötet varar i en torsdag.
+fredag,Friday,time,Mötet varar i en fredag.
+lördag,Saturday,time,Mötet varar i en lördag.
+söndag,Sunday,time,Mötet varar i en söndag.
+januari,January,time,Mötet varar i en januari.
+februari,February,time,Mötet varar i en februari.
+mars,March,time,Mötet varar i en mars.
+april,April,time,Mötet varar i en april.
+maj,May,time,Mötet varar i en maj.
+juni,June,time,Mötet varar i en juni.
+juli,July,time,Mötet varar i en juli.
+augusti,August,time,Mötet varar i en augusti.
+september,September,time,Mötet varar i en september.
+oktober,October,time,Mötet varar i en oktober.
+november,November,time,Mötet varar i en november.
+december,December,time,Mötet varar i en december.
+vår,spring,time,Mötet varar i en vår.
+sommar,summer,time,Mötet varar i en sommar.
+höst,autumn,time,Mötet varar i en höst.
+vinter,winter,time,Mötet varar i en vinter.
+kalender,calendar,time,Mötet varar i en kalender.
+helg,weekend,time,Mötet varar i en helg.
+vardag,weekday,time,Mötet varar i en vardag.
+framtid,future,time,Mötet varar i en framtid.
+nutid,present,time,Mötet varar i en nutid.
+dåtid,past,time,Mötet varar i en dåtid.
+årstid,season,time,Mötet varar i en årstid.
+tidszon,time zone,time,Mötet varar i en tidszon.
+röd,red,colors,Min favoritfärg är röd.
+blå,blue,colors,Min favoritfärg är blå.
+grön,green,colors,Min favoritfärg är grön.
+gul,yellow,colors,Min favoritfärg är gul.
+orange,orange,colors,Min favoritfärg är orange.
+lila,purple,colors,Min favoritfärg är lila.
+rosa,pink,colors,Min favoritfärg är rosa.
+brun,brown,colors,Min favoritfärg är brun.
+svart,black,colors,Min favoritfärg är svart.
+vit,white,colors,Min favoritfärg är vit.
+grå,gray,colors,Min favoritfärg är grå.
+beige,beige,colors,Min favoritfärg är beige.
+turkos,turquoise,colors,Min favoritfärg är turkos.
+guld,gold,colors,Min favoritfärg är guld.
+silver,silver,colors,Min favoritfärg är silver.
+jobb,job,work,Det är viktigt att trivas på sin jobb.
+karriär,career,work,Det är viktigt att trivas på sin karriär.
+chef,boss,work,Det är viktigt att trivas på sin chef.
+kollega,colleague,work,Det är viktigt att trivas på sin kollega.
+anställd,employee,work,Det är viktigt att trivas på sin anställd.
+arbetsgivare,employer,work,Det är viktigt att trivas på sin arbetsgivare.
+möte,meeting,work,Det är viktigt att trivas på sin möte.
+kontor,office,work,Det är viktigt att trivas på sin kontor.
+fabrik,factory,work,Det är viktigt att trivas på sin fabrik.
+företag,company,work,Det är viktigt att trivas på sin företag.
+projekt,project,work,Det är viktigt att trivas på sin projekt.
+uppgift,task,work,Det är viktigt att trivas på sin uppgift.
+lön,salary,work,Det är viktigt att trivas på sin lön.
+skatt,tax,work,Det är viktigt att trivas på sin skatt.
+faktura,invoice,work,Det är viktigt att trivas på sin faktura.
+kontrakt,contract,work,Det är viktigt att trivas på sin kontrakt.
+rapport,report,work,Det är viktigt att trivas på sin rapport.
+presentation,presentation,work,Det är viktigt att trivas på sin presentation.
+intervju,interview,work,Det är viktigt att trivas på sin intervju.
+ansökan,application,work,Det är viktigt att trivas på sin ansökan.
+erfarenhet,experience,work,Det är viktigt att trivas på sin erfarenhet.
+kompetens,competence,work,Det är viktigt att trivas på sin kompetens.
+ansvar,responsibility,work,Det är viktigt att trivas på sin ansvar.
+deadline,deadline,work,Det är viktigt att trivas på sin deadline.
+sjukskrivning,sick leave,work,Det är viktigt att trivas på sin sjukskrivning.
+övertid,overtime,work,Det är viktigt att trivas på sin övertid.
+pension,pension,work,Det är viktigt att trivas på sin pension.
+fackförening,trade union,work,Det är viktigt att trivas på sin fackförening.
+chefskap,management,work,Det är viktigt att trivas på sin chefskap.
+arbetsmarknad,labor market,work,Det är viktigt att trivas på sin arbetsmarknad.
+läkare,doctor,profession,Han jobbar som läkare på sjukhuset.
+sjuksköterska,nurse,profession,Han jobbar som sjuksköterska på sjukhuset.
+ingenjör,engineer,profession,Han jobbar som ingenjör på sjukhuset.
+advokat,lawyer,profession,Han jobbar som advokat på sjukhuset.
+arkitekt,architect,profession,Han jobbar som arkitekt på sjukhuset.
+konstnär,artist,profession,Han jobbar som konstnär på sjukhuset.
+musiker,musician,profession,Han jobbar som musiker på sjukhuset.
+skådespelare,actor,profession,Han jobbar som skådespelare på sjukhuset.
+författare,author,profession,Han jobbar som författare på sjukhuset.
+journalist,journalist,profession,Han jobbar som journalist på sjukhuset.
+fotograf,photographer,profession,Han jobbar som fotograf på sjukhuset.
+kock,chef,profession,Han jobbar som kock på sjukhuset.
+bagare,baker,profession,Han jobbar som bagare på sjukhuset.
+frisör,hairdresser,profession,Han jobbar som frisör på sjukhuset.
+elektriker,electrician,profession,Han jobbar som elektriker på sjukhuset.
+rörmokare,plumber,profession,Han jobbar som rörmokare på sjukhuset.
+snickare,carpenter,profession,Han jobbar som snickare på sjukhuset.
+mekaniker,mechanic,profession,Han jobbar som mekaniker på sjukhuset.
+pilot,pilot,profession,Han jobbar som pilot på sjukhuset.
+polis,police officer,profession,Han jobbar som polis på sjukhuset.
+brandman,firefighter,profession,Han jobbar som brandman på sjukhuset.
+psykolog,psychologist,profession,Han jobbar som psykolog på sjukhuset.
+vetenskapsman,scientist,profession,Han jobbar som vetenskapsman på sjukhuset.
+programmerare,programmer,profession,Han jobbar som programmerare på sjukhuset.
+designer,designer,profession,Han jobbar som designer på sjukhuset.
+tandläkare,dentist,profession,Han jobbar som tandläkare på sjukhuset.
+veterinär,veterinarian,profession,Han jobbar som veterinär på sjukhuset.
+apotekare,pharmacist,profession,Han jobbar som apotekare på sjukhuset.
+sekreterare,secretary,profession,Han jobbar som sekreterare på sjukhuset.
+direktör,director,profession,Han jobbar som direktör på sjukhuset.
+skola,school,school,Imorgon har jag prov i skola.
+klassrum,classroom,school,Imorgon har jag prov i klassrum.
+elev,student,school,Imorgon har jag prov i elev.
+bok,book,school,Imorgon har jag prov i bok.
+penna,pen,school,Imorgon har jag prov i penna.
+papper,paper,school,Imorgon har jag prov i papper.
+anteckningsbok,notebook,school,Imorgon har jag prov i anteckningsbok.
+läxa,homework,school,Imorgon har jag prov i läxa.
+prov,test,school,Imorgon har jag prov i prov.
+betyg,grade,school,Imorgon har jag prov i betyg.
+lektion,lesson,school,Imorgon har jag prov i lektion.
+schema,schedule,school,Imorgon har jag prov i schema.
+rast,break,school,Imorgon har jag prov i rast.
+bibliotek,library,school,Imorgon har jag prov i bibliotek.
+gymnasium,high school,school,Imorgon har jag prov i gymnasium.
+universitet,university,school,Imorgon har jag prov i universitet.
+kurs,course,school,Imorgon har jag prov i kurs.
+examen,exam,school,Imorgon har jag prov i examen.
+matematik,mathematics,school,Imorgon har jag prov i matematik.
+svenska,Swedish language,school,Imorgon har jag prov i svenska.
+engelska,English language,school,Imorgon har jag prov i engelska.
+historia,history,school,Imorgon har jag prov i historia.
+geografi,geography,school,Imorgon har jag prov i geografi.
+biologi,biology,school,Imorgon har jag prov i biologi.
+kemi,chemistry,school,Imorgon har jag prov i kemi.
+fysik,physics,school,Imorgon har jag prov i fysik.
+idrott,physical education,school,Imorgon har jag prov i idrott.
+stipendium,scholarship,school,Imorgon har jag prov i stipendium.
+föreläsning,lecture,school,Imorgon har jag prov i föreläsning.
+uppsats,essay,school,Imorgon har jag prov i uppsats.
+fotboll,football,sports,Vi spelar fotboll på lördagarna.
+basket,basketball,sports,Vi spelar basket på lördagarna.
+tennis,tennis,sports,Vi spelar tennis på lördagarna.
+simning,swimming,sports,Vi spelar simning på lördagarna.
+cykling,cycling,sports,Vi spelar cykling på lördagarna.
+löpning,running,sports,Vi spelar löpning på lördagarna.
+skidåkning,skiing,sports,Vi spelar skidåkning på lördagarna.
+ishockey,ice hockey,sports,Vi spelar ishockey på lördagarna.
+golf,golf,sports,Vi spelar golf på lördagarna.
+boxning,boxing,sports,Vi spelar boxning på lördagarna.
+kampsport,martial arts,sports,Vi spelar kampsport på lördagarna.
+yoga,yoga,sports,Vi spelar yoga på lördagarna.
+gym,gym,sports,Vi spelar gym på lördagarna.
+träning,workout,sports,Vi spelar träning på lördagarna.
+match,match,sports,Vi spelar match på lördagarna.
+tävling,competition,sports,Vi spelar tävling på lördagarna.
+lag,team,sports,Vi spelar lag på lördagarna.
+spelare,player,sports,Vi spelar spelare på lördagarna.
+tränare,coach,sports,Vi spelar tränare på lördagarna.
+mål,goal,sports,Vi spelar mål på lördagarna.
+poäng,score,sports,Vi spelar poäng på lördagarna.
+seger,victory,sports,Vi spelar seger på lördagarna.
+förlust,defeat,sports,Vi spelar förlust på lördagarna.
+stadion,stadium,sports,Vi spelar stadion på lördagarna.
+boll,ball,sports,Vi spelar boll på lördagarna.
+nät,net,sports,Vi spelar nät på lördagarna.
+racket,racket,sports,Vi spelar racket på lördagarna.
+handboll,handball,sports,Vi spelar handboll på lördagarna.
+volleyboll,volleyball,sports,Vi spelar volleyboll på lördagarna.
+friidrott,athletics,sports,Vi spelar friidrott på lördagarna.
+rodd,rowing,sports,Vi spelar rodd på lördagarna.
+segling,sailing,sports,Vi spelar segling på lördagarna.
+klättring,climbing,sports,Vi spelar klättring på lördagarna.
+vandring,hiking,sports,Vi spelar vandring på lördagarna.
+simhall,swimming pool,sports,Vi spelar simhall på lördagarna.
+rekord,record,sports,Vi spelar rekord på lördagarna.
+medalj,medal,sports,Vi spelar medalj på lördagarna.
+mästare,champion,sports,Vi spelar mästare på lördagarna.
+turnering,tournament,sports,Vi spelar turnering på lördagarna.
+straff,penalty,sports,Vi spelar straff på lördagarna.
+skridsko,ice skate,sports,Vi spelar skridsko på lördagarna.
+slalom,slalom,sports,Vi spelar slalom på lördagarna.
+friluftsliv,outdoor life,sports,Vi spelar friluftsliv på lördagarna.
+löparskor,running shoes,sports,Vi spelar löparskor på lördagarna.
+läsning,reading,hobbies,Min hobby är läsning.
+skrivande,writing,hobbies,Min hobby är skrivande.
+målning,painting,hobbies,Min hobby är målning.
+teckning,drawing,hobbies,Min hobby är teckning.
+fotografering,photography,hobbies,Min hobby är fotografering.
+matlagning,cooking,hobbies,Min hobby är matlagning.
+bakning,baking,hobbies,Min hobby är bakning.
+trädgårdsarbete,gardening,hobbies,Min hobby är trädgårdsarbete.
+stickning,knitting,hobbies,Min hobby är stickning.
+sömnad,sewing,hobbies,Min hobby är sömnad.
+dans,dancing,hobbies,Min hobby är dans.
+teater,theater,hobbies,Min hobby är teater.
+spel,gaming,hobbies,Min hobby är spel.
+pussel,puzzle,hobbies,Min hobby är pussel.
+schack,chess,hobbies,Min hobby är schack.
+fiske,fishing,hobbies,Min hobby är fiske.
+jakt,hunting,hobbies,Min hobby är jakt.
+ridning,horse riding,hobbies,Min hobby är ridning.
+camping,camping,hobbies,Min hobby är camping.
+samling,collecting,hobbies,Min hobby är samling.
+modellbygge,model building,hobbies,Min hobby är modellbygge.
+träsnideri,woodcarving,hobbies,Min hobby är träsnideri.
+keramik,ceramics,hobbies,Min hobby är keramik.
+vinprovning,wine tasting,hobbies,Min hobby är vinprovning.
+origami,origami,hobbies,Min hobby är origami.
+dator,computer,technology,Jag använder dator varje dag.
+laptop,laptop,technology,Jag använder laptop varje dag.
+telefon,phone,technology,Jag använder telefon varje dag.
+smartphone,smartphone,technology,Jag använder smartphone varje dag.
+surfplatta,tablet,technology,Jag använder surfplatta varje dag.
+skärm,screen,technology,Jag använder skärm varje dag.
+tangentbord,keyboard,technology,Jag använder tangentbord varje dag.
+mus,mouse (computer),technology,Jag använder mus varje dag.
+skrivare,printer,technology,Jag använder skrivare varje dag.
+kamera,camera,technology,Jag använder kamera varje dag.
+internet,internet,technology,Jag använder internet varje dag.
+wifi,wifi,technology,Jag använder wifi varje dag.
+app,app,technology,Jag använder app varje dag.
+program,software,technology,Jag använder program varje dag.
+hemsida,website,technology,Jag använder hemsida varje dag.
+e-post,email,technology,Jag använder e-post varje dag.
+lösenord,password,technology,Jag använder lösenord varje dag.
+data,data,technology,Jag använder data varje dag.
+fil,file,technology,Jag använder fil varje dag.
+mapp,folder,technology,Jag använder mapp varje dag.
+server,server,technology,Jag använder server varje dag.
+nätverk,network,technology,Jag använder nätverk varje dag.
+bluetooth,bluetooth,technology,Jag använder bluetooth varje dag.
+batteri,battery,technology,Jag använder batteri varje dag.
+laddare,charger,technology,Jag använder laddare varje dag.
+hörlurar,headphones,technology,Jag använder hörlurar varje dag.
+högtalare,speaker,technology,Jag använder högtalare varje dag.
+TV,TV,technology,Jag använder TV varje dag.
+radio,radio,technology,Jag använder radio varje dag.
+robot,robot,technology,Jag använder robot varje dag.
+artificiell intelligens,artificial intelligence,technology,Jag använder artificiell intelligens varje dag.
+sociala medier,social media,technology,Jag använder sociala medier varje dag.
+videospel,video game,technology,Jag använder videospel varje dag.
+strömning,streaming,technology,Jag använder strömning varje dag.
+satellit,satellite,technology,Jag använder satellit varje dag.
+bil,car,transport,Vi åker med bil till stan.
+buss,bus,transport,Vi åker med buss till stan.
+tåg,train,transport,Vi åker med tåg till stan.
+tunnelbana,subway,transport,Vi åker med tunnelbana till stan.
+spårvagn,tram,transport,Vi åker med spårvagn till stan.
+taxi,taxi,transport,Vi åker med taxi till stan.
+cykel,bicycle,transport,Vi åker med cykel till stan.
+motorcykel,motorcycle,transport,Vi åker med motorcykel till stan.
+flygplan,airplane,transport,Vi åker med flygplan till stan.
+helikopter,helicopter,transport,Vi åker med helikopter till stan.
+båt,boat,transport,Vi åker med båt till stan.
+fartyg,ship,transport,Vi åker med fartyg till stan.
+lastbil,truck,transport,Vi åker med lastbil till stan.
+ambulans,ambulance,transport,Vi åker med ambulans till stan.
+station,station,transport,Vi åker med station till stan.
+flygplats,airport,transport,Vi åker med flygplats till stan.
+hamn,harbor,transport,Vi åker med hamn till stan.
+väg,road,transport,Vi åker med väg till stan.
+motorväg,highway,transport,Vi åker med motorväg till stan.
+bro,bridge,transport,Vi åker med bro till stan.
+tunnel,tunnel,transport,Vi åker med tunnel till stan.
+parkering,parking,transport,Vi åker med parkering till stan.
+trafik,traffic,transport,Vi åker med trafik till stan.
+körkort,driver's license,transport,Vi åker med körkort till stan.
+bensin,gasoline,transport,Vi åker med bensin till stan.
+elbil,electric car,transport,Vi åker med elbil till stan.
+kollektivtrafik,public transport,transport,Vi åker med kollektivtrafik till stan.
+hållplats,bus stop,transport,Vi åker med hållplats till stan.
+avgång,departure,transport,Vi åker med avgång till stan.
+ankomst,arrival,transport,Vi åker med ankomst till stan.
+stad,city,places,Vi besökte stad på semestern.
+by,village,places,Vi besökte by på semestern.
+land,country,places,Vi besökte land på semestern.
+park,park,places,Vi besökte park på semestern.
+torg,square,places,Vi besökte torg på semestern.
+gata,street,places,Vi besökte gata på semestern.
+restaurang,restaurant,places,Vi besökte restaurang på semestern.
+café,café,places,Vi besökte café på semestern.
+bar,bar,places,Vi besökte bar på semestern.
+hotell,hotel,places,Vi besökte hotell på semestern.
+museum,museum,places,Vi besökte museum på semestern.
+bio,cinema,places,Vi besökte bio på semestern.
+kyrka,church,places,Vi besökte kyrka på semestern.
+moské,mosque,places,Vi besökte moské på semestern.
+bank,bank,places,Vi besökte bank på semestern.
+post,post office,places,Vi besökte post på semestern.
+polisstation,police station,places,Vi besökte polisstation på semestern.
+zoo,zoo,places,Vi besökte zoo på semestern.
+nöjespark,amusement park,places,Vi besökte nöjespark på semestern.
+köpcentrum,shopping mall,places,Vi besökte köpcentrum på semestern.
+marknad,market,places,Vi besökte marknad på semestern.
+lekplats,playground,places,Vi besökte lekplats på semestern.
+slott,castle,places,Vi besökte slott på semestern.
+rådhus,city hall,places,Vi besökte rådhus på semestern.
+ambassad,embassy,places,Vi besökte ambassad på semestern.
+fyr,lighthouse,places,Vi besökte fyr på semestern.
+tempel,temple,places,Vi besökte tempel på semestern.
+fängelse,prison,places,Vi besökte fängelse på semestern.
+bondgård,farm,places,Vi besökte bondgård på semestern.
+naturreservat,nature reserve,places,Vi besökte naturreservat på semestern.
+glad,happy,emotions,Jag kände glad när jag hörde nyheten.
+ledsen,sad,emotions,Jag kände ledsen när jag hörde nyheten.
+arg,angry,emotions,Jag kände arg när jag hörde nyheten.
+rädd,scared,emotions,Jag kände rädd när jag hörde nyheten.
+förvånad,surprised,emotions,Jag kände förvånad när jag hörde nyheten.
+äcklad,disgusted,emotions,Jag kände äcklad när jag hörde nyheten.
+stolt,proud,emotions,Jag kände stolt när jag hörde nyheten.
+skamsen,ashamed,emotions,Jag kände skamsen när jag hörde nyheten.
+ensam,lonely,emotions,Jag kände ensam när jag hörde nyheten.
+orolig,anxious,emotions,Jag kände orolig när jag hörde nyheten.
+lugn,calm,emotions,Jag kände lugn när jag hörde nyheten.
+kär,in love,emotions,Jag kände kär när jag hörde nyheten.
+avundsjuk,jealous,emotions,Jag kände avundsjuk när jag hörde nyheten.
+nöjd,satisfied,emotions,Jag kände nöjd när jag hörde nyheten.
+besviken,disappointed,emotions,Jag kände besviken när jag hörde nyheten.
+förvirrad,confused,emotions,Jag kände förvirrad när jag hörde nyheten.
+trött,tired,emotions,Jag kände trött när jag hörde nyheten.
+uttråkad,bored,emotions,Jag kände uttråkad när jag hörde nyheten.
+tacksam,grateful,emotions,Jag kände tacksam när jag hörde nyheten.
+nervös,nervous,emotions,Jag kände nervös när jag hörde nyheten.
+ivrig,eager,emotions,Jag kände ivrig när jag hörde nyheten.
+lycklig,happy/blissful,emotions,Jag kände lycklig när jag hörde nyheten.
+hoppfull,hopeful,emotions,Jag kände hoppfull när jag hörde nyheten.
+stor,big,adjectives,Han är väldigt stor.
+liten,small,adjectives,Han är väldigt liten.
+lång,long/tall,adjectives,Han är väldigt lång.
+kort,short,adjectives,Han är väldigt kort.
+bred,wide,adjectives,Han är väldigt bred.
+smal,narrow,adjectives,Han är väldigt smal.
+tjock,thick,adjectives,Han är väldigt tjock.
+tunn,thin,adjectives,Han är väldigt tunn.
+tung,heavy,adjectives,Han är väldigt tung.
+lätt,light/easy,adjectives,Han är väldigt lätt.
+hård,hard,adjectives,Han är väldigt hård.
+mjuk,soft,adjectives,Han är väldigt mjuk.
+varm,warm,adjectives,Han är väldigt varm.
+kall,cold,adjectives,Han är väldigt kall.
+het,hot,adjectives,Han är väldigt het.
+sval,cool,adjectives,Han är väldigt sval.
+snabb,fast,adjectives,Han är väldigt snabb.
+långsam,slow,adjectives,Han är väldigt långsam.
+ny,new,adjectives,Han är väldigt ny.
+gammal,old,adjectives,Han är väldigt gammal.
+ung,young,adjectives,Han är väldigt ung.
+modern,modern,adjectives,Han är väldigt modern.
+ren,clean,adjectives,Han är väldigt ren.
+smutsig,dirty,adjectives,Han är väldigt smutsig.
+vacker,beautiful,adjectives,Han är väldigt vacker.
+ful,ugly,adjectives,Han är väldigt ful.
+söt,cute/sweet,adjectives,Han är väldigt söt.
+rolig,funny,adjectives,Han är väldigt rolig.
+tråkig,boring,adjectives,Han är väldigt tråkig.
+intressant,interesting,adjectives,Han är väldigt intressant.
+viktig,important,adjectives,Han är väldigt viktig.
+billig,cheap,adjectives,Han är väldigt billig.
+dyr,expensive,adjectives,Han är väldigt dyr.
+bra,good,adjectives,Han är väldigt bra.
+dålig,bad,adjectives,Han är väldigt dålig.
+rätt,correct,adjectives,Han är väldigt rätt.
+fel,wrong,adjectives,Han är väldigt fel.
+säker,safe,adjectives,Han är väldigt säker.
+farlig,dangerous,adjectives,Han är väldigt farlig.
+öppen,open,adjectives,Han är väldigt öppen.
+stängd,closed,adjectives,Han är väldigt stängd.
+full,full,adjectives,Han är väldigt full.
+tom,empty,adjectives,Han är väldigt tom.
+stark,strong,adjectives,Han är väldigt stark.
+svag,weak,adjectives,Han är väldigt svag.
+smart,smart,adjectives,Han är väldigt smart.
+dum,stupid,adjectives,Han är väldigt dum.
+rik,rich,adjectives,Han är väldigt rik.
+fattig,poor,adjectives,Han är väldigt fattig.
+fri,free,adjectives,Han är väldigt fri.
+upptagen,busy,adjectives,Han är väldigt upptagen.
+pigg,alert/lively,adjectives,Han är väldigt pigg.
+hungrig,hungry,adjectives,Han är väldigt hungrig.
+mätt,full (after eating),adjectives,Han är väldigt mätt.
+törstig,thirsty,adjectives,Han är väldigt törstig.
+sömnig,sleepy,adjectives,Han är väldigt sömnig.
+frisk,healthy,adjectives,Han är väldigt frisk.
+sjuk,sick,adjectives,Han är väldigt sjuk.
+nyfiken,curious,adjectives,Han är väldigt nyfiken.
+försiktig,careful,adjectives,Han är väldigt försiktig.
+modig,brave,adjectives,Han är väldigt modig.
+feg,cowardly,adjectives,Han är väldigt feg.
+lat,lazy,adjectives,Han är väldigt lat.
+flitig,hardworking,adjectives,Han är väldigt flitig.
+äventyrlig,adventurous,adjectives,Han är väldigt äventyrlig.
+perfekt,perfect,adjectives,Han är väldigt perfekt.
+hemsk,terrible,adjectives,Han är väldigt hemsk.
+underbar,wonderful,adjectives,Han är väldigt underbar.
+fantastisk,fantastic,adjectives,Han är väldigt fantastisk.
+otrolig,incredible,adjectives,Han är väldigt otrolig.
+vanlig,common/ordinary,adjectives,Han är väldigt vanlig.
+ovanlig,unusual,adjectives,Han är väldigt ovanlig.
+noggrann,thorough/careful,adjectives,Han är väldigt noggrann.
+kreativ,creative,adjectives,Han är väldigt kreativ.
+praktisk,practical,adjectives,Han är väldigt praktisk.
+pris,price,shopping,Jag hittade ett fint pris i affären.
+rabatt,discount,shopping,Jag hittade ett fint rabatt i affären.
+rea,sale,shopping,Jag hittade ett fint rea i affären.
+kassan,checkout,shopping,Jag hittade ett fint kassan i affären.
+kvitto,receipt,shopping,Jag hittade ett fint kvitto i affären.
+kreditkort,credit card,shopping,Jag hittade ett fint kreditkort i affären.
+kontanter,cash,shopping,Jag hittade ett fint kontanter i affären.
+varuhus,department store,shopping,Jag hittade ett fint varuhus i affären.
+märke,brand,shopping,Jag hittade ett fint märke i affären.
+storlek,size,shopping,Jag hittade ett fint storlek i affären.
+mode,fashion,shopping,Jag hittade ett fint mode i affären.
+trend,trend,shopping,Jag hittade ett fint trend i affären.
+erbjudande,deal/offer,shopping,Jag hittade ett fint erbjudande i affären.
+retur,return,shopping,Jag hittade ett fint retur i affären.
+garanti,guarantee,shopping,Jag hittade ett fint garanti i affären.
+musik,music,music,Jag spelar musik på fritiden.
+sång,song,music,Jag spelar sång på fritiden.
+låt,track,music,Jag spelar låt på fritiden.
+album,album,music,Jag spelar album på fritiden.
+artist,artist,music,Jag spelar artist på fritiden.
+band,band,music,Jag spelar band på fritiden.
+konsert,concert,music,Jag spelar konsert på fritiden.
+gitarr,guitar,music,Jag spelar gitarr på fritiden.
+piano,piano,music,Jag spelar piano på fritiden.
+trummor,drums,music,Jag spelar trummor på fritiden.
+bas,bass,music,Jag spelar bas på fritiden.
+violin,violin,music,Jag spelar violin på fritiden.
+flöjt,flute,music,Jag spelar flöjt på fritiden.
+trumpet,trumpet,music,Jag spelar trumpet på fritiden.
+saxofon,saxophone,music,Jag spelar saxofon på fritiden.
+mikrofon,microphone,music,Jag spelar mikrofon på fritiden.
+playlist,playlist,music,Jag spelar playlist på fritiden.
+rock,rock,music,Jag spelar rock på fritiden.
+pop,pop,music,Jag spelar pop på fritiden.
+jazz,jazz,music,Jag spelar jazz på fritiden.
+klassisk musik,classical music,music,Jag spelar klassisk musik på fritiden.
+rap,rap,music,Jag spelar rap på fritiden.
+opera,opera,music,Jag spelar opera på fritiden.
+musikfestival,music festival,music,Jag spelar musikfestival på fritiden.
+körmusik,choral music,music,Jag spelar körmusik på fritiden.
+konst,art,art & culture,konst är viktigt inom konst och kultur.
+skulptur,sculpture,art & culture,skulptur är viktigt inom konst och kultur.
+fotografi,photography,art & culture,fotografi är viktigt inom konst och kultur.
+film,film,art & culture,film är viktigt inom konst och kultur.
+litteratur,literature,art & culture,litteratur är viktigt inom konst och kultur.
+poesi,poetry,art & culture,poesi är viktigt inom konst och kultur.
+roman,novel,art & culture,roman är viktigt inom konst och kultur.
+novell,short story,art & culture,novell är viktigt inom konst och kultur.
+galleri,gallery,art & culture,galleri är viktigt inom konst och kultur.
+utställning,exhibition,art & culture,utställning är viktigt inom konst och kultur.
+kulturhus,cultural center,art & culture,kulturhus är viktigt inom konst och kultur.
+kalligrafi,calligraphy,art & culture,kalligrafi är viktigt inom konst och kultur.
+animation,animation,art & culture,animation är viktigt inom konst och kultur.
+grafik,graphic design,art & culture,grafik är viktigt inom konst och kultur.
+karneval,carnival,art & culture,karneval är viktigt inom konst och kultur.
+politik,politics,politics,politik är en del av demokratin.
+regering,government,politics,regering är en del av demokratin.
+parlament,parliament,politics,parlament är en del av demokratin.
+demokrati,democracy,politics,demokrati är en del av demokratin.
+val,election,politics,val är en del av demokratin.
+röstning,voting,politics,röstning är en del av demokratin.
+parti,party,politics,parti är en del av demokratin.
+minister,minister,politics,minister är en del av demokratin.
+president,president,politics,president är en del av demokratin.
+kung,king,politics,kung är en del av demokratin.
+drottning,queen,politics,drottning är en del av demokratin.
+lag,law,politics,lag är en del av demokratin.
+rättighet,right,politics,rättighet är en del av demokratin.
+frihet,freedom,politics,frihet är en del av demokratin.
+jämlikhet,equality,politics,jämlikhet är en del av demokratin.
+ekonomi,economy,economy,ekonomi är viktigt för ekonomin.
+pengar,money,economy,pengar är viktigt för ekonomin.
+investering,investment,economy,investering är viktigt för ekonomin.
+aktie,stock/share,economy,aktie är viktigt för ekonomin.
+inflation,inflation,economy,inflation är viktigt för ekonomin.
+handel,trade,economy,handel är viktigt för ekonomin.
+export,export,economy,export är viktigt för ekonomin.
+import,import,economy,import är viktigt för ekonomin.
+budget,budget,economy,budget är viktigt för ekonomin.
+ränta,interest rate,economy,ränta är viktigt för ekonomin.
+skuld,debt,economy,skuld är viktigt för ekonomin.
+vinst,profit,economy,vinst är viktigt för ekonomin.
+förlust,loss,economy,förlust är viktigt för ekonomin.
+valuta,currency,economy,valuta är viktigt för ekonomin.
+skatt,tax,economy,skatt är viktigt för ekonomin.
+pass,passport,travel,Vi bokade en resa med pass.
+visum,visa,travel,Vi bokade en resa med visum.
+bagage,luggage,travel,Vi bokade en resa med bagage.
+resväska,suitcase,travel,Vi bokade en resa med resväska.
+hotellbokning,hotel booking,travel,Vi bokade en resa med hotellbokning.
+biljett,ticket,travel,Vi bokade en resa med biljett.
+avgång,departure,travel,Vi bokade en resa med avgång.
+ankomst,arrival,travel,Vi bokade en resa med ankomst.
+karta,map,travel,Vi bokade en resa med karta.
+guide,guide,travel,Vi bokade en resa med guide.
+turist,tourist,travel,Vi bokade en resa med turist.
+semester,vacation,travel,Vi bokade en resa med semester.
+resa,trip,travel,Vi bokade en resa med resa.
+destination,destination,travel,Vi bokade en resa med destination.
+souvenir,souvenir,travel,Vi bokade en resa med souvenir.
+turism,tourism,travel,Vi bokade en resa med turism.
+reseförsäkring,travel insurance,travel,Vi bokade en resa med reseförsäkring.
+incheckning,check-in,travel,Vi bokade en resa med incheckning.
+vetenskap,science,science,Vi studerar vetenskap på universitetet.
+forskning,research,science,Vi studerar forskning på universitetet.
+experiment,experiment,science,Vi studerar experiment på universitetet.
+teori,theory,science,Vi studerar teori på universitetet.
+hypotes,hypothesis,science,Vi studerar hypotes på universitetet.
+laboratorium,laboratory,science,Vi studerar laboratorium på universitetet.
+kemikalie,chemical,science,Vi studerar kemikalie på universitetet.
+element,element,science,Vi studerar element på universitetet.
+atom,atom,science,Vi studerar atom på universitetet.
+molekyl,molecule,science,Vi studerar molekyl på universitetet.
+energi,energy,science,Vi studerar energi på universitetet.
+kraft,force,science,Vi studerar kraft på universitetet.
+gravitation,gravity,science,Vi studerar gravitation på universitetet.
+evolution,evolution,science,Vi studerar evolution på universitetet.
+gen,gene,science,Vi studerar gen på universitetet.
+DNA,DNA,science,Vi studerar DNA på universitetet.
+cell,cell,science,Vi studerar cell på universitetet.
+raket,rocket,science,Vi studerar raket på universitetet.
+rymden,outer space,science,Vi studerar rymden på universitetet.
+planet,planet,science,Vi studerar planet på universitetet.
+galax,galaxy,science,Vi studerar galax på universitetet.
+miljö,environment,environment,miljö påverkar vår planet.
+klimat,climate,environment,klimat påverkar vår planet.
+klimatförändring,climate change,environment,klimatförändring påverkar vår planet.
+förorening,pollution,environment,förorening påverkar vår planet.
+utsläpp,emissions,environment,utsläpp påverkar vår planet.
+återvinning,recycling,environment,återvinning påverkar vår planet.
+hållbarhet,sustainability,environment,hållbarhet påverkar vår planet.
+förnybar energi,renewable energy,environment,förnybar energi påverkar vår planet.
+solenergi,solar energy,environment,solenergi påverkar vår planet.
+vindkraft,wind power,environment,vindkraft påverkar vår planet.
+utrotningshotad,endangered,environment,utrotningshotad påverkar vår planet.
+ekosystem,ecosystem,environment,ekosystem påverkar vår planet.
+växthuseffekt,greenhouse effect,environment,växthuseffekt påverkar vår planet.
+ozon,ozone,environment,ozon påverkar vår planet.
+biologisk mångfald,biodiversity,environment,biologisk mångfald påverkar vår planet.
+samhälle,society,society,samhälle spelar en viktig roll i samhället.
+gemenskap,community,society,gemenskap spelar en viktig roll i samhället.
+tradition,tradition,society,tradition spelar en viktig roll i samhället.
+religion,religion,society,religion spelar en viktig roll i samhället.
+immigration,immigration,society,immigration spelar en viktig roll i samhället.
+integration,integration,society,integration spelar en viktig roll i samhället.
+diskriminering,discrimination,society,diskriminering spelar en viktig roll i samhället.
+rasism,racism,society,rasism spelar en viktig roll i samhället.
+jämställdhet,gender equality,society,jämställdhet spelar en viktig roll i samhället.
+mänskliga rättigheter,human rights,society,mänskliga rättigheter spelar en viktig roll i samhället.
+välgörenhet,charity,society,välgörenhet spelar en viktig roll i samhället.
+volontär,volunteer,society,volontär spelar en viktig roll i samhället.
+rättvisa,justice,society,rättvisa spelar en viktig roll i samhället.
+solidaritet,solidarity,society,solidaritet spelar en viktig roll i samhället.
+mångfald,diversity,society,mångfald spelar en viktig roll i samhället.
+kris,crisis,society,kris spelar en viktig roll i samhället.
+konflikt,conflict,society,konflikt spelar en viktig roll i samhället.
+fred,peace,society,fred spelar en viktig roll i samhället.
+krig,war,society,krig spelar en viktig roll i samhället.
+medborgare,citizen,society,medborgare spelar en viktig roll i samhället.
+kniv,knife,kitchen,Jag använder kniv när jag lagar mat.
+gaffel,fork,kitchen,Jag använder gaffel när jag lagar mat.
+sked,spoon,kitchen,Jag använder sked när jag lagar mat.
+tallrik,plate,kitchen,Jag använder tallrik när jag lagar mat.
+skål,bowl,kitchen,Jag använder skål när jag lagar mat.
+kopp,cup,kitchen,Jag använder kopp när jag lagar mat.
+glas,glass,kitchen,Jag använder glas när jag lagar mat.
+kastrull,pot,kitchen,Jag använder kastrull när jag lagar mat.
+stekpanna,frying pan,kitchen,Jag använder stekpanna när jag lagar mat.
+skärbräda,cutting board,kitchen,Jag använder skärbräda när jag lagar mat.
+vispare,whisk,kitchen,Jag använder vispare när jag lagar mat.
+korkskruv,corkscrew,kitchen,Jag använder korkskruv när jag lagar mat.
+flaska,bottle,kitchen,Jag använder flaska när jag lagar mat.
+burk,jar,kitchen,Jag använder burk när jag lagar mat.
+durkslag,colander,kitchen,Jag använder durkslag när jag lagar mat.
+bakplåt,baking sheet,kitchen,Jag använder bakplåt när jag lagar mat.
+mixer,blender,kitchen,Jag använder mixer när jag lagar mat.
+vattenkokare,kettle,kitchen,Jag använder vattenkokare när jag lagar mat.
+toaster,toaster,kitchen,Jag använder toaster när jag lagar mat.
+basilika,basil,kitchen,Jag använder basilika när jag lagar mat.
+persilja,parsley,kitchen,Jag använder persilja när jag lagar mat.
+koriander,coriander,kitchen,Jag använder koriander när jag lagar mat.
+timjan,thyme,kitchen,Jag använder timjan när jag lagar mat.
+rosmarin,rosemary,kitchen,Jag använder rosmarin när jag lagar mat.
+oregano,oregano,kitchen,Jag använder oregano när jag lagar mat.
+kanel,cinnamon,kitchen,Jag använder kanel när jag lagar mat.
+ingefära,ginger,kitchen,Jag använder ingefära när jag lagar mat.
+gurkmeja,turmeric,kitchen,Jag använder gurkmeja när jag lagar mat.
+spiskummin,cumin,kitchen,Jag använder spiskummin när jag lagar mat.
+lagerblad,bay leaf,kitchen,Jag använder lagerblad när jag lagar mat.
+ett,one,numbers,ett är ett tal på svenska.
+två,two,numbers,två är ett tal på svenska.
+tre,three,numbers,tre är ett tal på svenska.
+fyra,four,numbers,fyra är ett tal på svenska.
+fem,five,numbers,fem är ett tal på svenska.
+sex,six,numbers,sex är ett tal på svenska.
+sju,seven,numbers,sju är ett tal på svenska.
+åtta,eight,numbers,åtta är ett tal på svenska.
+nio,nine,numbers,nio är ett tal på svenska.
+tio,ten,numbers,tio är ett tal på svenska.
+tjugo,twenty,numbers,tjugo är ett tal på svenska.
+hundra,hundred,numbers,hundra är ett tal på svenska.
+tusen,thousand,numbers,tusen är ett tal på svenska.
+miljon,million,numbers,miljon är ett tal på svenska.
+hälften,half,numbers,hälften är ett tal på svenska.
+kvart,quarter,numbers,kvart är ett tal på svenska.
+procent,percent,numbers,procent är ett tal på svenska.
+summa,sum,numbers,summa är ett tal på svenska.
+dubbel,double,numbers,dubbel är ett tal på svenska.
+noll,zero,numbers,noll är ett tal på svenska.
+ja,yes,basic,ja är ett vanligt ord på svenska.
+nej,no,basic,nej är ett vanligt ord på svenska.
+tack,thank you,basic,tack är ett vanligt ord på svenska.
+förlåt,sorry,basic,förlåt är ett vanligt ord på svenska.
+hej,hello,basic,hej är ett vanligt ord på svenska.
+hejdå,goodbye,basic,hejdå är ett vanligt ord på svenska.
+snälla,please (informal),basic,snälla är ett vanligt ord på svenska.
+varsågod,you're welcome,basic,varsågod är ett vanligt ord på svenska.
+ursäkta,excuse me,basic,ursäkta är ett vanligt ord på svenska.
+välkommen,welcome,basic,välkommen är ett vanligt ord på svenska.
+vänligen,please (formal),basic,vänligen är ett vanligt ord på svenska.
+jordbävning,earthquake,nature,En jordbävning syns ute i naturen.
+tsunami,tsunami,nature,En tsunami syns ute i naturen.
+glaciär,glacier,nature,En glaciär syns ute i naturen.
+korall,coral,nature,En korall syns ute i naturen.
+alger,algae,nature,En alger syns ute i naturen.
+fitness,fitness,health,fitness är viktigt för god hälsa.
+övervikt,overweight,health,övervikt är viktigt för god hälsa.
+undersökning,examination,health,undersökning är viktigt för god hälsa.
+apotek,pharmacy,health,apotek är viktigt för god hälsa.
+smärtstillare,painkiller,health,smärtstillare är viktigt för god hälsa.
+butiksägare,shop owner,profession,Han jobbar som butiksägare på sjukhuset.
+revisor,accountant,profession,Han jobbar som revisor på sjukhuset.
+statsminister,prime minister,politics,statsminister är en del av demokratin.
+grundlag,constitution,politics,grundlag är en del av demokratin.
+nattklubb,nightclub,places,Vi besökte nattklubb på semestern.
+löneförhandling,salary negotiation,work,Det är viktigt att trivas på sin löneförhandling.
+spegelbild,reflection,adjectives,Han är väldigt spegelbild.
+gästfri,hospitable,adjectives,Han är väldigt gästfri.
+blöja,nappy/diaper,childcare,Barnet behöver blöja varje dag.
+napp,pacifier/dummy,childcare,Barnet behöver napp varje dag.
+barnvagn,pram/stroller,childcare,Barnet behöver barnvagn varje dag.
+spjälsäng,cot/crib,childcare,Barnet behöver spjälsäng varje dag.
+nappflaska,baby bottle,childcare,Barnet behöver nappflaska varje dag.
+välling,infant cereal/porridge,childcare,Barnet behöver välling varje dag.
+förskola,preschool,childcare,Barnet behöver förskola varje dag.
+dagis,daycare (informal),childcare,Barnet behöver dagis varje dag.
+barnvakt,babysitter,childcare,Barnet behöver barnvakt varje dag.
+leksak,toy,childcare,Barnet behöver leksak varje dag.
+matstol,highchair,childcare,Barnet behöver matstol varje dag.
+vagga,cradle,childcare,Barnet behöver vagga varje dag.
+sparkdräkt,babygro/sleepsuit,childcare,Barnet behöver sparkdräkt varje dag.
+amning,breastfeeding,childcare,Barnet behöver amning varje dag.
+tupplur,nap,childcare,Barnet behöver tupplur varje dag.
+blöjbyte,nappy change,childcare,Barnet behöver blöjbyte varje dag.
+babymonitor,baby monitor,childcare,Barnet behöver babymonitor varje dag.
+napphållare,dummy clip,childcare,Barnet behöver napphållare varje dag.
+hosta,cough,health,hosta är viktigt för god hälsa.
+förkyld,having a cold,health,förkyld är viktigt för god hälsa.
+vantar,gloves,clothing,Hon hade en fin vantar på sig.
+torkskåp,drying cabinet,furniture,Det finns en torkskåp i vardagsrummet.
+uppsättning,set,basic,uppsättning är ett vanligt ord på svenska.
+en del,some/a part of,basic,en del är ett vanligt ord på svenska.
+några,some/a few,basic,några är ett vanligt ord på svenska.
+en sak,a thing / an item,basic,en sak är ett vanligt ord på svenska.
+möjligtvis,possibly,basic,möjligtvis är ett vanligt ord på svenska.
+stjärna,star,nature,En stjärna syns ute i naturen.
+lådan,the box,home,Vi renoverar lådan hemma.
+redan,already,basic,redan är ett vanligt ord på svenska.
+blöt,wet,adjectives,Han är väldigt blöt.
+ju,you know / of course,basic,ju är ett vanligt ord på svenska.
+verkligen,really / truly,basic,verkligen är ett vanligt ord på svenska.
+iskallt,ice cold,adjectives,Han är väldigt iskallt.
+en verktygslåda,toolbox,tools,Jag använder en verktygslåda när jag bygger.
+en såg,saw,tools,Jag använder en såg när jag bygger.
+en hammare,hammer,tools,Jag använder en hammare när jag bygger.
+en spik,nail,tools,Jag använder en spik när jag bygger.
+en tång,pliers / tongs,tools,Jag använder en tång när jag bygger.
+en tumstock,folding ruler,tools,Jag använder en tumstock när jag bygger.
+en koja,hut / den / treehouse,home,Vi renoverar en koja hemma.
+fartlig,exciting / dangerous,adjectives,Han är väldigt fartlig.
+en lek,game / play,hobbies,Min hobby är en lek.
+flyger högt,flies high,basic,flyger högt är ett vanligt ord på svenska.
+en helikopter,helicopter,transport,Vi åker med en helikopter till stan.
+ett äventyr,adventure,basic,ett äventyr är ett vanligt ord på svenska.
+en djungel,jungle,nature,En en djungel syns ute i naturen.
+ett djur,animal,animals,En ett djur lever ute i naturen.
+en fantasi,fantasy / imagination,basic,en fantasi är ett vanligt ord på svenska.
+en verklighet,reality,basic,en verklighet är ett vanligt ord på svenska.
+ha tråkigt,to be bored,basic,ha tråkigt är ett vanligt ord på svenska.
+pallen,the stool / the pallet,furniture,Det finns en pallen i vardagsrummet.
+trasig,broken,adjectives,Han är väldigt trasig.

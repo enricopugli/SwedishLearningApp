@@ -120,7 +120,51 @@ function qConjugate(verb) {
   };
 }
 
-const VERB_FNS = { 'sv-en': qSvEn, 'en-sv': qEnSv, 'conjugate': qConjugate };
+const VERB_FNS = { 'sv-en': qSvEn, 'en-sv': qEnSv, 'conjugate': qConjugate, 'fill-blank': qFillBlankVerb };
+
+// ─── Fill-in-the-blank helpers ────────────────────────────────────────────────
+function blankOut(sentence, word) {
+  // Strip parentheticals like "(sig)" when searching
+  const cleanWord = word.replace(/\s*\([^)]*\)/g, '').trim();
+  if (!cleanWord) return sentence;
+  const idx = sentence.toLowerCase().indexOf(cleanWord.toLowerCase());
+  if (idx === -1) return sentence;
+  return sentence.substring(0, idx) + '____' + sentence.substring(idx + cleanWord.length);
+}
+
+function qFillBlankVerb(verb) {
+  const sentence = verb['Example'] || '';
+  const targetWord = verb['Presens'] || primaryForm(verb);
+  const cleanTarget = targetWord.replace(/\s*\([^)]*\)/g, '').trim();
+  return {
+    label: 'Fill in the blank',
+    question: sentence ? blankOut(sentence, targetWord) : `Fyll i luckan: ${primaryForm(verb)}`,
+    fullSentence: sentence,
+    word: primaryForm(verb),
+    accepted: cleanTarget,
+    display: cleanTarget,
+    getDisplay: v => {
+      const p = v['Presens'] || primaryForm(v);
+      return p.replace(/\s*\([^)]*\)/g, '').trim();
+    },
+    isFillBlank: true,
+  };
+}
+
+function qFillBlankVocab(word) {
+  const sentence = word['Example'] || '';
+  const targetWord = word['Swedish'];
+  return {
+    label: 'Fill in the blank',
+    question: sentence ? blankOut(sentence, targetWord) : `Fyll i luckan: ${targetWord}`,
+    fullSentence: sentence,
+    word: targetWord,
+    accepted: targetWord,
+    display: targetWord,
+    getDisplay: w => w['Swedish'],
+    isFillBlank: true,
+  };
+}
 
 // ─── Vocab question generators ────────────────────────────────────────────────
 function qVocabSvEn(word) {
@@ -145,7 +189,7 @@ function qVocabEnSv(word) {
   };
 }
 
-const VOCAB_FNS = { 'sv-en': qVocabSvEn, 'en-sv': qVocabEnSv };
+const VOCAB_FNS = { 'sv-en': qVocabSvEn, 'en-sv': qVocabEnSv, 'fill-blank': qFillBlankVocab };
 
 // ─── App state ────────────────────────────────────────────────────────────────
 let allVerbs = [], allVocab = [], allCategories = [];
@@ -281,6 +325,18 @@ function startSession(mode) {
   renderQuestion();
 }
 
+function startFillBlankSession(type) {
+  const prev = multipleChoice;
+  multipleChoice = true; // renderQuestion checks this; restored after session starts
+  if (type === 'verbs') {
+    startSession('fill-blank');
+  } else {
+    startVocabSession('fill-blank');
+  }
+  multipleChoice = prev;
+  if (session) session.forceMC = true;
+}
+
 function startVocabSession(mode) {
   const filtered = getFilteredVocab();
   if (!filtered.length) { alert('No starred words yet. Star words during an exercise first!'); return; }
@@ -360,7 +416,7 @@ function renderQuestion() {
   const mcDiv = document.getElementById('mc-options');
   const submitBtn = document.getElementById('submit-btn');
 
-  if (multipleChoice) {
+  if (multipleChoice || session.forceMC) {
     input.style.display = 'none';
     mcDiv.style.display = 'grid';
     submitBtn.style.display = 'none';

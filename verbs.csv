@@ -1,166 +1,166 @@
-Imperativ,Infinitiv,Presens,Preteritum,Supinum,Engelsk översättning,Acceptable answers,Attempts,Correct
-var,vara,är,var,varit,be,be|to be,0,0
-ha,ha,har,hade,haft,have,have|to have,0,0
-gör,göra,gör,gjorde,gjort,do / make,do|to do|make|to make,0,0
-säg,säga,säger,sa,sagt,say,say|to say,1,1
-–,kunna,kan,kunde,kunnat,can / be able to,can|to can|be able to|to be able to,0,0
-få,få,får,fick,fått,get / may,get|to get|may|to may,0,0
-gå,gå,går,gick,gått,go / walk,go|to go|walk|to walk,0,0
-kom,komma,kommer,kom,kommit,come,come|to come,0,0
-se,se,ser,såg,sett,see,see|to see,0,0
-ta,ta,tar,tog,tagit,take,take|to take,1,1
-bli,bli,blir,blev,blivit,become,become|to become,0,0
-ge,ge,ger,gav,gett,give,give|to give,1,1
-vet,veta,vet,visste,vetat,know,know|to know,0,0
-tänk,tänka,tänker,tänkte,tänkt,think,think|to think,0,0
-känn,känna,känner,kände,känt,feel,feel|to feel,0,0
-låt,låta,låter,lät,låtit,let,let|to let,1,0
-håll,hålla,håller,höll,hållit,hold,hold|to hold,0,0
-lev,leva,lever,levde,levt,live,live|to live,0,0
-fråga,fråga,frågar,frågade,frågat,ask,ask|to ask,0,0
-ställ,ställa,ställer,ställde,ställt,place,place|to place,0,0
-visa,visa,visar,visade,visat,show,show|to show,0,0
-spela,spela,spelar,spelade,spelat,play,play|to play,0,0
-tro,tro,tror,trodde,trott,believe,believe|to believe,0,0
-ligg,ligga,ligger,låg,legat,lie,lie|to lie,0,0
-stå,stå,står,stod,stått,stand,stand|to stand,0,0
-tyck,tycka,tycker,tyckte,tyckt,like / think,like|to like|think|to think,0,0
-mena,mena,menar,menade,menat,mean,mean|to mean,0,0
-sätt,sätta,sätter,satte,satt,put,put|to put,0,0
-hitta,hitta,hittar,hittade,hittat,find,find|to find,0,0
-behöv,behöva,behöver,behövde,behövt,need,need|to need,0,0
-börja,börja,börjar,började,börjat,begin,begin|to begin,0,0
-försök,försöka,försöker,försökte,försökt,try,try|to try,0,0
-använd,använda,använder,använde,använt,use,use|to use,0,0
-hjälp,hjälpa,hjälper,hjälpte,hjälpt,help,help|to help,0,0
-tala,tala,talar,talade,talat,speak,speak|to speak,0,0
-följ,följa,följer,följde,följt,follow,follow|to follow,0,0
-lämna,lämna,lämnar,lämnade,lämnat,leave,leave|to leave,0,0
-träffa,träffa,träffar,träffade,träffat,meet,meet|to meet,0,0
-skriv,skriva,skriver,skrev,skrivit,write,write|to write,0,0
-läs,läsa,läser,läste,läst,read,read|to read,0,0
-verka,verka,verkar,verkade,verkat,seem,seem|to seem,0,0
-delta,delta,deltar,deltog,deltagit,participate,participate|to participate,0,0
-ändra,ändra,ändrar,ändrade,ändrat,change,change|to change,0,0
-fortsätt,fortsätta,fortsätter,fortsatte,fortsatt,continue,continue|to continue,0,0
-hör,höra,hör,hörde,hört,hear,hear|to hear,0,0
-öppna,öppna,öppnar,öppnade,öppnat,open,open|to open,0,0
-stäng,stänga,stänger,stängde,stängt,close,close|to close,0,0
-svara,svara,svarar,svarade,svarat,answer,answer|to answer,0,0
-möt,möta,möter,mötte,mött,meet,meet|to meet,0,0
-hyr,hyra,hyr,hyrde,hyrt,rent,rent|to rent,0,0
-kör,köra,kör,körde,kört,drive,drive|to drive,0,0
-ring,ringa,ringer,ringde,ringt,call,call|to call,0,0
-sluta,sluta,slutar,slutade,slutat,stop,stop|to stop,0,0
-sitt,sitta,sitter,satt,suttit,sit,sit|to sit,0,0
-ät,äta,äter,åt,ätit,eat,eat|to eat,0,0
-drick,dricka,dricker,drack,druckit,drink,drink|to drink,0,0
-sov,sova,sover,sov,sovit,sleep,sleep|to sleep,0,0
-spring,springa,springer,sprang,sprungit,run,run|to run,0,0
-res,resa,reser,reste,rest,travel,travel|to travel,0,0
-glöm,glömma,glömmer,glömde,glömt,forget,forget|to forget,0,0
-vinn,vinna,vinner,vann,vunnit,win,win|to win,1,1
-förlora,förlora,förlorar,förlorade,förlorat,lose,lose|to lose,0,0
-betala,betala,betalar,betalade,betalat,pay,pay|to pay,0,0
-köp,köpa,köper,köpte,köpt,buy,buy|to buy,0,0
-sälj,sälja,säljer,sålde,sålt,sell,sell|to sell,0,0
-tjäna,tjäna,tjänar,tjänade,tjänat,earn,earn|to earn,0,0
-gilla,gilla,gillar,gillade,gillat,like,like|to like,0,0
-älska,älska,älskar,älskade,älskat,love,love|to love,0,0
-bo,bo,bor,bodde,bott,live,live|to live,0,0
-kolla,kolla,kollar,kollade,kollat,check,check|to check,0,0
-skratta,skratta,skrattar,skrattade,skrattat,laugh,laugh|to laugh,0,0
-åk,åka,åker,åkte,åkt,go,go|to go,0,0
-bygg,bygga,bygger,byggde,byggt,build,build|to build,0,0
-studera,studera,studerar,studerade,studerat,study,study|to study,0,0
-prata,prata,pratar,pratade,pratat,talk,talk|to talk,0,0
-sjung,sjunga,sjunger,sjöng,sjungit,sing,sing|to sing,0,0
-laga,laga,lagar,lagade,lagat,cook / fix,cook|to cook|fix|to fix,1,1
-måla,måla,målar,målade,målat,paint,paint|to paint,0,0
-förstör,förstöra,förstör,förstörde,förstört,destroy,destroy|to destroy,0,0
-bestäm,bestämma,bestämmer,bestämde,bestämt,decide,decide|to decide,0,0
-planera,planera,planerar,planerade,planerat,plan,plan|to plan,0,0
-förklara,förklara,förklarar,förklarade,förklarat,explain,explain|to explain,0,0
-förstå,förstå,förstår,förstod,förstått,understand,understand|to understand,0,0
-vänta,vänta,väntar,väntade,väntat,wait,wait|to wait,0,0
-arbeta,arbeta,arbetar,arbetade,arbetat,work,work|to work,0,0
-skicka,skicka,skickar,skickade,skickat,send,send|to send,0,0
-vänd,vända,vänder,vände,vänt,turn,turn|to turn,0,0
-kasta,kasta,kastar,kastade,kastat,throw,throw|to throw,0,0
-titta,titta,tittar,tittade,tittat,look,look|to look,0,0
-klara,klara,klarar,klarade,klarat,manage,manage|to manage,0,0
-rör,röra,rör,rörde,rört,move,move|to move,0,0
-bär,bära,bär,bar,burit,carry,carry|to carry,0,0
-välj,välja,väljer,valde,valt,choose,choose|to choose,0,0
-väx,växa,växer,växte,vuxit,grow,grow|to grow,0,0
-skapa,skapa,skapar,skapade,skapat,create,create|to create,0,0
-förstå,förstå,förstår,förstod,förstått,understand,understand|to understand,0,0
-erbjud,erbjuda,erbjuder,erbjöd,erbjudit,offer,offer|to offer,0,0
-bjud,bjuda,bjuder,bjöd,bjudit,offer for free,offer for free|to offer for free,0,0
-räkna,räkna,räknar,räknade,räknat,count,count|to count,0,0
-leta,leta,letar,letade,letat,look for,look for|to look for,0,0
-nå,nå,når,nådde,nått,reach,reach|to reach,0,0
-passa,passa,passar,passade,passat,fit,fit|to fit,0,0
-utveckla,utveckla,utvecklar,utvecklade,utvecklat,develop,develop|to develop,0,0
-föreslå,föreslå,föreslår,föreslog,föreslagit,suggest,suggest|to suggest,0,0
-sakna,sakna,saknar,saknade,saknat,miss / lack,miss|to miss|lack|to lack,0,0
-jämför,jämföra,jämför,jämförde,jämfört,compare,compare|to compare,0,0
-räck,räcka,räcker,räckte,räckt,be enough,be enough|to be enough,0,0
-bruka,bruka,brukar,brukade,brukat,usually do,usually do|to usually do,0,0
-ligg,ligga,ligger,låg,legat,lie / be located,lie|to lie|be located|to be located,0,0
-lägg,lägga,lägger,la,lagt,lay / put,lay|to lay|put|to put,1,0
-le,le,ler,log,lett,smile / laugh,smile|to smile|laugh|to laugh,0,0
-åk,åka,åker,åkte,åkt,go / travel,go|to go|travel|to travel,0,0
-kosta,kosta,kostar,kostade,kostat,cost,cost|to cost,0,0
-besök,besöka,besöker,besökte,besökt,visit,visit|to visit,0,0
-somna,somna,somnar,somnade,somnat,fall asleep,fall asleep|to fall asleep,0,0
-googla,googla,googlar,googlade,googlat,google / search online,google|to google|search online|to search online,0,0
-swisha,swisha,swishar,swishade,swishat,pay with Swish,pay with Swish|to pay with Swish,0,0
-–,vilja,vill,ville,velat,want,want|to want,1,1
-–,måste,måste,var tvungen att,varit tvungen att,must / have to,must|to must|have to|to have to,0,0
-–,–,bör,borde,bort,ought to / should,ought to|to ought to|should|to should,0,0
-stå,stå,står,stod,stått,stand,stand|to stand,0,0
-behöv,behöva,behöver,behövde,behövt,need,need|to need,0,0
-lyssna,lyssna,lyssnar,lyssnade,lyssnat,listen,listen|to listen,1,1
-jobba,jobba,jobbar,jobbade,jobbat,work,work|to work,0,0
-dö,dö,dör,dog,dött,die,die|to die,0,0
-hoppas,hoppas,hoppas,hoppades,hoppats,hope,hope|to hope,0,0
-minns,minnas,minns,mindes,mints,remember,remember|to remember,0,0
-lär (sig),lära (sig),lär (sig),lärde (sig),lärt (sig),learn / teach,learn|to learn|teach|to teach,0,0
-flytta,flytta,flyttar,flyttade,flyttat,move,move|to move,0,0
-orka,orka,orkar,orkade,orkat,have the energy / manage,have the energy|to have the energy|manage|to manage,0,0
-beställ,beställa,beställer,beställde,beställt,order,order|to order,0,0
-hinn,hinna,hinner,hann,hunnit,have time / manage to,have time|to have time|manage to|to manage to,0,0
-hämta,hämta,hämtar,hämtade,hämtat,fetch / pick up,fetch|to fetch|pick up|to pick up,0,0
-led,leda,leder,ledde,lett,lead,lead|to lead,0,0
-tappa,tappa,tappar,tappade,tappat,lose/drop,lose|to lose|drop|to drop,0,0
-spara,spara,sparar,sparade,sparat,save,save|to save,0,0
-låna,låna,lånar,lånade,lånat,borrow / lend,borrow|to borrow|lend|to lend,0,0
-betyd,betyda,betyder,betydde,betytt,mean,mean|to mean,0,0
-erkänn,erkänna,erkänner,erkände,erkänt,admit / acknowledge,admit|to admit|acknowledge|to acknowledge,0,0
-ladda,ladda,laddar,laddade,laddat,charge,charge|to charge,0,0
-påverka,påverka,påverkar,påverkade,påverkat,influence,influence|to influence,0,0
-förändra,förändra,förändrar,förändrade,förändrat,change / alter,change|to change|alter|to alter,0,0
-leverera,leverera,levererar,levererade,levererat,deliver,deliver|to deliver,0,0
-publicera,publicera,publicerar,publicerade,publicerat,publish,publish|to publish,0,0
-sök,söka,söker,sökte,sökt,search / apply,search|to search|apply|to apply,0,0
-undvik,undvika,undviker,undvek,undvikit,avoid,avoid|to avoid,0,0
-upplev,uppleva,upplever,upplevde,upplevt,experience,experience|to experience,0,0
-förbered,förbereda,förbereder,förberedde,förberett,prepare,prepare|to prepare,0,0
-kontrollera,kontrollera,kontrollerar,kontrollerade,kontrollerat,check / control,check|to check|control|to control,1,1
-undersök,undersöka,undersöker,undersökte,undersökt,investigate / examine,investigate|to investigate|examine|to examine,0,0
-meddela,meddelar,meddelade,meddelat,to inform,inform|to inform|announce|to announce|notify|to notify,,,
-ta hand om,ta hand om,tar hand om,tog hand om,tagit hand om,take care of,take care of|to take care of|look after|to look after,0,0
-räck,räcka,räcker,räckte,räckt,be enough/reach,be enough|to be enough|reach|to reach|suffice|to suffice,0,0
-gå åt rätt håll,gå åt rätt håll,går åt rätt håll,gick åt rätt håll,gått åt rätt håll,go in the right direction,go in the right direction|to go in the right direction|be on the right track|to be on the right track,0,0
-håll koll,hålla koll,håller koll,höll koll,hållit koll,keep track,keep track|to keep track|keep an eye on|to keep an eye on,0,0
-byt,byta,byter,bytte,bytt,change/swap,change|to change|swap|to swap|switch|to switch,0,0
-låt bekant,låta bekant,låter bekant,lät bekant,låtit bekant,sound familiar,sound familiar|to sound familiar,0,0
-känn igen,känna igen,känner igen,kände igen,känt igen,recognize,recognize|to recognize|recognise|to recognise,0,0
-lämna,lämna,lämnar,lämnade,lämnat,leave/hand in,leave|to leave|hand in|to hand in|drop off|to drop off,0,0
-se ut,se ut,ser ut,såg ut,sett ut,look / appear / seem,look|to look|appear|to appear|seem|to seem,0,0
-upphitta,upphitta,upphittar,upphittade,upphittat,find / discover,find|to find|discover|to discover,0,0
-såga,såga,sågar,sågade,sågat,saw,saw|to saw,0,0
-snickra,snickra,snickrar,snickrade,snickrat,do carpentry / build,do carpentry|to do carpentry|build|to build,0,0
-mät,mäta,mäter,mätte,mätt,measure,measure|to measure,0,0
-landa,landa,landar,landade,landat,land,land|to land,0,0
+Imperativ,Infinitiv,Presens,Preteritum,Supinum,Engelsk översättning,Acceptable answers,Attempts,Correct,Example
+var,vara,är,var,varit,be,be|to be,0,0,Det är viktigt att ha bra vänner.
+ha,ha,har,hade,haft,have,have|to have,0,0,Jag har en katt hemma.
+gör,göra,gör,gjorde,gjort,do / make,do|to do|make|to make,0,0,Vad gör du på helgerna?
+säg,säga,säger,sa,sagt,say,say|to say,1,1,Hon säger alltid sanningen.
+–,kunna,kan,kunde,kunnat,can / be able to,can|to can|be able to|to be able to,0,0,Jag kan simma ganska bra.
+få,få,får,fick,fått,get / may,get|to get|may|to may,0,0,Du får äta kakan nu.
+gå,gå,går,gick,gått,go / walk,go|to go|walk|to walk,0,0,Vi går till parken varje morgon.
+kom,komma,kommer,kom,kommit,come,come|to come,0,0,Han kommer snart hem från jobbet.
+se,se,ser,såg,sett,see,see|to see,0,0,Jag ser en fågel utanför fönstret.
+ta,ta,tar,tog,tagit,take,take|to take,1,1,Hon tar bussen till jobbet.
+bli,bli,blir,blev,blivit,become,become|to become,0,0,Det blir kallt på kvällen.
+ge,ge,ger,gav,gett,give,give|to give,1,1,Han ger henne en blomma.
+vet,veta,vet,visste,vetat,know,know|to know,0,0,Jag vet inte svaret på den frågan.
+tänk,tänka,tänker,tänkte,tänkt,think,think|to think,0,0,Hon tänker på sin familj varje dag.
+känn,känna,känner,kände,känt,feel,feel|to feel,0,0,Jag känner mig glad idag.
+låt,låta,låter,lät,låtit,let,let|to let,1,0,Musiken låter vacker i det stora rummet.
+håll,hålla,håller,höll,hållit,hold,hold|to hold,0,0,Han håller i sin mammas hand.
+lev,leva,lever,levde,levt,live,live|to live,0,0,Vi lever ett enkelt liv på landet.
+fråga,fråga,frågar,frågade,frågat,ask,ask|to ask,0,0,Han frågar alltid om hjälp när han behöver det.
+ställ,ställa,ställer,ställde,ställt,place,place|to place,0,0,Läraren ställer en svår fråga till klassen.
+visa,visa,visar,visade,visat,show,show|to show,0,0,Hon visar sina foton från semestern.
+spela,spela,spelar,spelade,spelat,play,play|to play,0,0,Han spelar gitarr varje kväll.
+tro,tro,tror,trodde,trott,believe,believe|to believe,0,0,Jag tror att det kommer att gå bra.
+ligg,ligga,ligger,låg,legat,lie,lie|to lie,0,0,Boken ligger på bordet.
+stå,stå,står,stod,stått,stand,stand|to stand,0,0,Han står utanför dörren och väntar.
+tyck,tycka,tycker,tyckte,tyckt,like / think,like|to like|think|to think,0,0,Jag tycker om att läsa böcker.
+mena,mena,menar,menade,menat,mean,mean|to mean,0,0,Vad menar du med det?
+sätt,sätta,sätter,satte,satt,put,put|to put,0,0,Hon sätter nyckeln på bordet.
+hitta,hitta,hittar,hittade,hittat,find,find|to find,0,0,Jag hittar alltid mina nycklar i jackan.
+behöv,behöva,behöver,behövde,behövt,need,need|to need,0,0,Du behöver inte oroa dig för det.
+börja,börja,börjar,började,börjat,begin,begin|to begin,0,0,Skolan börjar klockan åtta varje morgon.
+försök,försöka,försöker,försökte,försökt,try,try|to try,0,0,Han försöker lära sig svenska varje dag.
+använd,använda,använder,använde,använt,use,use|to use,0,0,Jag använder dator på jobbet.
+hjälp,hjälpa,hjälper,hjälpte,hjälpt,help,help|to help,0,0,Hon hjälper sin mamma med matlagningen.
+tala,tala,talar,talade,talat,speak,speak|to speak,0,0,Han talar tre språk flytande.
+följ,följa,följer,följde,följt,follow,follow|to follow,0,0,Hunden följer sin ägare överallt.
+lämna,lämna,lämnar,lämnade,lämnat,leave,leave|to leave,0,0,Han lämnar huset klockan sju varje morgon.
+träffa,träffa,träffar,träffade,träffat,meet,meet|to meet,0,0,Jag träffar mina vänner på helgerna.
+skriv,skriva,skriver,skrev,skrivit,write,write|to write,0,0,Hon skriver en roman om sin barndom.
+läs,läsa,läser,läste,läst,read,read|to read,0,0,Han läser en bok varje kväll.
+verka,verka,verkar,verkade,verkat,seem,seem|to seem,0,0,Det verkar som att det ska bli regn idag.
+delta,delta,deltar,deltog,deltagit,participate,participate|to participate,0,0,Han deltar i ett projekt på jobbet.
+ändra,ändra,ändrar,ändrade,ändrat,change,change|to change,0,0,Programmet ändrar automatiskt alla inställningar.
+fortsätt,fortsätta,fortsätter,fortsatte,fortsatt,continue,continue|to continue,0,0,Hon fortsätter att studera trots svårigheterna.
+hör,höra,hör,hörde,hört,hear,hear|to hear,0,0,Jag hör musik från grannen.
+öppna,öppna,öppnar,öppnade,öppnat,open,open|to open,0,0,Han öppnar fönstret för att vädra.
+stäng,stänga,stänger,stängde,stängt,close,close|to close,0,0,Hon stänger dörren försiktigt.
+svara,svara,svarar,svarade,svarat,answer,answer|to answer,0,0,Han svarar alltid på mina meddelanden.
+möt,möta,möter,mötte,mött,meet,meet|to meet,0,0,Vi möter våra nya grannar imorgon.
+hyr,hyra,hyr,hyrde,hyrt,rent,rent|to rent,0,0,Hon hyr en lägenhet i centrala Stockholm.
+kör,köra,kör,körde,kört,drive,drive|to drive,0,0,Han kör bil till jobbet varje dag.
+ring,ringa,ringer,ringde,ringt,call,call|to call,0,0,Hon ringer sin mamma varje söndag.
+sluta,sluta,slutar,slutade,slutat,stop,stop|to stop,0,0,Arbetet slutar klockan fem.
+sitt,sitta,sitter,satt,suttit,sit,sit|to sit,0,0,Han sitter vid datorn hela dagen.
+ät,äta,äter,åt,ätit,eat,eat|to eat,0,0,Vi äter frukost klockan sju.
+drick,dricka,dricker,drack,druckit,drink,drink|to drink,0,0,Hon dricker kaffe varje morgon.
+sov,sova,sover,sov,sovit,sleep,sleep|to sleep,0,0,Barnet sover i åtta timmar varje natt.
+spring,springa,springer,sprang,sprungit,run,run|to run,0,0,Han springer fem kilometer varje morgon.
+res,resa,reser,reste,rest,travel,travel|to travel,0,0,Hon reser till Paris nästa vecka.
+glöm,glömma,glömmer,glömde,glömt,forget,forget|to forget,0,0,Jag glömmer alltid var jag lägger mina nycklar.
+vinn,vinna,vinner,vann,vunnit,win,win|to win,1,1,Laget vinner matchen med tre mål.
+förlora,förlora,förlorar,förlorade,förlorat,lose,lose|to lose,0,0,Han förlorar alltid när vi spelar schack.
+betala,betala,betalar,betalade,betalat,pay,pay|to pay,0,0,Hon betalar räkningarna i tid.
+köp,köpa,köper,köpte,köpt,buy,buy|to buy,0,0,Han köper bröd på affären varje morgon.
+sälj,sälja,säljer,sålde,sålt,sell,sell|to sell,0,0,Hon säljer handgjorda smycken online.
+tjäna,tjäna,tjänar,tjänade,tjänat,earn,earn|to earn,0,0,Han tjänar bra på sitt nya jobb.
+gilla,gilla,gillar,gillade,gillat,like,like|to like,0,0,Jag gillar verkligen din nya frisyr.
+älska,älska,älskar,älskade,älskat,love,love|to love,0,0,Hon älskar sin familj över allt annat.
+bo,bo,bor,bodde,bott,live,live|to live,0,0,Han bor i en liten stad nära havet.
+kolla,kolla,kollar,kollade,kollat,check,check|to check,0,0,Hon kollar alltid vädret innan hon åker ut.
+skratta,skratta,skrattar,skrattade,skrattat,laugh,laugh|to laugh,0,0,Han skrattar alltid åt hennes skämt.
+åk,åka,åker,åkte,åkt,go,go|to go,0,0,Vi åker tåg till Göteborg imorgon.
+bygg,bygga,bygger,byggde,byggt,build,build|to build,0,0,Han bygger ett hus med hjälp av sina vänner.
+studera,studera,studerar,studerade,studerat,study,study|to study,0,0,Hon studerar medicin vid universitetet.
+prata,prata,pratar,pratade,pratat,talk,talk|to talk,0,0,Vi pratar svenska hemma.
+sjung,sjunga,sjunger,sjöng,sjungit,sing,sing|to sing,0,0,Barnen sjunger en sång i skolan.
+laga,laga,lagar,lagade,lagat,cook / fix,cook|to cook|fix|to fix,1,1,Hon lagar mat till hela familjen.
+måla,måla,målar,målade,målat,paint,paint|to paint,0,0,Han målar ett porträtt av sin dotter.
+förstör,förstöra,förstör,förstörde,förstört,destroy,destroy|to destroy,0,0,Han förstör alltid stämningen på festen.
+bestäm,bestämma,bestämmer,bestämde,bestämt,decide,decide|to decide,0,0,Vi bestämmer vart vi ska åka på semester.
+planera,planera,planerar,planerade,planerat,plan,plan|to plan,0,0,Hon planerar bröllopsresan noggrant.
+förklara,förklara,förklarar,förklarade,förklarat,explain,explain|to explain,0,0,Läraren förklarar grammatiken på ett tydligt sätt.
+förstå,förstå,förstår,förstod,förstått,understand,understand|to understand,0,0,Jag förstår inte vad han menar.
+vänta,vänta,väntar,väntade,väntat,wait,wait|to wait,0,0,Han väntar på tåget vid perrongen.
+arbeta,arbeta,arbetar,arbetade,arbetat,work,work|to work,0,0,Hon arbetar på ett stort företag i stan.
+skicka,skicka,skickar,skickade,skickat,send,send|to send,0,0,Han skickar ett paket till sin familj.
+vänd,vända,vänder,vände,vänt,turn,turn|to turn,0,0,Hon vänder sig om när hon hör sitt namn.
+kasta,kasta,kastar,kastade,kastat,throw,throw|to throw,0,0,Han kastar bollen till sin kompis.
+titta,titta,tittar,tittade,tittat,look,look|to look,0,0,Hon tittar på sin favoritserie varje kväll.
+klara,klara,klarar,klarade,klarat,manage,manage|to manage,0,0,Han klarar av svåra uppgifter på jobbet.
+rör,röra,rör,rörde,rört,move,move|to move,0,0,Han rör soppan tills den är varm.
+bär,bära,bär,bar,burit,carry,carry|to carry,0,0,Han bär tung utrustning på vandringen.
+välj,välja,väljer,valde,valt,choose,choose|to choose,0,0,Hon väljer alltid den friskaste maten i butiken.
+väx,växa,växer,växte,vuxit,grow,grow|to grow,0,0,Barnet växer väldigt fort i år.
+skapa,skapa,skapar,skapade,skapat,create,create|to create,0,0,Konstnären skapar ett nytt konstverk varje vecka.
+förstå,förstå,förstår,förstod,förstått,understand,understand|to understand,0,0,Jag förstår inte vad han menar.
+erbjud,erbjuda,erbjuder,erbjöd,erbjudit,offer,offer|to offer,0,0,Företaget erbjuder bra lön och förmåner.
+bjud,bjuda,bjuder,bjöd,bjudit,offer for free,offer for free|to offer for free,0,0,Han bjuder alltid sina vänner på middag.
+räkna,räkna,räknar,räknade,räknat,count,count|to count,0,0,Barnet räknar till hundra.
+leta,leta,letar,letade,letat,look for,look for|to look for,0,0,Hon letar efter sin förlorade katt.
+nå,nå,når,nådde,nått,reach,reach|to reach,0,0,Han når sin dröm efter många år.
+passa,passa,passar,passade,passat,fit,fit|to fit,0,0,Den blå klänningen passar perfekt till festen.
+utveckla,utveckla,utvecklar,utvecklade,utvecklat,develop,develop|to develop,0,0,Företaget utvecklar ny teknik.
+föreslå,föreslå,föreslår,föreslog,föreslagit,suggest,suggest|to suggest,0,0,Han föreslår en ny lösning på problemet.
+sakna,sakna,saknar,saknade,saknat,miss / lack,miss|to miss|lack|to lack,0,0,Jag saknar min familj när jag reser bort.
+jämför,jämföra,jämför,jämförde,jämfört,compare,compare|to compare,0,0,Hon jämför priserna på olika webbplatser.
+räck,räcka,räcker,räckte,räckt,be enough,be enough|to be enough,0,0,Det räcker med en kopp kaffe för att vakna.
+bruka,bruka,brukar,brukade,brukat,usually do,usually do|to usually do,0,0,Jag brukar gå till gym på morgnarna.
+ligg,ligga,ligger,låg,legat,lie / be located,lie|to lie|be located|to be located,0,0,Boken ligger på bordet.
+lägg,lägga,lägger,la,lagt,lay / put,lay|to lay|put|to put,1,0,Han lägger böckerna på hyllan.
+le,le,ler,log,lett,smile / laugh,smile|to smile|laugh|to laugh,0,0,Hon ler alltid mot sina grannar.
+åk,åka,åker,åkte,åkt,go / travel,go|to go|travel|to travel,0,0,Vi åker tåg till Göteborg imorgon.
+kosta,kosta,kostar,kostade,kostat,cost,cost|to cost,0,0,Den nya telefonen kostar mycket pengar.
+besök,besöka,besöker,besökte,besökt,visit,visit|to visit,0,0,Vi besöker mormor varje jul.
+somna,somna,somnar,somnade,somnat,fall asleep,fall asleep|to fall asleep,0,0,Barnet somnar genast när vi sätter på musik.
+googla,googla,googlar,googlade,googlat,google / search online,google|to google|search online|to search online,0,0,Hon googlar svaret på frågan direkt.
+swisha,swisha,swishar,swishade,swishat,pay with Swish,pay with Swish|to pay with Swish,0,0,Han swishar pengarna direkt till sin vän.
+–,vilja,vill,ville,velat,want,want|to want,1,1,Jag vill lära mig svenska flytande.
+–,måste,måste,var tvungen att,varit tvungen att,must / have to,must|to must|have to|to have to,0,0,Hon måste arbeta extra i helgen.
+–,–,bör,borde,bort,ought to / should,ought to|to ought to|should|to should,0,0,Du bör komma i tid till mötet.
+stå,stå,står,stod,stått,stand,stand|to stand,0,0,Han står utanför dörren och väntar.
+behöv,behöva,behöver,behövde,behövt,need,need|to need,0,0,Du behöver inte oroa dig för det.
+lyssna,lyssna,lyssnar,lyssnade,lyssnat,listen,listen|to listen,1,1,Han lyssnar på musik när han joggar.
+jobba,jobba,jobbar,jobbade,jobbat,work,work|to work,0,0,Hon jobbar hemifrån på fredagarna.
+dö,dö,dör,dog,dött,die,die|to die,0,0,Blommorna dör om man glömmer att vattna dem.
+hoppas,hoppas,hoppas,hoppades,hoppats,hope,hope|to hope,0,0,Jag hoppas att vi vinner matchen.
+minns,minnas,minns,mindes,mints,remember,remember|to remember,0,0,Jag minns fortfarande den dagen väldigt tydligt.
+lär (sig),lära (sig),lär (sig),lärde (sig),lärt (sig),learn / teach,learn|to learn|teach|to teach,0,0,Hon lär sig ett nytt recept varje vecka.
+flytta,flytta,flyttar,flyttade,flyttat,move,move|to move,0,0,De flyttar till en ny stad nästa år.
+orka,orka,orkar,orkade,orkat,have the energy / manage,have the energy|to have the energy|manage|to manage,0,0,Jag orkar inte lyfta den tunga lådan.
+beställ,beställa,beställer,beställde,beställt,order,order|to order,0,0,Han beställer mat online istället för att laga det.
+hinn,hinna,hinner,hann,hunnit,have time / manage to,have time|to have time|manage to|to manage to,0,0,Jag hinner inte med tåget om jag inte skyndar.
+hämta,hämta,hämtar,hämtade,hämtat,fetch / pick up,fetch|to fetch|pick up|to pick up,0,0,Hon hämtar barnen från skolan klockan tre.
+led,leda,leder,ledde,lett,lead,lead|to lead,0,0,Hon leder ett stort projekt på arbetet.
+tappa,tappa,tappar,tappade,tappat,lose/drop,lose|to lose|drop|to drop,0,0,Han tappar alltid sin mobiltelefon.
+spara,spara,sparar,sparade,sparat,save,save|to save,0,0,Hon sparar pengar för att köpa en ny bil.
+låna,låna,lånar,lånade,lånat,borrow / lend,borrow|to borrow|lend|to lend,0,0,Han lånar böcker på biblioteket varje vecka.
+betyd,betyda,betyder,betydde,betytt,mean,mean|to mean,0,0,Vad betyder det här ordet på svenska?
+erkänn,erkänna,erkänner,erkände,erkänt,admit / acknowledge,admit|to admit|acknowledge|to acknowledge,0,0,Han erkänner att han hade gjort ett misstag.
+ladda,ladda,laddar,laddade,laddat,charge,charge|to charge,0,0,Hon laddar sin telefon varje kväll.
+påverka,påverka,påverkar,påverkade,påverkat,influence,influence|to influence,0,0,Vädret påverkar mitt humör.
+förändra,förändra,förändrar,förändrade,förändrat,change / alter,change|to change|alter|to alter,0,0,Resan förändrar mitt perspektiv på livet.
+leverera,leverera,levererar,levererade,levererat,deliver,deliver|to deliver,0,0,Företaget levererar paketet inom tre dagar.
+publicera,publicera,publicerar,publicerade,publicerat,publish,publish|to publish,0,0,Hon publicerar en ny artikel varje månad.
+sök,söka,söker,sökte,sökt,search / apply,search|to search|apply|to apply,0,0,Han söker ett nytt jobb.
+undvik,undvika,undviker,undvek,undvikit,avoid,avoid|to avoid,0,0,Hon undviker söta drycker för sin hälsa.
+upplev,uppleva,upplever,upplevde,upplevt,experience,experience|to experience,0,0,Vi upplever ett fantastiskt äventyr.
+förbered,förbereda,förbereder,förberedde,förberett,prepare,prepare|to prepare,0,0,Hon förbereder middagen redan på morgonen.
+kontrollera,kontrollera,kontrollerar,kontrollerade,kontrollerat,check / control,check|to check|control|to control,1,1,Han kontrollerar alltid bilen innan en lång resa.
+undersök,undersöka,undersöker,undersökte,undersökt,investigate / examine,investigate|to investigate|examine|to examine,0,0,Läkaren undersöker patienten noggrant.
+meddela,meddelar,meddelade,meddelat,to inform,inform|to inform|announce|to announce|notify|to notify,,,,Hon meddelar sina kollegor om ändringen.
+ta hand om,ta hand om,tar hand om,tog hand om,tagit hand om,take care of,take care of|to take care of|look after|to look after,0,0,Hon tar hand om sina äldre föräldrar.
+räck,räcka,räcker,räckte,räckt,be enough/reach,be enough|to be enough|reach|to reach|suffice|to suffice,0,0,Det räcker med en kopp kaffe för att vakna.
+gå åt rätt håll,gå åt rätt håll,går åt rätt håll,gick åt rätt håll,gått åt rätt håll,go in the right direction,go in the right direction|to go in the right direction|be on the right track|to be on the right track,0,0,Projektet går åt rätt håll trots de tidiga problemen.
+håll koll,hålla koll,håller koll,höll koll,hållit koll,keep track,keep track|to keep track|keep an eye on|to keep an eye on,0,0,Han håller koll på alla sina utgifter.
+byt,byta,byter,bytte,bytt,change/swap,change|to change|swap|to swap|switch|to switch,0,0,Hon byter jobb vartannat år.
+låt bekant,låta bekant,låter bekant,lät bekant,låtit bekant,sound familiar,sound familiar|to sound familiar,0,0,Det låter bekant men jag minns inte varifrån.
+känn igen,känna igen,känner igen,kände igen,känt igen,recognize,recognize|to recognize|recognise|to recognise,0,0,Jag känner igen den melodin från filmen.
+lämna,lämna,lämnar,lämnade,lämnat,leave/hand in,leave|to leave|hand in|to hand in|drop off|to drop off,0,0,Han lämnar huset klockan sju varje morgon.
+se ut,se ut,ser ut,såg ut,sett ut,look / appear / seem,look|to look|appear|to appear|seem|to seem,0,0,Hon ser ut att vara trött idag.
+upphitta,upphitta,upphittar,upphittade,upphittat,find / discover,find|to find|discover|to discover,0,0,Polisen upphittar den försvunna bilen.
+såga,såga,sågar,sågade,sågat,saw,saw|to saw,0,0,Han sågar ner det gamla trädet i trädgården.
+snickra,snickra,snickrar,snickrade,snickrat,do carpentry / build,do carpentry|to do carpentry|build|to build,0,0,Han snickrar en bokhylla i garaget.
+mät,mäta,mäter,mätte,mätt,measure,measure|to measure,0,0,Hon mäter rummet innan de köper möbler.
+landa,landa,landar,landade,landat,land,land|to land,0,0,Planet landar precis i tid.
