@@ -134,13 +134,15 @@
     .q-card .mode-label { font-size: 0.72rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.09em; color: var(--blue); margin-bottom: 10px; }
     .q-card .question { font-size: 1.25rem; font-weight: 600; color: var(--text); line-height: 1.45; }
 
-    /* ── Speak button ── */
-    .speak-btn {
-      margin-top: 14px; background: none; border: 2px solid #dde1e7;
+    /* ── Speak / Star buttons ── */
+    .q-card-actions { display: flex; gap: 8px; margin-top: 14px; }
+    .speak-btn, .star-btn {
+      background: none; border: 2px solid #dde1e7;
       border-radius: 10px; padding: 7px 14px; font-size: 1.1rem;
       cursor: pointer; color: var(--sub); transition: all 0.15s;
     }
-    .speak-btn:active { background: #e2e8f0; transform: scale(0.95); }
+    .speak-btn:active, .star-btn:active { background: #e2e8f0; transform: scale(0.95); }
+    .star-btn.starred { color: var(--yellow); border-color: var(--yellow); background: #fffbeb; }
 
     /* ── Answer input ── */
     .answer-input {
@@ -441,6 +443,11 @@
     <button onclick="showScreen('home')" style="background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:0.85rem; font-weight:600; font-family:inherit; padding:7px 14px; border-radius:20px; cursor:pointer;">&#x2190; Back</button>
   </div>
   <div class="content">
+    <div class="toggle-group" style="margin-bottom:10px">
+      <button class="toggle-btn active" id="verb-filter-all-btn" onclick="setVerbFilter('all')">All verbs</button>
+      <button class="toggle-btn" id="verb-filter-starred-btn" onclick="setVerbFilter('starred')">&#x2605; Starred</button>
+    </div>
+
     <div class="num-picker">
       <label>Questions per session</label>
       <div class="controls">
@@ -517,8 +524,9 @@
   </div>
   <div class="content">
     <div class="toggle-group" style="margin-bottom:10px">
-      <button class="toggle-btn active" id="cat-filter-all-btn" onclick="setCategoryFilter(false)">All words</button>
-      <button class="toggle-btn" id="cat-filter-pick-btn" onclick="setCategoryFilter(true)">Filter by category</button>
+      <button class="toggle-btn active" id="cat-filter-all-btn" onclick="setVocabFilter('all')">All</button>
+      <button class="toggle-btn" id="cat-filter-pick-btn" onclick="setVocabFilter('category')">Category</button>
+      <button class="toggle-btn" id="cat-filter-starred-btn" onclick="setVocabFilter('starred')">&#x2605; Starred</button>
     </div>
     <div id="category-chips-wrap" style="display:none; margin-bottom:14px">
       <div class="chips" id="category-chips"></div>
@@ -597,7 +605,10 @@
     <div class="q-card">
       <div class="mode-label" id="mode-label"></div>
       <div class="question" id="question-text"></div>
-      <button id="speak-btn" class="speak-btn" onclick="speakCurrent()" aria-label="Hear pronunciation" title="Hear pronunciation">&#x1F50A;</button>
+      <div class="q-card-actions">
+        <button id="speak-btn" class="speak-btn" onclick="speakCurrent()" aria-label="Hear pronunciation" title="Hear pronunciation">&#x1F50A;</button>
+        <button id="star-btn" class="star-btn" onclick="toggleStar()" aria-label="Star this word" title="Star this word">&#x2606;</button>
+      </div>
     </div>
 
     <input
@@ -653,6 +664,7 @@
     <div class="toggle-group">
       <button class="toggle-btn browse-vocab-btn active" onclick="setBrowseType('vocab')">Vocabulary</button>
       <button class="toggle-btn browse-verbs-btn" onclick="setBrowseType('verbs')">Verbs</button>
+      <button class="toggle-btn browse-starred-btn" onclick="setBrowseType('starred')">&#x2605; Starred</button>
     </div>
 
     <div class="browse-search-wrap">

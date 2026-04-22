@@ -154,6 +154,9 @@ let numQ = parseInt(localStorage.getItem('svNumQ') || '10');
 let numMatch = parseInt(localStorage.getItem('svNumMatch') || '12');
 let multipleChoice = false;
 let selectedCategories = new Set();
+let verbFilter = 'all';   // 'all' | 'starred'
+let vocabFilter = 'all';  // 'all' | 'category' | 'starred'
+let starredIds = new Set(JSON.parse(localStorage.getItem('svStarred') || '[]'));
 let lastMode = 'sv-en', lastVocabMode = 'sv-en', lastSessionType = 'verbs';
 let session = null;
 
@@ -180,19 +183,52 @@ function setMultipleChoice(val) {
   multipleChoice = val;
 }
 
-function getFilteredVocab() {
-  if (selectedCategories.size === 0) return allVocab;
-  return allVocab.filter(w => selectedCategories.has(w['Category']));
+function getFilteredVerbs() {
+  if (verbFilter === 'starred') return allVerbs.filter(v => starredIds.has(String(v._id)));
+  return allVerbs;
 }
 
-function setCategoryFilter(enabled) {
-  document.getElementById('cat-filter-all-btn').classList.toggle('active', !enabled);
-  document.getElementById('cat-filter-pick-btn').classList.toggle('active', enabled);
-  document.getElementById('category-chips-wrap').style.display = enabled ? '' : 'none';
-  if (!enabled) {
-    selectedCategories.clear();
-    updateVocabStats();
-  }
+function getFilteredVocab() {
+  if (vocabFilter === 'starred') return allVocab.filter(w => starredIds.has(String(w._id)));
+  if (vocabFilter === 'category' && selectedCategories.size > 0)
+    return allVocab.filter(w => selectedCategories.has(w['Category']));
+  return allVocab;
+}
+
+function setVerbFilter(mode) {
+  verbFilter = mode;
+  document.getElementById('verb-filter-all-btn').classList.toggle('active', mode === 'all');
+  document.getElementById('verb-filter-starred-btn').classList.toggle('active', mode === 'starred');
+  updateVerbStats();
+}
+
+function setVocabFilter(mode) {
+  vocabFilter = mode;
+  document.getElementById('cat-filter-all-btn').classList.toggle('active', mode === 'all');
+  document.getElementById('cat-filter-pick-btn').classList.toggle('active', mode === 'category');
+  document.getElementById('cat-filter-starred-btn').classList.toggle('active', mode === 'starred');
+  document.getElementById('category-chips-wrap').style.display = mode === 'category' ? '' : 'none';
+  if (mode !== 'category') selectedCategories.clear();
+  updateVocabStats();
+}
+
+function toggleStar() {
+  if (!session) return;
+  const id = String(session.questions[session.index]._id);
+  if (starredIds.has(id)) starredIds.delete(id);
+  else starredIds.add(id);
+  localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
+  updateStarBtn();
+}
+
+function updateStarBtn() {
+  if (!session) return;
+  const id = String(session.questions[session.index]._id);
+  const starred = starredIds.has(id);
+  const btn = document.getElementById('star-btn');
+  if (!btn) return;
+  btn.textContent = starred ? '\u2605' : '\u2606';
+  btn.classList.toggle('starred', starred);
 }
 
 function renderCategoryChips() {
@@ -209,8 +245,10 @@ function updateVerbStats() {
   const totalA = allVerbs.reduce((s, v) => s + v._attempts, 0);
   const totalC = allVerbs.reduce((s, v) => s + v._correct, 0);
   const pct = totalA > 0 ? Math.round(totalC / totalA * 100) : 0;
+  const starCount = allVerbs.filter(v => starredIds.has(String(v._id))).length;
+  const suffix = verbFilter === 'starred' ? ` \u00b7 \u2605 ${starCount} starred` : '';
   document.getElementById('menu-stats').textContent =
-    `${seen}/${allVerbs.length} verbs seen \u00b7 ${pct}% accuracy`;
+    `${seen}/${allVerbs.length} verbs seen \u00b7 ${pct}% accuracy${suffix}`;
 }
 
 function updateVocabStats() {
@@ -219,18 +257,20 @@ function updateVocabStats() {
   const totalA = filtered.reduce((s, v) => s + v._attempts, 0);
   const totalC = filtered.reduce((s, v) => s + v._correct, 0);
   const pct = totalA > 0 ? Math.round(totalC / totalA * 100) : 0;
-  const suffix = selectedCategories.size > 0 ? ` (${filtered.length} filtered)` : '';
+  const suffix = vocabFilter !== 'all' ? ` (${filtered.length} filtered)` : '';
   document.getElementById('vocab-stats').textContent =
     `${seen}/${filtered.length} words seen \u00b7 ${pct}% accuracy${suffix}`;
 }
 
 // ─── Session ──────────────────────────────────────────────────────────────────
 function startSession(mode) {
+  const pool = getFilteredVerbs();
+  if (!pool.length) { alert('No starred verbs yet. Star words during an exercise first!'); return; }
   lastMode = mode;
   lastSessionType = 'verbs';
   session = {
-    questions: weightedSample(allVerbs, numQ),
-    pool: allVerbs,
+    questions: weightedSample(pool, numQ),
+    pool,
     index: 0, score: 0, missed: [],
     questionFn: VERB_FNS[mode],
     progressKey: 'svVerbProgress',
@@ -242,9 +282,10 @@ function startSession(mode) {
 }
 
 function startVocabSession(mode) {
+  const filtered = getFilteredVocab();
+  if (!filtered.length) { alert('No starred words yet. Star words during an exercise first!'); return; }
   lastVocabMode = mode;
   lastSessionType = 'vocab';
-  const filtered = getFilteredVocab();
   session = {
     questions: weightedSample(filtered, numQ),
     pool: filtered,
@@ -273,6 +314,7 @@ function renderQuestion() {
 
   session._q = q;
   session.answered = false;
+  updateStarBtn();
 
   const input = document.getElementById('answer-input');
   const mcDiv = document.getElementById('mc-options');
@@ -491,6 +533,7 @@ function showBrowse() {
   document.getElementById('browse-search').value = '';
   document.querySelectorAll('.browse-vocab-btn').forEach(el => el.classList.add('active'));
   document.querySelectorAll('.browse-verbs-btn').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.browse-starred-btn').forEach(el => el.classList.remove('active'));
   document.getElementById('browse-chips').style.display = '';
   renderBrowseCategories();
   renderBrowseList();
@@ -503,6 +546,7 @@ function setBrowseType(type) {
   document.getElementById('browse-search').value = '';
   document.querySelectorAll('.browse-vocab-btn').forEach(el => el.classList.toggle('active', type === 'vocab'));
   document.querySelectorAll('.browse-verbs-btn').forEach(el => el.classList.toggle('active', type === 'verbs'));
+  document.querySelectorAll('.browse-starred-btn').forEach(el => el.classList.toggle('active', type === 'starred'));
   document.getElementById('browse-chips').style.display = type === 'vocab' ? '' : 'none';
   renderBrowseCategories();
   renderBrowseList();
@@ -524,7 +568,25 @@ function renderBrowseList() {
   const query = norm(document.getElementById('browse-search').value);
   let html = '';
 
-  if (browseType === 'vocab') {
+  if (browseType === 'starred') {
+    const svocab = allVocab.filter(w => starredIds.has(String(w._id)));
+    const sverbs = allVerbs.filter(v => starredIds.has(String(v._id)));
+    let pool = [
+      ...svocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab' })),
+      ...sverbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb' })),
+    ].filter(x => !query || norm(x.sv).includes(query) || norm(x.en).includes(query))
+     .sort((a, b) => a.sv.localeCompare(b.sv, 'sv'));
+    document.getElementById('browse-count').textContent = `${pool.length} starred`;
+    html = pool.map(x =>
+      `<div class="browse-item">
+        <div class="browse-item-row">
+          <span class="browse-sv">\u2605 ${escapeHtml(x.sv)}</span>
+          <span class="browse-en">${escapeHtml(x.en)}</span>
+          <span class="browse-cat">${escapeHtml(x.tag)}</span>
+        </div>
+      </div>`
+    ).join('');
+  } else if (browseType === 'vocab') {
     let pool = browseCategories.size > 0
       ? allVocab.filter(w => browseCategories.has(w['Category']))
       : allVocab;
@@ -661,9 +723,9 @@ let matchState = null;
 
 function startMatchSession(type) {
   lastSessionType = type === 'verbs' ? 'verbs' : 'vocab';
-  const pool = (type === 'verbs'
-    ? weightedSample(allVerbs, numMatch)
-    : weightedSample(getFilteredVocab(), numMatch));
+  const src = type === 'verbs' ? getFilteredVerbs() : getFilteredVocab();
+  if (!src.length) { alert('No starred words yet. Star words during an exercise first!'); return; }
+  const pool = weightedSample(src, numMatch);
 
   matchState = {
     type,
