@@ -299,6 +299,44 @@ function startVocabSession(mode) {
   renderQuestion();
 }
 
+function startHardSession(type, mode) {
+  const src = type === 'verbs' ? getFilteredVerbs() : getFilteredVocab();
+  const attempted = src.filter(v => v._attempts > 0);
+  if (!attempted.length) {
+    alert('No attempted words yet. Complete some exercises first!');
+    return;
+  }
+  const pool = shuffle(
+    [...attempted].sort((a, b) => (a._correct / a._attempts) - (b._correct / b._attempts))
+                  .slice(0, numQ)
+  );
+  if (type === 'verbs') {
+    lastMode = mode;
+    lastSessionType = 'verbs';
+    session = {
+      questions: pool, pool,
+      index: 0, score: 0, missed: [],
+      questionFn: VERB_FNS[mode],
+      progressKey: 'svVerbProgress',
+      progressMap: verbProgress,
+      answered: false,
+    };
+  } else {
+    lastVocabMode = mode;
+    lastSessionType = 'vocab';
+    session = {
+      questions: pool, pool,
+      index: 0, score: 0, missed: [],
+      questionFn: VOCAB_FNS[mode],
+      progressKey: 'svVocabProgress',
+      progressMap: vocabProgress,
+      answered: false,
+    };
+  }
+  showScreen('quiz');
+  renderQuestion();
+}
+
 // ─── Quiz ─────────────────────────────────────────────────────────────────────
 function renderQuestion() {
   const item = session.questions[session.index];
