@@ -93,14 +93,33 @@
     .mode-btn-wrap .mode-btn { border-radius: 0; box-shadow: none; margin-bottom: 0; border-bottom: 1px solid #f0f0f0; }
     .mode-btn-wrap .mode-btn:last-child { border-bottom: none; }
     .mode-actions { display: flex; gap: 0; border-top: 1px solid #f0f0f0; }
+    .mode-actions-grid { display: grid; grid-template-columns: 1fr 1fr; }
     .mode-action-btn {
       flex: 1; padding: 11px 8px; border: none; background: transparent;
       font-size: 0.82rem; font-weight: 600; font-family: inherit; color: var(--sub);
       cursor: pointer; transition: all 0.15s; border-right: 1px solid #f0f0f0;
+      border-bottom: 1px solid #f0f0f0;
     }
-    .mode-action-btn:last-child { border-right: none; }
+    .mode-actions .mode-action-btn:last-child { border-right: none; }
+    .mode-actions-grid .mode-action-btn:nth-child(2n) { border-right: none; }
+    .mode-actions-grid .mode-action-btn:nth-last-child(-n+2) { border-bottom: none; }
     .mode-action-btn:hover { background: #f8f9fa; color: var(--blue); }
     .mode-action-btn:active { background: #e8f0fb; }
+
+    /* ── Section with inline picker ── */
+    .section-with-picker {
+      display: flex; align-items: center; justify-content: space-between;
+      margin: 16px 2px 10px;
+    }
+    .section-with-picker .section-label { margin: 0; }
+    .section-with-picker .mini-controls { display: flex; align-items: center; gap: 10px; }
+    .section-with-picker .mini-controls button {
+      width: 28px; height: 28px; border-radius: 50%; border: none;
+      background: var(--blue); color: #fff; font-size: 1rem; font-weight: 700;
+      cursor: pointer; display: flex; align-items: center; justify-content: center;
+    }
+    .section-with-picker .mini-controls button:active { opacity: 0.8; }
+    .section-with-picker .mini-controls span { font-size: 0.95rem; font-weight: 700; min-width: 22px; text-align: center; color: var(--text); }
 
     /* ── Category chips ── */
     .chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 18px; }
@@ -443,21 +462,19 @@
     <button onclick="showScreen('home')" style="background:rgba(255,255,255,0.15); border:none; color:#fff; font-size:0.85rem; font-weight:600; font-family:inherit; padding:7px 14px; border-radius:20px; cursor:pointer;">&#x2190; Back</button>
   </div>
   <div class="content">
-    <div class="toggle-group" style="margin-bottom:10px">
+    <div class="toggle-group" style="margin-bottom:16px">
       <button class="toggle-btn active" id="verb-filter-all-btn" onclick="setVerbFilter('all')">All verbs</button>
       <button class="toggle-btn" id="verb-filter-starred-btn" onclick="setVerbFilter('starred')">&#x2605; Starred</button>
     </div>
 
-    <div class="num-picker">
-      <label>Questions per session</label>
-      <div class="controls">
+    <div class="section-with-picker">
+      <span class="section-label" style="margin:0">Quiz</span>
+      <div class="mini-controls">
         <button onclick="changeNumQ(-5)" aria-label="Fewer">&#8722;</button>
         <span class="num-q-display">10</span>
         <button onclick="changeNumQ(5)" aria-label="More">&#43;</button>
       </div>
     </div>
-
-    <p class="section-label">Choose a mode</p>
 
     <div class="mode-btn-wrap">
       <div class="mode-btn">
@@ -494,21 +511,6 @@
         <div class="desc">Give a specific verb form</div>
       </div>
     </button>
-    <div class="num-picker">
-      <label>Match pairs</label>
-      <div class="controls">
-        <button onclick="changeNumMatch(-6)" aria-label="Fewer">&#8722;</button>
-        <span class="num-match-display">12</span>
-        <button onclick="changeNumMatch(6)" aria-label="More">&#43;</button>
-      </div>
-    </div>
-    <button class="mode-btn" onclick="startMatchSession('verbs')">
-      <div class="icon">&#x1F500;</div>
-      <div>
-        <div class="title">Match</div>
-        <div class="desc">Connect Swedish verbs to their English meaning</div>
-      </div>
-    </button>
 
     <div class="mode-btn-wrap">
       <div class="mode-btn">
@@ -518,13 +520,30 @@
           <div class="desc">Your worst-scoring verbs</div>
         </div>
       </div>
-      <div class="mode-actions">
+      <div class="mode-actions mode-actions-grid">
         <button class="mode-action-btn" onclick="setMultipleChoice(false); startHardSession('verbs','sv-en')">Sv&#x2192;En type</button>
         <button class="mode-action-btn" onclick="setMultipleChoice(true); startHardSession('verbs','sv-en')">Sv&#x2192;En MC</button>
         <button class="mode-action-btn" onclick="setMultipleChoice(false); startHardSession('verbs','en-sv')">En&#x2192;Sv type</button>
         <button class="mode-action-btn" onclick="setMultipleChoice(true); startHardSession('verbs','en-sv')">En&#x2192;Sv MC</button>
       </div>
     </div>
+
+    <div class="section-with-picker">
+      <span class="section-label" style="margin:0">Match</span>
+      <div class="mini-controls">
+        <button onclick="changeNumMatch(-6)" aria-label="Fewer">&#8722;</button>
+        <span class="num-match-display">12</span>
+        <button onclick="changeNumMatch(6)" aria-label="More">&#43;</button>
+      </div>
+    </div>
+
+    <button class="mode-btn" onclick="startMatchSession('verbs')">
+      <div class="icon">&#x1F500;</div>
+      <div>
+        <div class="title">Match</div>
+        <div class="desc">Connect Swedish verbs to their English meaning</div>
+      </div>
+    </button>
 
   </div>
 </div>
@@ -548,16 +567,14 @@
       <div class="chips" id="category-chips"></div>
     </div>
 
-    <div class="num-picker">
-      <label>Questions per session</label>
-      <div class="controls">
+    <div class="section-with-picker">
+      <span class="section-label" style="margin:0">Quiz</span>
+      <div class="mini-controls">
         <button onclick="changeNumQ(-5)" aria-label="Fewer">&#8722;</button>
         <span class="num-q-display">10</span>
         <button onclick="changeNumQ(5)" aria-label="More">&#43;</button>
       </div>
     </div>
-
-    <p class="section-label">Choose a mode</p>
 
     <div class="mode-btn-wrap">
       <div class="mode-btn">
@@ -587,22 +604,6 @@
       </div>
     </div>
 
-    <div class="num-picker">
-      <label>Match pairs</label>
-      <div class="controls">
-        <button onclick="changeNumMatch(-6)" aria-label="Fewer">&#8722;</button>
-        <span class="num-match-display">12</span>
-        <button onclick="changeNumMatch(6)" aria-label="More">&#43;</button>
-      </div>
-    </div>
-    <button class="mode-btn" onclick="startMatchSession('vocab')">
-      <div class="icon">&#x1F500;</div>
-      <div>
-        <div class="title">Match</div>
-        <div class="desc">Connect Swedish words to their English meaning</div>
-      </div>
-    </button>
-
     <div class="mode-btn-wrap">
       <div class="mode-btn">
         <div class="icon">&#x1F4C9;</div>
@@ -611,13 +612,30 @@
           <div class="desc">Your worst-scoring words</div>
         </div>
       </div>
-      <div class="mode-actions">
+      <div class="mode-actions mode-actions-grid">
         <button class="mode-action-btn" onclick="setMultipleChoice(false); startHardSession('vocab','sv-en')">Sv&#x2192;En type</button>
         <button class="mode-action-btn" onclick="setMultipleChoice(true); startHardSession('vocab','sv-en')">Sv&#x2192;En MC</button>
         <button class="mode-action-btn" onclick="setMultipleChoice(false); startHardSession('vocab','en-sv')">En&#x2192;Sv type</button>
         <button class="mode-action-btn" onclick="setMultipleChoice(true); startHardSession('vocab','en-sv')">En&#x2192;Sv MC</button>
       </div>
     </div>
+
+    <div class="section-with-picker">
+      <span class="section-label" style="margin:0">Match</span>
+      <div class="mini-controls">
+        <button onclick="changeNumMatch(-6)" aria-label="Fewer">&#8722;</button>
+        <span class="num-match-display">12</span>
+        <button onclick="changeNumMatch(6)" aria-label="More">&#43;</button>
+      </div>
+    </div>
+
+    <button class="mode-btn" onclick="startMatchSession('vocab')">
+      <div class="icon">&#x1F500;</div>
+      <div>
+        <div class="title">Match</div>
+        <div class="desc">Connect Swedish words to their English meaning</div>
+      </div>
+    </button>
 
   </div>
 </div>
