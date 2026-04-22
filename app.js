@@ -315,6 +315,7 @@ function startHardSession(type, mode) {
     lastSessionType = 'verbs';
     session = {
       questions: pool, pool,
+      distractorPool: allVerbs,
       index: 0, score: 0, missed: [],
       questionFn: VERB_FNS[mode],
       progressKey: 'svVerbProgress',
@@ -326,6 +327,7 @@ function startHardSession(type, mode) {
     lastSessionType = 'vocab';
     session = {
       questions: pool, pool,
+      distractorPool: allVocab,
       index: 0, score: 0, missed: [],
       questionFn: VOCAB_FNS[mode],
       progressKey: 'svVocabProgress',
@@ -362,7 +364,7 @@ function renderQuestion() {
     input.style.display = 'none';
     mcDiv.style.display = 'grid';
     submitBtn.style.display = 'none';
-    const options = generateOptions(q.display, session.pool, q.getDisplay, item._id);
+    const options = generateOptions(q.display, session.distractorPool || session.pool, q.getDisplay, item._id);
     mcDiv.innerHTML = options.map(opt =>
       `<button class="mc-btn" data-value="${escapeHtml(opt)}">${escapeHtml(opt)}</button>`
     ).join('');
