@@ -526,7 +526,11 @@ function showScore() {
 }
 
 function playAgain() {
-  lastSessionType === 'vocab' ? startVocabSession(lastVocabMode) : startSession(lastMode);
+  if (lastMode === 'fill-blank' || lastVocabMode === 'fill-blank') {
+    startFillBlankSession(lastSessionType === 'vocab' ? 'vocab' : 'verbs');
+  } else {
+    lastSessionType === 'vocab' ? startVocabSession(lastVocabMode) : startSession(lastMode);
+  }
 }
 
 function backToMenu() {
@@ -999,10 +1003,12 @@ function speak(text) {
 
 function speakCurrent() {
   if (!session) return;
-  const item = session.questions[session.index];
   const q = session._q;
-  // Always speak the Swedish word/form
-  speak(q.word);
+  if (q.isFillBlank && q.question) {
+    speak(q.question.replace('____', 'mmmmh'));
+  } else {
+    speak(q.word);
+  }
 }
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
