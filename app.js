@@ -526,7 +526,11 @@ function showScore() {
 }
 
 function playAgain() {
-  lastSessionType === 'vocab' ? startVocabSession(lastVocabMode) : startSession(lastMode);
+  if (lastMode === 'fill-blank' || lastVocabMode === 'fill-blank') {
+    startFillBlankSession(lastSessionType === 'vocab' ? 'vocab' : 'verbs');
+  } else {
+    lastSessionType === 'vocab' ? startVocabSession(lastVocabMode) : startSession(lastMode);
+  }
 }
 
 function backToMenu() {
