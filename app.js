@@ -1005,10 +1005,32 @@ function speakCurrent() {
   if (!session) return;
   const q = session._q;
   if (q.isFillBlank && q.question) {
-    speak(q.question.replace('____', 'mmmmh'));
-  } else {
-    speak(q.word);
+    const parts = q.question.split('____');
+    if (parts.length === 2) {
+      window.speechSynthesis.cancel();
+      const voices = window.speechSynthesis.getVoices();
+      const svVoice = voices.find(v => v.lang.startsWith('sv'));
+      const makeUtt = text => {
+        const utt = new SpeechSynthesisUtterance(text);
+        utt.lang = 'sv-SE';
+        utt.rate = 0.9;
+        if (svVoice) utt.voice = svVoice;
+        return utt;
+      };
+      const speakSecond = () => {
+        if (parts[1].trim()) window.speechSynthesis.speak(makeUtt(parts[1]));
+      };
+      if (parts[0].trim()) {
+        const utt1 = makeUtt(parts[0]);
+        utt1.onend = () => setTimeout(speakSecond, 800);
+        window.speechSynthesis.speak(utt1);
+      } else {
+        setTimeout(speakSecond, 800);
+      }
+      return;
+    }
   }
+  speak(q.word);
 }
 
 // ─── Boot ─────────────────────────────────────────────────────────────────────
