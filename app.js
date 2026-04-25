@@ -672,20 +672,21 @@ function renderBrowseList() {
     const svocab = allVocab.filter(w => starredIds.has(String(w._id)));
     const sverbs = allVerbs.filter(v => starredIds.has(String(v._id)));
     let pool = [
-      ...svocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab' })),
+      ...svocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—' })),
       ...sverbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb' })),
     ].filter(x => !query || norm(x.sv).includes(query) || norm(x.en).includes(query))
      .sort((a, b) => a.sv.localeCompare(b.sv, 'sv'));
     document.getElementById('browse-count').textContent = `${pool.length} starred`;
-    html = pool.map(x =>
-      `<div class="browse-item">
+    html = pool.map(x => {
+      const art = x.art && x.art !== '\u2014' ? `<span class="browse-article">(${escapeHtml(x.art)})</span> ` : '';
+      return `<div class="browse-item">
         <div class="browse-item-row">
-          <span class="browse-sv">\u2605 ${escapeHtml(x.sv)}</span>
+          <span class="browse-sv">\u2605 ${art}${escapeHtml(x.sv)}</span>
           <span class="browse-en">${escapeHtml(x.en)}</span>
           <span class="browse-cat">${escapeHtml(x.tag)}</span>
         </div>
-      </div>`
-    ).join('');
+      </div>`;
+    }).join('');
   } else if (browseType === 'vocab') {
     let pool = browseCategories.size > 0
       ? allVocab.filter(w => browseCategories.has(w['Category']))
@@ -695,15 +696,16 @@ function renderBrowseList() {
     );
     pool = [...pool].sort((a, b) => a.Swedish.localeCompare(b.Swedish, 'sv'));
     document.getElementById('browse-count').textContent = `${pool.length} word${pool.length !== 1 ? 's' : ''}`;
-    html = pool.map(w =>
-      `<div class="browse-item">
+    html = pool.map(w => {
+      const art = w['Article'] && w['Article'] !== '—' ? `<span class="browse-article">(${escapeHtml(w['Article'])})</span> ` : '';
+      return `<div class="browse-item">
         <div class="browse-item-row">
-          <span class="browse-sv">${escapeHtml(w.Swedish)}</span>
+          <span class="browse-sv">${art}${escapeHtml(w.Swedish)}</span>
           <span class="browse-en">${escapeHtml(w.English)}</span>
           <span class="browse-cat">${escapeHtml(w['Category'] || '')}</span>
         </div>
-      </div>`
-    ).join('');
+      </div>`;
+    }).join('');
   } else {
     let pool = allVerbs;
     if (query) pool = pool.filter(v =>
