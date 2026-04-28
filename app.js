@@ -256,6 +256,14 @@ function setVocabFilter(mode) {
   updateVocabStats();
 }
 
+function toggleBrowseStar(id) {
+  id = String(id);
+  if (starredIds.has(id)) starredIds.delete(id);
+  else starredIds.add(id);
+  localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
+  renderBrowseList();
+}
+
 function toggleStar() {
   if (!session) return;
   const id = String(session.questions[session.index]._id);
@@ -672,8 +680,8 @@ function renderBrowseList() {
     const svocab = allVocab.filter(w => starredIds.has(String(w._id)));
     const sverbs = allVerbs.filter(v => starredIds.has(String(v._id)));
     let pool = [
-      ...svocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—' })),
-      ...sverbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb' })),
+      ...svocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—', id: w._id })),
+      ...sverbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb', art: '—', id: v._id })),
     ].filter(x => !query || norm(x.sv).includes(query) || norm(x.en).includes(query))
      .sort((a, b) => a.sv.localeCompare(b.sv, 'sv'));
     document.getElementById('browse-count').textContent = `${pool.length} starred`;
@@ -681,7 +689,8 @@ function renderBrowseList() {
       const art = x.art && x.art !== '\u2014' ? `<span class="browse-article">(${escapeHtml(x.art)})</span> ` : '';
       return `<div class="browse-item">
         <div class="browse-item-row">
-          <span class="browse-sv">\u2605 ${art}${escapeHtml(x.sv)}</span>
+          <button class="browse-star starred" onclick="toggleBrowseStar(${x.id})">\u2605</button>
+          <span class="browse-sv">${art}${escapeHtml(x.sv)}</span>
           <span class="browse-en">${escapeHtml(x.en)}</span>
           <span class="browse-cat">${escapeHtml(x.tag)}</span>
         </div>
@@ -698,8 +707,10 @@ function renderBrowseList() {
     document.getElementById('browse-count').textContent = `${pool.length} word${pool.length !== 1 ? 's' : ''}`;
     html = pool.map(w => {
       const art = w['Article'] && w['Article'] !== '—' ? `<span class="browse-article">(${escapeHtml(w['Article'])})</span> ` : '';
+      const starred = starredIds.has(String(w._id));
       return `<div class="browse-item">
         <div class="browse-item-row">
+          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar(${w._id})">${starred ? '★' : '☆'}</button>
           <span class="browse-sv">${art}${escapeHtml(w.Swedish)}</span>
           <span class="browse-en">${escapeHtml(w.English)}</span>
           <span class="browse-cat">${escapeHtml(w['Category'] || '')}</span>
@@ -719,8 +730,10 @@ function renderBrowseList() {
     document.getElementById('browse-count').textContent = `${pool.length} verb${pool.length !== 1 ? 's' : ''}`;
     html = pool.map(v => {
       const forms = CONJ_FORMS.map(f => v[f]).filter(f => f && !isDash(f)).join(' \u00b7 ');
+      const starred = starredIds.has(String(v._id));
       return `<div class="browse-item">
         <div class="browse-item-row">
+          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar(${v._id})">${starred ? '\u2605' : '\u2606'}</button>
           <span class="browse-sv">${escapeHtml(primaryForm(v))}</span>
           <span class="browse-en">${escapeHtml(v['Engelsk \u00f6vers\u00e4ttning'] || '')}</span>
         </div>
