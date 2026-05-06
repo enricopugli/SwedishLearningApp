@@ -275,7 +275,7 @@ function toggleStar() {
 
 function updateStarBtn() {
   if (!session) return;
-  const id = String(session.questions[session.index]._id);
+  const id = String(session.questions[session.cursor]._id);
   const starred = starredIds.has(id);
   const btn = document.getElementById('star-btn');
   if (!btn) return;
@@ -323,7 +323,8 @@ function startSession(mode) {
   session = {
     questions: weightedSample(pool, numQ),
     pool,
-    index: 0, score: 0, missed: [],
+    index: 0, cursor: 0, score: 0, missed: [],
+    qCache: {}, answers: {},
     questionFn: VERB_FNS[mode],
     progressKey: 'svVerbProgress',
     progressMap: verbProgress,
@@ -353,7 +354,8 @@ function startVocabSession(mode) {
   session = {
     questions: weightedSample(filtered, numQ),
     pool: filtered,
-    index: 0, score: 0, missed: [],
+    index: 0, cursor: 0, score: 0, missed: [],
+    qCache: {}, answers: {},
     questionFn: VOCAB_FNS[mode],
     progressKey: 'svVocabProgress',
     progressMap: vocabProgress,
@@ -380,7 +382,8 @@ function startHardSession(type, mode) {
     session = {
       questions: pool, pool,
       distractorPool: allVerbs,
-      index: 0, score: 0, missed: [],
+      index: 0, cursor: 0, score: 0, missed: [],
+      qCache: {}, answers: {},
       questionFn: VERB_FNS[mode],
       progressKey: 'svVerbProgress',
       progressMap: verbProgress,
@@ -392,7 +395,8 @@ function startHardSession(type, mode) {
     session = {
       questions: pool, pool,
       distractorPool: allVocab,
-      index: 0, score: 0, missed: [],
+      index: 0, cursor: 0, score: 0, missed: [],
+      qCache: {}, answers: {},
       questionFn: VOCAB_FNS[mode],
       progressKey: 'svVocabProgress',
       progressMap: vocabProgress,
@@ -405,47 +409,105 @@ function startHardSession(type, mode) {
 
 // ─── Quiz ─────────────────────────────────────────────────────────────────────
 function renderQuestion() {
-  const item = session.questions[session.index];
-  const q = session.questionFn(item);
+  const cur = session.cursor;
   const total = session.questions.length;
+
+  // Cache question object so conjugation form stays stable on re-visit
+  if (!session.qCache[cur]) {
+    const item = session.questions[cur];
+    session.qCache[cur] = session.questionFn(item);
+  }
+  const q = session.qCache[cur];
+  session._q = q;
 
   document.getElementById('mode-label').textContent = q.label;
   document.getElementById('question-text').textContent = q.question;
-  document.getElementById('progress-text').textContent = `Question ${session.index + 1}/${total}`;
-  document.getElementById('progress-fill').style.width = `${(session.index / total) * 100}%`;
-  document.getElementById('feedback').className = 'feedback';
-  document.getElementById('feedback').textContent = '';
+  document.getElementById('progress-text').textContent = `Question ${cur + 1}/${total}`;
+  document.getElementById('progress-fill').style.width = `${(cur / total) * 100}%`;
 
-  session._q = q;
-  session.answered = false;
   updateStarBtn();
+  updateNavBtns();
 
   const input = document.getElementById('answer-input');
   const mcDiv = document.getElementById('mc-options');
   const submitBtn = document.getElementById('submit-btn');
+  const fb = document.getElementById('feedback');
 
-  if (multipleChoice || session.forceMC) {
-    input.style.display = 'none';
-    mcDiv.style.display = 'grid';
+  const stored = session.answers[cur];
+
+  if (stored) {
+    // Reviewing a past answered question — read-only
+    session.answered = true;
+    fb.className = 'feedback ' + (stored.correct ? 'correct' : 'wrong') + ' show';
+    fb.textContent = stored.correct ? '✓ Correct!' : `✗ Correct answer: ${stored.display}`;
     submitBtn.style.display = 'none';
-    const options = generateOptions(q.display, session.distractorPool || session.pool, q.getDisplay, item._id);
-    mcDiv.innerHTML = options.map(opt =>
-      `<button class="mc-btn" data-value="${escapeHtml(opt)}">${escapeHtml(opt)}</button>`
-    ).join('');
+
+    if (stored.options) {
+      input.style.display = 'none';
+      mcDiv.style.display = 'grid';
+      mcDiv.innerHTML = stored.options.map(opt => {
+        let cls = 'mc-btn';
+        if (norm(opt) === norm(stored.display)) cls += ' correct';
+        else if (norm(opt) === norm(stored.userAnswer) && !stored.correct) cls += ' wrong';
+        return `<button class="${cls}" data-value="${escapeHtml(opt)}" disabled>${escapeHtml(opt)}</button>`;
+      }).join('');
+    } else {
+      mcDiv.style.display = 'none';
+      input.style.display = '';
+      input.value = stored.userAnswer;
+      input.disabled = true;
+      input.className = 'answer-input ' + (stored.correct ? 'correct' : 'wrong');
+    }
   } else {
-    input.style.display = '';
-    input.value = '';
-    input.className = 'answer-input';
-    input.disabled = false;
-    input.focus();
-    mcDiv.style.display = 'none';
-    submitBtn.style.display = '';
-    submitBtn.textContent = 'Check';
+    // Current unanswered question
+    session.answered = false;
+    fb.className = 'feedback';
+    fb.textContent = '';
+
+    if (multipleChoice || session.forceMC) {
+      if (!session.qCache[cur]._options) {
+        const item = session.questions[cur];
+        session.qCache[cur]._options = generateOptions(q.display, session.distractorPool || session.pool, q.getDisplay, item._id);
+      }
+      const options = session.qCache[cur]._options;
+      input.style.display = 'none';
+      mcDiv.style.display = 'grid';
+      submitBtn.style.display = 'none';
+      mcDiv.innerHTML = options.map(opt =>
+        `<button class="mc-btn" data-value="${escapeHtml(opt)}">${escapeHtml(opt)}</button>`
+      ).join('');
+    } else {
+      input.style.display = '';
+      input.value = '';
+      input.className = 'answer-input';
+      input.disabled = false;
+      input.focus();
+      mcDiv.style.display = 'none';
+      submitBtn.style.display = '';
+      submitBtn.textContent = 'Check';
+    }
   }
+}
+
+function updateNavBtns() {
+  const prev = document.getElementById('nav-prev');
+  const next = document.getElementById('nav-next');
+  if (!prev || !next) return;
+  prev.disabled = session.cursor === 0;
+  next.style.visibility = session.cursor < session.index ? 'visible' : 'hidden';
+}
+
+function navPrev() {
+  if (session && session.cursor > 0) { session.cursor--; renderQuestion(); }
+}
+
+function navNext() {
+  if (session && session.cursor < session.index) { session.cursor++; renderQuestion(); }
 }
 
 function advance() {
   session.index++;
+  session.cursor = session.index;
   session.index >= session.questions.length ? showScore() : renderQuestion();
 }
 
@@ -465,6 +527,9 @@ function selectOption(value, btn) {
 
   recordAnswer(item, correct, display, word);
 
+  const options = session.qCache[session.index]._options || null;
+  session.answers[session.index] = { q: session._q, options, userAnswer: value, correct, display };
+
   document.querySelectorAll('.mc-btn').forEach(b => {
     b.disabled = true;
     if (norm(b.dataset.value) === norm(display)) b.classList.add('correct');
@@ -476,6 +541,7 @@ function selectOption(value, btn) {
   submitBtn.style.display = '';
   submitBtn.textContent = isLast ? 'See Score' : 'Next \u2192';
   session.answered = true;
+  updateNavBtns();
 }
 
 function submitAnswer() {
@@ -494,6 +560,8 @@ function submitAnswer() {
   input.disabled = true;
   input.className = 'answer-input ' + (correct ? 'correct' : 'wrong');
 
+  session.answers[session.index] = { q: session._q, options: null, userAnswer, correct, display };
+
   const fb = document.getElementById('feedback');
   fb.className = 'feedback ' + (correct ? 'correct' : 'wrong') + ' show';
   fb.textContent = correct ? '\u2713 Correct!' : `\u2717 Correct answer: ${display}`;
@@ -501,6 +569,7 @@ function submitAnswer() {
   const isLast = session.index === session.questions.length - 1;
   document.getElementById('submit-btn').textContent = isLast ? 'See Score' : 'Next \u2192';
   session.answered = true;
+  updateNavBtns();
 }
 
 // ─── Score ────────────────────────────────────────────────────────────────────

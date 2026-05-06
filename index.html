@@ -147,6 +147,8 @@
     .progress-bar { height: 5px; background: rgba(255,255,255,0.25); border-radius: 3px; overflow: hidden; }
     .progress-bar .fill { height: 100%; background: var(--yellow); border-radius: 3px; transition: width 0.35s ease; }
     .progress-text { font-size: 0.82rem; color: rgba(255,255,255,0.75); margin-bottom: 6px; }
+    .nav-btn { background: rgba(255,255,255,0.15); border: none; color: #fff; font-size: 1rem; font-weight: 700; font-family: inherit; padding: 4px 10px; border-radius: 14px; cursor: pointer; flex-shrink: 0; }
+    .nav-btn:disabled { opacity: 0.3; cursor: default; }
 
     /* ── Question card ── */
     .q-card { background: var(--card); border-radius: var(--radius); padding: 24px 20px; box-shadow: 0 2px 8px rgba(0,0,0,0.09); margin-bottom: 16px; }
@@ -663,7 +665,11 @@
 <div id="screen-quiz" class="screen">
   <div class="header" style="display:flex; align-items:flex-start; justify-content:space-between;">
     <div style="flex:1; min-width:0;">
-      <div class="progress-text" id="progress-text">Question 1/10</div>
+      <div style="display:flex; align-items:center; gap:8px; margin-bottom:6px;">
+        <button id="nav-prev" class="nav-btn" onclick="navPrev()" title="Previous question" disabled>&#8592;</button>
+        <div class="progress-text" id="progress-text" style="margin-bottom:0; flex:1;">Question 1/10</div>
+        <button id="nav-next" class="nav-btn" onclick="navNext()" title="Next question" style="visibility:hidden;">&#8594;</button>
+      </div>
       <div class="progress-wrap">
         <div class="progress-bar"><div class="fill" id="progress-fill" style="width:0%"></div></div>
       </div>
