@@ -1,5 +1,7 @@
 'use strict';
 
+const APP_VERSION = '2026.05.06';
+
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function parseCSV(raw) {
   const lines = raw.replace(/\r/g, '').replace(/^\uFEFF/, '').trim().split('\n');
@@ -1180,6 +1182,9 @@ if ('serviceWorker' in navigator) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
+  const vl = document.getElementById('app-version-label');
+  if (vl) vl.textContent = `v${APP_VERSION}`;
+
   document.querySelectorAll('.num-q-display').forEach(el => el.textContent = numQ);
   document.querySelectorAll('.num-match-display').forEach(el => el.textContent = numMatch);
 
