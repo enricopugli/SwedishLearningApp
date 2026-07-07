@@ -511,24 +511,32 @@ function setupQuizSwipeNav() {
   const target = document.getElementById('screen-quiz');
   if (!target) return;
   const SWIPE_THRESHOLD = 60;
-  let startX = 0, startY = 0, tracking = false;
+  let startX = 0, startY = 0, lastX = 0, lastY = 0, tracking = false;
 
   target.addEventListener('touchstart', e => {
     if (e.touches.length !== 1) { tracking = false; return; }
-    startX = e.touches[0].clientX;
-    startY = e.touches[0].clientY;
+    startX = lastX = e.touches[0].clientX;
+    startY = lastY = e.touches[0].clientY;
     tracking = true;
   }, { passive: true });
 
-  target.addEventListener('touchend', e => {
+  target.addEventListener('touchmove', e => {
+    if (!tracking || e.touches.length !== 1) return;
+    lastX = e.touches[0].clientX;
+    lastY = e.touches[0].clientY;
+  }, { passive: true });
+
+  const finish = () => {
     if (!tracking) return;
     tracking = false;
-    const touch = e.changedTouches[0];
-    const dx = touch.clientX - startX;
-    const dy = touch.clientY - startY;
+    const dx = lastX - startX;
+    const dy = lastY - startY;
     if (Math.abs(dx) < SWIPE_THRESHOLD || Math.abs(dx) < Math.abs(dy) * 1.5) return;
     if (dx > 0) navPrev(); else navNext();
-  }, { passive: true });
+  };
+
+  target.addEventListener('touchend', finish, { passive: true });
+  target.addEventListener('touchcancel', finish, { passive: true });
 }
 
 function advance() {
