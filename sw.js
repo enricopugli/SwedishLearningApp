@@ -1,4 +1,4 @@
-const CACHE = 'svverbs-v1783409617';
+const CACHE = 'svverbs-v1783410627';
 const ASSETS = ['./', './index.html', './app.js', './manifest.json', './verbs.csv', './vocabulary.csv', './grammar.html'];
 
 self.addEventListener('install', e => {
