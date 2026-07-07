@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '2026.05.06';
+const APP_VERSION = '2026.07.07';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function parseCSV(raw) {
@@ -268,7 +268,7 @@ function toggleBrowseStar(id) {
 
 function toggleStar() {
   if (!session) return;
-  const id = String(session.questions[session.index]._id);
+  const id = String(session.questions[session.cursor]._id);
   if (starredIds.has(id)) starredIds.delete(id);
   else starredIds.add(id);
   localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
