@@ -319,15 +319,33 @@
     /* ── Grammar screen ── */
     .grammar-content { font-size: 0.92rem; line-height: 1.65; }
 
-    /* Jump nav (built by JS) */
-    .grammar-nav {
-      display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 20px;
+    /* Table of contents (built by JS): collapsible, indented by heading level */
+    .grammar-toc {
+      margin-bottom: 20px; border: 1px solid #dde1e7; border-radius: 10px;
+      overflow: hidden; background: #fff;
     }
-    .grammar-nav a {
-      padding: 6px 14px; border-radius: 20px;
-      background: var(--blue); color: #fff;
-      font-size: 0.8rem; font-weight: 600; text-decoration: none;
+    .toc-row {
+      display: flex; align-items: center; gap: 8px;
+      padding: 10px 12px; border-bottom: 1px solid #eef0f3;
+      background: #f7f9fc;
     }
+    .grammar-toc > .toc-row:last-child { border-bottom: none; }
+    .toc-toggle, .toc-spacer { flex: none; width: 18px; text-align: center; }
+    .toc-toggle {
+      background: none; border: none; padding: 0; cursor: pointer;
+      color: var(--blue); font-size: 0.7rem;
+      transform: rotate(0deg); transition: transform .15s;
+    }
+    .toc-row.open .toc-toggle { transform: rotate(90deg); }
+    .toc-h2-link { color: var(--blue); font-weight: 700; font-size: 0.88rem; text-decoration: none; }
+    .toc-sub { list-style: none; margin: 0; padding: 4px 0 8px; }
+    .toc-sub li { margin: 0; }
+    .toc-sub-link {
+      display: block; padding: 6px 14px 6px 34px;
+      font-size: 0.82rem; color: var(--text); text-decoration: none;
+    }
+    .toc-sub li.toc-h4 .toc-sub-link { padding-left: 50px; font-size: 0.78rem; color: var(--sub); }
+    .toc-sub-link:active { background: #eef2ff; }
 
     /* The pandoc TOC (first <ul> after <h1>) — hidden, replaced by our nav */
     .grammar-content > ul:first-of-type { display: none; }
@@ -351,7 +369,6 @@
     .grammar-content li { margin-bottom: 5px; }
     .grammar-content hr { border: none; border-top: 1px solid #dde1e7; margin: 20px 0; }
     .grammar-content a { color: var(--blue); }
-    .grammar-nav a { color: #fff; }  /* re-assert: overrides .grammar-content a */
 
     /* Swedish examples: <li> whose only child is <em> */
     .grammar-content li > em:only-child {

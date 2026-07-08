@@ -731,21 +731,68 @@ function postProcessGrammar(root) {
     }
   });
 
-  // 3. Build jump nav from h2 headings and prepend it
-  const headings = root.querySelectorAll('h2');
+  // 3. Build a nested, collapsible table of contents from h2/h3/h4 and prepend it
+  const headings = Array.from(root.querySelectorAll('h2, h3, h4'));
   if (headings.length) {
     const nav = document.createElement('nav');
-    nav.className = 'grammar-nav';
-    headings.forEach(h => {
+    nav.className = 'grammar-toc';
+
+    const makeLink = (h, className) => {
       const a = document.createElement('a');
       a.href = '#';
+      a.className = className;
       a.textContent = h.textContent;
       a.addEventListener('click', e => {
         e.preventDefault();
         h.scrollIntoView({ behavior: 'smooth', block: 'start' });
       });
-      nav.appendChild(a);
-    });
+      return a;
+    };
+
+    let i = 0;
+    while (i < headings.length) {
+      const h2 = headings[i++];
+      const children = [];
+      while (i < headings.length && headings[i].tagName !== 'H2') children.push(headings[i++]);
+
+      const row = document.createElement('div');
+      row.className = 'toc-row';
+
+      if (children.length) {
+        const toggle = document.createElement('button');
+        toggle.type = 'button';
+        toggle.className = 'toc-toggle';
+        toggle.setAttribute('aria-label', 'Expand section');
+        toggle.textContent = '▸';
+        row.appendChild(toggle);
+      } else {
+        const spacer = document.createElement('span');
+        spacer.className = 'toc-spacer';
+        row.appendChild(spacer);
+      }
+
+      row.appendChild(makeLink(h2, 'toc-h2-link'));
+      nav.appendChild(row);
+
+      if (children.length) {
+        const ul = document.createElement('ul');
+        ul.className = 'toc-sub';
+        ul.hidden = true;
+        children.forEach(h => {
+          const li = document.createElement('li');
+          li.className = h.tagName === 'H4' ? 'toc-h4' : 'toc-h3';
+          li.appendChild(makeLink(h, 'toc-sub-link'));
+          ul.appendChild(li);
+        });
+        nav.appendChild(ul);
+
+        row.querySelector('.toc-toggle').addEventListener('click', () => {
+          ul.hidden = !ul.hidden;
+          row.classList.toggle('open', !ul.hidden);
+        });
+      }
+    }
+
     root.prepend(nav);
   }
 }
