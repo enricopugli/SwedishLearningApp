@@ -805,6 +805,7 @@ function showBrowse() {
   browseType = 'vocab';
   browseCategories.clear();
   document.getElementById('browse-search').value = '';
+  document.querySelectorAll('.browse-all-btn').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.browse-vocab-btn').forEach(el => el.classList.add('active'));
   document.querySelectorAll('.browse-verbs-btn').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.browse-starred-btn').forEach(el => el.classList.remove('active'));
@@ -818,12 +819,20 @@ function setBrowseType(type) {
   browseType = type;
   browseCategories.clear();
   document.getElementById('browse-search').value = '';
+  document.querySelectorAll('.browse-all-btn').forEach(el => el.classList.toggle('active', type === 'all'));
   document.querySelectorAll('.browse-vocab-btn').forEach(el => el.classList.toggle('active', type === 'vocab'));
   document.querySelectorAll('.browse-verbs-btn').forEach(el => el.classList.toggle('active', type === 'verbs'));
   document.querySelectorAll('.browse-starred-btn').forEach(el => el.classList.toggle('active', type === 'starred'));
   document.getElementById('browse-chips').style.display = type === 'vocab' ? '' : 'none';
   renderBrowseCategories();
   renderBrowseList();
+}
+
+function combinedBrowsePool() {
+  return [
+    ...allVocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—', id: w._id })),
+    ...allVerbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb', art: '—', id: v._id })),
+  ];
 }
 
 function renderBrowseCategories() {
@@ -842,20 +851,20 @@ function renderBrowseList() {
   const query = norm(document.getElementById('browse-search').value);
   let html = '';
 
-  if (browseType === 'starred') {
-    const svocab = allVocab.filter(w => starredIds.has(String(w._id)));
-    const sverbs = allVerbs.filter(v => starredIds.has(String(v._id)));
-    let pool = [
-      ...svocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—', id: w._id })),
-      ...sverbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb', art: '—', id: v._id })),
-    ].filter(x => !query || norm(x.sv).includes(query) || norm(x.en).includes(query))
-     .sort((a, b) => a.sv.localeCompare(b.sv, 'sv'));
-    document.getElementById('browse-count').textContent = `${pool.length} starred`;
+  if (browseType === 'starred' || browseType === 'all') {
+    let pool = combinedBrowsePool()
+      .filter(x => browseType !== 'starred' || starredIds.has(String(x.id)))
+      .filter(x => !query || norm(x.sv).includes(query) || norm(x.en).includes(query))
+      .sort((a, b) => a.sv.localeCompare(b.sv, 'sv'));
+    document.getElementById('browse-count').textContent = browseType === 'starred'
+      ? `${pool.length} starred`
+      : `${pool.length} word${pool.length !== 1 ? 's' : ''}`;
     html = pool.map(x => {
       const art = x.art && x.art !== '\u2014' ? `<span class="browse-article">(${escapeHtml(x.art)})</span> ` : '';
+      const starred = starredIds.has(String(x.id));
       return `<div class="browse-item">
         <div class="browse-item-row">
-          <button class="browse-star starred" onclick="toggleBrowseStar(${x.id})">\u2605</button>
+          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar(${x.id})">${starred ? '\u2605' : '\u2606'}</button>
           <span class="browse-sv">${art}${escapeHtml(x.sv)}</span>
           <span class="browse-en">${escapeHtml(x.en)}</span>
           <span class="browse-cat">${escapeHtml(x.tag)}</span>
