@@ -209,18 +209,24 @@
     .score-box .lbl { font-size: 0.9rem; color: var(--sub); margin-top: 6px; }
     .score-box .pct { font-size: 1.2rem; font-weight: 700; color: var(--text); margin-top: 14px; }
 
-    /* ── Missed words ── */
-    #missed-section { margin-bottom: 20px; }
-    #missed-section .section-label { margin-bottom: 10px; }
-    .missed-item {
+    /* ── Answer review ── */
+    #review-section { margin-bottom: 20px; }
+    #review-section .section-label { margin-bottom: 10px; }
+    .review-item {
       display: flex; align-items: baseline; gap: 10px;
       background: var(--card); border-radius: 12px; padding: 11px 16px;
       margin-bottom: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.06);
+      border-left: 3px solid transparent;
     }
-    .missed-word   { font-weight: 700; color: var(--err); font-size: 0.9rem; flex-shrink: 0; }
-    .missed-arrow  { color: var(--sub); font-size: 0.85rem; flex-shrink: 0; }
-    .missed-answer { color: var(--text); font-size: 0.9rem; flex: 1; }
-    .missed-star   { margin-left: auto; flex-shrink: 0; }
+    .review-item.correct { border-left-color: var(--ok); }
+    .review-item.wrong    { border-left-color: var(--err); }
+    .review-icon    { font-size: 0.85rem; font-weight: 700; flex-shrink: 0; }
+    .review-item.correct .review-icon { color: var(--ok); }
+    .review-item.wrong    .review-icon { color: var(--err); }
+    .review-word    { font-weight: 700; color: var(--text); font-size: 0.9rem; flex-shrink: 0; }
+    .review-arrow   { color: var(--sub); font-size: 0.85rem; flex-shrink: 0; }
+    .review-answer  { color: var(--text); font-size: 0.9rem; flex: 1; }
+    .review-star    { margin-left: auto; flex-shrink: 0; }
 
     /* ── Browse ── */
     .browse-search {
@@ -732,9 +738,9 @@
       <div class="pct" id="score-pct"></div>
     </div>
 
-    <div id="missed-section" style="display:none">
-      <p class="section-label">Missed this session</p>
-      <div id="missed-list"></div>
+    <div id="review-section" style="display:none">
+      <p class="section-label">This session</p>
+      <div id="review-list"></div>
     </div>
 
     <button class="btn btn-primary" onclick="playAgain()">Play Again</button>

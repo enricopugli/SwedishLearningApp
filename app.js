@@ -325,7 +325,7 @@ function startSession(mode) {
   session = {
     questions: weightedSample(pool, numQ),
     pool,
-    index: 0, cursor: 0, score: 0, missed: [],
+    index: 0, cursor: 0, score: 0, reviewList: [],
     qCache: {}, answers: {},
     questionFn: VERB_FNS[mode],
     progressKey: 'svVerbProgress',
@@ -356,7 +356,7 @@ function startVocabSession(mode) {
   session = {
     questions: weightedSample(filtered, numQ),
     pool: filtered,
-    index: 0, cursor: 0, score: 0, missed: [],
+    index: 0, cursor: 0, score: 0, reviewList: [],
     qCache: {}, answers: {},
     questionFn: VOCAB_FNS[mode],
     progressKey: 'svVocabProgress',
@@ -384,7 +384,7 @@ function startHardSession(type, mode) {
     session = {
       questions: pool, pool,
       distractorPool: allVerbs,
-      index: 0, cursor: 0, score: 0, missed: [],
+      index: 0, cursor: 0, score: 0, reviewList: [],
       qCache: {}, answers: {},
       questionFn: VERB_FNS[mode],
       progressKey: 'svVerbProgress',
@@ -397,7 +397,7 @@ function startHardSession(type, mode) {
     session = {
       questions: pool, pool,
       distractorPool: allVocab,
-      index: 0, cursor: 0, score: 0, missed: [],
+      index: 0, cursor: 0, score: 0, reviewList: [],
       qCache: {}, answers: {},
       questionFn: VOCAB_FNS[mode],
       progressKey: 'svVocabProgress',
@@ -548,7 +548,7 @@ function advance() {
 function recordAnswer(item, correct, display, word) {
   item._attempts++;
   if (correct) { item._correct++; session.score++; }
-  else { session.missed.push({ id: item._id, word, answer: display }); }
+  session.reviewList.push({ id: item._id, word, answer: display, correct });
   session.progressMap[item._id] = { attempts: item._attempts, correct: item._correct };
   saveProgress(session.progressKey, session.progressMap);
 }
@@ -607,27 +607,28 @@ function submitAnswer() {
 }
 
 // ─── Score ───────────────────────────────────────────────────────────────────────
-function renderMissedList(missed) {
-  const missedSection = document.getElementById('missed-section');
-  const missedList = document.getElementById('missed-list');
-  if (missed.length > 0) {
-    missedSection.style.display = 'block';
-    missedList.innerHTML = missed.map(m => {
+function renderReviewList(reviewList) {
+  const reviewSection = document.getElementById('review-section');
+  const reviewListEl = document.getElementById('review-list');
+  if (reviewList.length > 0) {
+    reviewSection.style.display = 'block';
+    reviewListEl.innerHTML = reviewList.map(m => {
       const id = String(m.id);
       const starred = starredIds.has(id);
-      return `<div class="missed-item">
-        <span class="missed-word">${escapeHtml(m.word)}</span>
-        <span class="missed-arrow">\u2192</span>
-        <span class="missed-answer">${escapeHtml(m.answer)}</span>
-        <button class="missed-star browse-star${starred ? ' starred' : ''}" data-id="${escapeHtml(id)}" aria-label="Star this word" title="Star this word">${starred ? '\u2605' : '\u2606'}</button>
+      return `<div class="review-item ${m.correct ? 'correct' : 'wrong'}">
+        <span class="review-icon">${m.correct ? '\u2713' : '\u2717'}</span>
+        <span class="review-word">${escapeHtml(m.word)}</span>
+        <span class="review-arrow">\u2192</span>
+        <span class="review-answer">${escapeHtml(m.answer)}</span>
+        <button class="review-star browse-star${starred ? ' starred' : ''}" data-id="${escapeHtml(id)}" aria-label="Star this word" title="Star this word">${starred ? '\u2605' : '\u2606'}</button>
       </div>`;
     }).join('');
   } else {
-    missedSection.style.display = 'none';
+    reviewSection.style.display = 'none';
   }
 }
 
-function toggleMissedStar(id, btn) {
+function toggleReviewStar(id, btn) {
   if (starredIds.has(id)) starredIds.delete(id);
   else starredIds.add(id);
   localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
@@ -637,7 +638,7 @@ function toggleMissedStar(id, btn) {
 }
 
 function showScore() {
-  const { score, questions, missed } = session;
+  const { score, questions, reviewList } = session;
   const total = questions.length;
   const pct = Math.round(score / total * 100);
   const msg = pct >= 80 ? 'Bra jobbat!' : pct >= 50 ? 'Forts\u00e4tt \u00f6va!' : '\u00d6va mer!';
@@ -645,7 +646,7 @@ function showScore() {
   document.getElementById('score-fraction').textContent = `${score}/${total}`;
   document.getElementById('score-pct').textContent = `${pct}% \u2014 ${msg}`;
 
-  renderMissedList(missed);
+  renderReviewList(reviewList);
 
   updateVerbStats();
   updateVocabStats();
@@ -1027,7 +1028,7 @@ function startMatchSession(type) {
     totalMatched: 0,
     totalPairs: pool.length,
     score: 0,
-    missed: [],
+    reviewList: [],
     wrongIds: new Set(),
     selectedSv: null,
     selectedEn: null,
@@ -1107,14 +1108,10 @@ function checkMatchPair() {
     const progressKey = matchState.type === 'verbs' ? 'svVerbProgress' : 'svVocabProgress';
     const progressMap = matchState.type === 'verbs' ? verbProgress : vocabProgress;
     item._attempts++;
-    if (firstTry) {
-      item._correct++;
-      matchState.score++;
-    } else {
-      const svText = matchState.type === 'verbs' ? primaryForm(item) : item.Swedish;
-      const enText = matchState.type === 'verbs' ? item['Engelsk översättning'] : item.English.split('|')[0];
-      matchState.missed.push({ id: item._id, word: svText, answer: enText });
-    }
+    if (firstTry) { item._correct++; matchState.score++; }
+    const svText = matchState.type === 'verbs' ? primaryForm(item) : item.Swedish;
+    const enText = matchState.type === 'verbs' ? item['Engelsk översättning'] : item.English.split('|')[0];
+    matchState.reviewList.push({ id: item._id, word: svText, answer: enText, correct: firstTry });
     progressMap[item._id] = { attempts: item._attempts, correct: item._correct };
     saveProgress(progressKey, progressMap);
 
@@ -1154,7 +1151,7 @@ function showMatchScore() {
   document.getElementById('score-fraction').textContent = `${score}/${total}`;
   document.getElementById('score-pct').textContent = `${pct}% — ${msg}`;
 
-  renderMissedList(matchState.missed);
+  renderReviewList(matchState.reviewList);
 
   if (matchState.type === 'verbs') updateVerbStats();
   else updateVocabStats();
@@ -1284,9 +1281,9 @@ document.addEventListener('DOMContentLoaded', () => {
     if (btn && !btn.disabled) selectOption(btn.dataset.value, btn);
   });
 
-  document.getElementById('missed-list').addEventListener('click', e => {
-    const btn = e.target.closest('.missed-star');
-    if (btn) toggleMissedStar(btn.dataset.id, btn);
+  document.getElementById('review-list').addEventListener('click', e => {
+    const btn = e.target.closest('.review-star');
+    if (btn) toggleReviewStar(btn.dataset.id, btn);
   });
 
   document.getElementById('category-chips').addEventListener('click', e => {
