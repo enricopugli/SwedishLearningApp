@@ -1,6 +1,6 @@
 'use strict';
 
-const APP_VERSION = '2026.07.08';
+const APP_VERSION = '2026.07.15';
 
 // ─── Helpers ──────────────────────────────────────────────────────────────────
 function parseCSV(raw) {
