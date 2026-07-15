@@ -206,6 +206,26 @@ let starredIds = new Set(JSON.parse(localStorage.getItem('svStarred') || '[]'));
 let lastMode = 'sv-en', lastVocabMode = 'sv-en', lastSessionType = 'verbs';
 let session = null;
 
+// Vocab and verb rows are parsed from separate CSVs, each restarting _id at 0,
+// so raw ids collide across the two pools. Starred entries are namespaced by
+// type to keep "starred word" and "starred verb" distinct.
+function starKey(type, id) { return (type === 'verb' ? 'verb' : 'vocab') + ':' + id; }
+function isStarred(type, id) { return starredIds.has(starKey(type, id)); }
+
+function migrateStarredIds() {
+  const raw = [...starredIds];
+  const needsMigration = raw.some(k => !k.startsWith('vocab:') && !k.startsWith('verb:'));
+  if (!needsMigration) return;
+  const migrated = new Set();
+  for (const entry of raw) {
+    if (entry.startsWith('vocab:') || entry.startsWith('verb:')) { migrated.add(entry); continue; }
+    if (allVocab.some(w => String(w._id) === entry)) migrated.add(starKey('vocab', entry));
+    if (allVerbs.some(v => String(v._id) === entry)) migrated.add(starKey('verb', entry));
+  }
+  starredIds = migrated;
+  localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
+}
+
 // ─── UI helpers ───────────────────────────────────────────────────────────────
 function showScreen(id) {
   document.querySelectorAll('.screen').forEach(s => s.classList.remove('active'));
@@ -230,12 +250,12 @@ function setMultipleChoice(val) {
 }
 
 function getFilteredVerbs() {
-  if (verbFilter === 'starred') return allVerbs.filter(v => starredIds.has(String(v._id)));
+  if (verbFilter === 'starred') return allVerbs.filter(v => isStarred('verb', v._id));
   return allVerbs;
 }
 
 function getFilteredVocab() {
-  if (vocabFilter === 'starred') return allVocab.filter(w => starredIds.has(String(w._id)));
+  if (vocabFilter === 'starred') return allVocab.filter(w => isStarred('vocab', w._id));
   if (vocabFilter === 'category' && selectedCategories.size > 0)
     return allVocab.filter(w => selectedCategories.has(w['Category']));
   return allVocab;
@@ -258,27 +278,30 @@ function setVocabFilter(mode) {
   updateVocabStats();
 }
 
-function toggleBrowseStar(id) {
-  id = String(id);
-  if (starredIds.has(id)) starredIds.delete(id);
-  else starredIds.add(id);
+function toggleBrowseStar(id, type) {
+  const key = starKey(type, id);
+  if (starredIds.has(key)) starredIds.delete(key);
+  else starredIds.add(key);
   localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
   renderBrowseList();
 }
 
+function sessionItemType() {
+  return session.progressKey === 'svVerbProgress' ? 'verb' : 'vocab';
+}
+
 function toggleStar() {
   if (!session) return;
-  const id = String(session.questions[session.cursor]._id);
-  if (starredIds.has(id)) starredIds.delete(id);
-  else starredIds.add(id);
+  const key = starKey(sessionItemType(), session.questions[session.cursor]._id);
+  if (starredIds.has(key)) starredIds.delete(key);
+  else starredIds.add(key);
   localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
   updateStarBtn();
 }
 
 function updateStarBtn() {
   if (!session) return;
-  const id = String(session.questions[session.cursor]._id);
-  const starred = starredIds.has(id);
+  const starred = isStarred(sessionItemType(), session.questions[session.cursor]._id);
   const btn = document.getElementById('star-btn');
   if (!btn) return;
   btn.textContent = starred ? '\u2605' : '\u2606';
@@ -299,7 +322,7 @@ function updateVerbStats() {
   const totalA = allVerbs.reduce((s, v) => s + v._attempts, 0);
   const totalC = allVerbs.reduce((s, v) => s + v._correct, 0);
   const pct = totalA > 0 ? Math.round(totalC / totalA * 100) : 0;
-  const starCount = allVerbs.filter(v => starredIds.has(String(v._id))).length;
+  const starCount = allVerbs.filter(v => isStarred('verb', v._id)).length;
   const suffix = verbFilter === 'starred' ? ` \u00b7 \u2605 ${starCount} starred` : '';
   document.getElementById('menu-stats').textContent =
     `${seen}/${allVerbs.length} verbs seen \u00b7 ${pct}% accuracy${suffix}`;
@@ -548,7 +571,7 @@ function advance() {
 function recordAnswer(item, correct, display, word) {
   item._attempts++;
   if (correct) { item._correct++; session.score++; }
-  session.reviewList.push({ id: item._id, word, answer: display, correct });
+  session.reviewList.push({ id: item._id, type: sessionItemType(), word, answer: display, correct });
   session.progressMap[item._id] = { attempts: item._attempts, correct: item._correct };
   saveProgress(session.progressKey, session.progressMap);
 }
@@ -613,14 +636,13 @@ function renderReviewList(reviewList) {
   if (reviewList.length > 0) {
     reviewSection.style.display = 'block';
     reviewListEl.innerHTML = reviewList.map(m => {
-      const id = String(m.id);
-      const starred = starredIds.has(id);
+      const starred = isStarred(m.type, m.id);
       return `<div class="review-item ${m.correct ? 'correct' : 'wrong'}">
         <span class="review-icon">${m.correct ? '\u2713' : '\u2717'}</span>
         <span class="review-word">${escapeHtml(m.word)}</span>
         <span class="review-arrow">\u2192</span>
         <span class="review-answer">${escapeHtml(m.answer)}</span>
-        <button class="review-star browse-star${starred ? ' starred' : ''}" data-id="${escapeHtml(id)}" aria-label="Star this word" title="Star this word">${starred ? '\u2605' : '\u2606'}</button>
+        <button class="review-star browse-star${starred ? ' starred' : ''}" data-id="${escapeHtml(String(m.id))}" data-type="${escapeHtml(m.type)}" aria-label="Star this word" title="Star this word">${starred ? '\u2605' : '\u2606'}</button>
       </div>`;
     }).join('');
   } else {
@@ -628,11 +650,12 @@ function renderReviewList(reviewList) {
   }
 }
 
-function toggleReviewStar(id, btn) {
-  if (starredIds.has(id)) starredIds.delete(id);
-  else starredIds.add(id);
+function toggleReviewStar(id, type, btn) {
+  const key = starKey(type, id);
+  if (starredIds.has(key)) starredIds.delete(key);
+  else starredIds.add(key);
   localStorage.setItem('svStarred', JSON.stringify([...starredIds]));
-  const starred = starredIds.has(id);
+  const starred = starredIds.has(key);
   btn.classList.toggle('starred', starred);
   btn.textContent = starred ? '\u2605' : '\u2606';
 }
@@ -800,16 +823,19 @@ function postProcessGrammar(root) {
 
 // ─── Browse ───────────────────────────────────────────────────────────────────
 let browseType = 'vocab';
+let browseStarredOnly = false;
 let browseCategories = new Set();
 
 function showBrowse() {
   browseType = 'vocab';
+  browseStarredOnly = false;
   browseCategories.clear();
   document.getElementById('browse-search').value = '';
   document.querySelectorAll('.browse-all-btn').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.browse-vocab-btn').forEach(el => el.classList.add('active'));
   document.querySelectorAll('.browse-verbs-btn').forEach(el => el.classList.remove('active'));
-  document.querySelectorAll('.browse-starred-btn').forEach(el => el.classList.remove('active'));
+  document.querySelectorAll('.browse-starred-all-btn').forEach(el => el.classList.add('active'));
+  document.querySelectorAll('.browse-starred-only-btn').forEach(el => el.classList.remove('active'));
   document.getElementById('browse-chips').style.display = '';
   renderBrowseCategories();
   renderBrowseList();
@@ -823,16 +849,22 @@ function setBrowseType(type) {
   document.querySelectorAll('.browse-all-btn').forEach(el => el.classList.toggle('active', type === 'all'));
   document.querySelectorAll('.browse-vocab-btn').forEach(el => el.classList.toggle('active', type === 'vocab'));
   document.querySelectorAll('.browse-verbs-btn').forEach(el => el.classList.toggle('active', type === 'verbs'));
-  document.querySelectorAll('.browse-starred-btn').forEach(el => el.classList.toggle('active', type === 'starred'));
   document.getElementById('browse-chips').style.display = type === 'vocab' ? '' : 'none';
   renderBrowseCategories();
   renderBrowseList();
 }
 
+function setBrowseStarredOnly(flag) {
+  browseStarredOnly = flag;
+  document.querySelectorAll('.browse-starred-all-btn').forEach(el => el.classList.toggle('active', !flag));
+  document.querySelectorAll('.browse-starred-only-btn').forEach(el => el.classList.toggle('active', flag));
+  renderBrowseList();
+}
+
 function combinedBrowsePool() {
   return [
-    ...allVocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—', id: w._id })),
-    ...allVerbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb', art: '—', id: v._id })),
+    ...allVocab.map(w => ({ sv: w.Swedish, en: w.English.split('|')[0], tag: w['Category'] || 'vocab', art: w['Article'] || '—', id: w._id, type: 'vocab' })),
+    ...allVerbs.map(v => ({ sv: primaryForm(v), en: v['Engelsk översättning'], tag: 'verb', art: '—', id: v._id, type: 'verb' })),
   ];
 }
 
@@ -852,20 +884,20 @@ function renderBrowseList() {
   const query = norm(document.getElementById('browse-search').value);
   let html = '';
 
-  if (browseType === 'starred' || browseType === 'all') {
+  if (browseType === 'all') {
     let pool = combinedBrowsePool()
-      .filter(x => browseType !== 'starred' || starredIds.has(String(x.id)))
+      .filter(x => !browseStarredOnly || isStarred(x.type, x.id))
       .filter(x => !query || norm(x.sv).includes(query) || norm(x.en).includes(query))
       .sort((a, b) => a.sv.localeCompare(b.sv, 'sv'));
-    document.getElementById('browse-count').textContent = browseType === 'starred'
+    document.getElementById('browse-count').textContent = browseStarredOnly
       ? `${pool.length} starred`
       : `${pool.length} word${pool.length !== 1 ? 's' : ''}`;
     html = pool.map(x => {
       const art = x.art && x.art !== '\u2014' ? `<span class="browse-article">(${escapeHtml(x.art)})</span> ` : '';
-      const starred = starredIds.has(String(x.id));
+      const starred = isStarred(x.type, x.id);
       return `<div class="browse-item">
         <div class="browse-item-row">
-          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar(${x.id})">${starred ? '\u2605' : '\u2606'}</button>
+          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar('${escapeHtml(String(x.id))}', '${x.type}')">${starred ? '\u2605' : '\u2606'}</button>
           <span class="browse-sv">${art}${escapeHtml(x.sv)}</span>
           <span class="browse-en">${escapeHtml(x.en)}</span>
           <span class="browse-cat">${escapeHtml(x.tag)}</span>
@@ -876,17 +908,20 @@ function renderBrowseList() {
     let pool = browseCategories.size > 0
       ? allVocab.filter(w => browseCategories.has(w['Category']))
       : allVocab;
+    if (browseStarredOnly) pool = pool.filter(w => isStarred('vocab', w._id));
     if (query) pool = pool.filter(w =>
       norm(w.Swedish).includes(query) || norm(w.English).includes(query)
     );
     pool = [...pool].sort((a, b) => a.Swedish.localeCompare(b.Swedish, 'sv'));
-    document.getElementById('browse-count').textContent = `${pool.length} word${pool.length !== 1 ? 's' : ''}`;
+    document.getElementById('browse-count').textContent = browseStarredOnly
+      ? `${pool.length} starred`
+      : `${pool.length} word${pool.length !== 1 ? 's' : ''}`;
     html = pool.map(w => {
       const art = w['Article'] && w['Article'] !== '—' ? `<span class="browse-article">(${escapeHtml(w['Article'])})</span> ` : '';
-      const starred = starredIds.has(String(w._id));
+      const starred = isStarred('vocab', w._id);
       return `<div class="browse-item">
         <div class="browse-item-row">
-          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar(${w._id})">${starred ? '★' : '☆'}</button>
+          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar('${escapeHtml(String(w._id))}', 'vocab')">${starred ? '★' : '☆'}</button>
           <span class="browse-sv">${art}${escapeHtml(w.Swedish)}</span>
           <span class="browse-en">${escapeHtml(w.English)}</span>
           <span class="browse-cat">${escapeHtml(w['Category'] || '')}</span>
@@ -895,6 +930,7 @@ function renderBrowseList() {
     }).join('');
   } else {
     let pool = allVerbs;
+    if (browseStarredOnly) pool = pool.filter(v => isStarred('verb', v._id));
     if (query) pool = pool.filter(v =>
       norm(primaryForm(v)).includes(query) ||
       norm(v['Engelsk \u00f6vers\u00e4ttning'] || '').includes(query) ||
@@ -903,13 +939,15 @@ function renderBrowseList() {
       )
     );
     pool = [...pool].sort((a, b) => primaryForm(a).localeCompare(primaryForm(b), 'sv'));
-    document.getElementById('browse-count').textContent = `${pool.length} verb${pool.length !== 1 ? 's' : ''}`;
+    document.getElementById('browse-count').textContent = browseStarredOnly
+      ? `${pool.length} starred`
+      : `${pool.length} verb${pool.length !== 1 ? 's' : ''}`;
     html = pool.map(v => {
       const forms = CONJ_FORMS.map(f => v[f]).filter(f => f && !isDash(f)).join(' \u00b7 ');
-      const starred = starredIds.has(String(v._id));
+      const starred = isStarred('verb', v._id);
       return `<div class="browse-item">
         <div class="browse-item-row">
-          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar(${v._id})">${starred ? '\u2605' : '\u2606'}</button>
+          <button class="browse-star${starred ? ' starred' : ''}" onclick="toggleBrowseStar('${escapeHtml(String(v._id))}', 'verb')">${starred ? '\u2605' : '\u2606'}</button>
           <span class="browse-sv">${escapeHtml(primaryForm(v))}</span>
           <span class="browse-en">${escapeHtml(v['Engelsk \u00f6vers\u00e4ttning'] || '')}</span>
         </div>
@@ -1111,7 +1149,8 @@ function checkMatchPair() {
     if (firstTry) { item._correct++; matchState.score++; }
     const svText = matchState.type === 'verbs' ? primaryForm(item) : item.Swedish;
     const enText = matchState.type === 'verbs' ? item['Engelsk översättning'] : item.English.split('|')[0];
-    matchState.reviewList.push({ id: item._id, word: svText, answer: enText, correct: firstTry });
+    const itemType = matchState.type === 'verbs' ? 'verb' : 'vocab';
+    matchState.reviewList.push({ id: item._id, type: itemType, word: svText, answer: enText, correct: firstTry });
     progressMap[item._id] = { attempts: item._attempts, correct: item._correct };
     saveProgress(progressKey, progressMap);
 
@@ -1251,6 +1290,8 @@ async function init() {
 
     allCategories = [...new Set(allVocab.map(w => w['Category']).filter(Boolean))].sort();
 
+    migrateStarredIds();
+
     updateVerbStats();
     updateVocabStats();
     renderCategoryChips();
@@ -1283,7 +1324,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   document.getElementById('review-list').addEventListener('click', e => {
     const btn = e.target.closest('.review-star');
-    if (btn) toggleReviewStar(btn.dataset.id, btn);
+    if (btn) toggleReviewStar(btn.dataset.id, btn.dataset.type, btn);
   });
 
   document.getElementById('category-chips').addEventListener('click', e => {
