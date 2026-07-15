@@ -1119,3 +1119,124 @@ resa sig,stand up/get up,basic,Han försökte resa sig snabbt.,—
 bruten,broken,health,Hans arm är bruten.,—
 stukad,sprained,health,Hennes fot är stukad.,—
 vilar,rests,health,Hon vilar efter träningen.,—
+anledning,reason,basic,Vad är anledningen till att du är sen.,en
+applikation,application,technology,Jag laddade ner en ny applikation till telefonen.,en
+arbete,work,work,Hon gillar sitt arbete mycket.,ett
+artikel,article,basic,Jag läste en intressant artikel i tidningen.,en
+bestick,cutlery,kitchen,Kan du duka fram bestick till middagen.,ett
+bild,picture/image,art & culture,Han tog en fin bild av solnedgången.,en
+bostad,home/property,home,De letar efter en ny bostad i stan.,en
+brev,letter,basic,Jag skickade ett brev till min mormor.,ett
+broder,brother,family,Min broder bor i Göteborg.,en
+butik,shop/store,shopping,Den där butiken har fina kläder.,en
+byxor,trousers,clothing,Hon köpte nya byxor igår.,—
+början,beginning,time,Det här är bara början på historien.,en
+chans,chance,basic,Du får en chans till att svara rätt.,en
+del,part,basic,Den här delen av filmen var bäst.,en
+diagram,diagram,science,Läraren ritade ett diagram på tavlan.,ett
+djur,animal,animals,Vilket djur tycker du mest om.,ett
+domstol,court,society,Fallet togs upp i domstol förra veckan.,en
+dryck,drink,drink,Vilken dryck vill du beställa.,en
+dröm,dream,emotions,Jag hade en konstig dröm i natt.,en
+el,electricity,home,Priset på el har gått upp i år.,en
+familj,family,family,Min familj äter middag tillsammans varje söndag.,en
+flyg,plane/flight,transport,Vårt flyg går klockan sju imorgon.,ett
+frukt,fruit,food,Jag äter frukt varje dag.,en
+fråga,question,school,Läraren ställde en svår fråga.,en
+färg,color,colors,Vilken färg tycker du bäst om.,en
+färja,ferry,transport,Vi tog färjan över till ön.,en
+förälder,parent,family,Varje förälder vill det bästa för sitt barn.,en
+förändring,change,basic,Det här är en stor förändring för oss.,en
+granne,neighbor,society,Min granne är väldigt trevlig.,en
+grupp,group,society,Vi jobbar i en liten grupp på kursen.,en
+gång,time/occasion,time,Det här är första gången jag är i Sverige.,en
+hem,home,home,Det är skönt att komma hem efter jobbet.,ett
+himmel,sky,nature,En klar himmel gör att man kan se stjärnorna.,en
+hjälp,help,basic,Tack för hjälpen med flytten.,en
+idé,idea,basic,Det var en riktigt bra idé.,en
+kapitel,chapter,school,Vi läste ett nytt kapitel i boken.,ett
+kassa,register,shopping,Kön till kassan var väldigt lång.,en
+kille,guy,basic,Vem var killen du pratade med.,en
+klass,class,school,Min klass har trettio elever.,en
+knapp,button,clothing,En knapp har lossnat från skjortan.,en
+kod,code,technology,Du måste ange en kod för att logga in.,en
+kompis,friend (informal),society,Min kompis ringde mig igår kväll.,en
+kommun,municipality,society,Kommunen bygger en ny skola.,en
+kontakt,plug/contact,technology,Sätt sladden i kontakten på väggen.,en
+konto,account,economy,Jag måste sätta in pengar på mitt konto.,ett
+kropp,body,body,Motion är bra för kroppen.,en
+kund,customer,shopping,Butiken hade många kunder idag.,en
+kvinna,woman,basic,Kvinnan i kassan var mycket trevlig.,en
+kyla,cold,weather,Jag tycker inte om kylan på vintern.,en
+kyl,refrigerator,kitchen,Mjölken står i kylen.,en
+kärlek,love,emotions,Kärlek är viktigt i livet.,en
+ledare,leader,work,Hon är en bra ledare för teamet.,en
+lista,list,basic,Jag skrev en lista över allt jag behöver köpa.,en
+liv,life,basic,Han lever ett lugnt liv på landet.,ett
+ljus,light,home,Kan du tända ljuset i vardagsrummet.,ett
+lärare,teacher,school,Vår lärare förklarar alltid tydligt.,en
+lösning,solution,basic,Vi hittade en bra lösning på problemet.,en
+man,man,basic,Mannen väntade på bussen.,en
+mat,food,food,Maten på restaurangen var jättegod.,en
+meddelande,message,technology,Jag fick ett meddelande från min chef.,ett
+medlem,member,society,Hon är medlem i en idrottsförening.,en
+mejl,email,technology,Jag skickade ett mejl till kunden.,ett
+mening,sentence,school,Skriv en mening med det nya ordet.,en
+minne,memory,emotions,Det där är ett fint minne från barndomen.,ett
+mobiltelefon,cellphone,technology,Min mobiltelefon har inget batteri kvar.,en
+modell,model,basic,Bilen finns i flera olika modeller.,en
+människa,human being/person,basic,Varje människa är unik.,en
+möbel,piece of furniture,furniture,Vi köpte en ny möbel till vardagsrummet.,en
+mörker,darkness,nature,Det rådde totalt mörker i rummet.,ett
+namn,name,basic,Vad heter du i förnamn.,ett
+nivå,level,basic,Kursen är på en avancerad nivå.,en
+nummer,number,numbers,Kan jag få ditt telefonnummer.,ett
+nyhet,news item,basic,Det var en stor nyhet i tidningen idag.,en
+område,area,places,Vi bor i ett lugnt område.,ett
+ord,word,school,Det här ordet är svårt att uttala.,ett
+patient,patient,health,Läkaren undersökte sin patient noggrant.,en
+person,person,basic,Han är en väldigt trevlig person.,en
+plan,plan,basic,Vi har en plan för helgen.,en
+plats,place,places,Det här är en fin plats att bo på.,en
+problem,problem,basic,Vi har ett litet problem med datorn.,ett
+produkt,product,shopping,Den nya produkten kostar mycket.,en
+regel,rule,basic,Det finns en regel du måste följa.,en
+region,region,places,Han kommer från en region i norra Sverige.,en
+resultat,result,school,Resultatet av provet blev bra.,ett
+roll,role,work,Hon spelade en viktig roll i projektet.,en
+räkning,bill,economy,Jag måste betala räkningen idag.,en
+sak,thing/matter,basic,Det är en viktig sak att komma ihåg.,en
+sanning,truth,basic,Han berättade hela sanningen.,en
+serie,series,art & culture,Vi tittade på en ny serie igår.,en
+sida,page,school,Öppna boken på sida tio.,en
+siffra,digit/figure,numbers,En siffra kan vara mellan noll och nio.,en
+sjukdom,illness,health,Han blev frisk efter sin sjukdom.,en
+sladd,cord,technology,Sladden till laddaren är trasig.,en
+sko,shoe,clothing,Den här skon är för liten.,en
+slut,end,time,Vi väntar på att filmen ska ta slut.,ett
+smak,taste,food,Den här maten har en konstig smak.,en
+solsken,sunshine,weather,Det var soligt med mycket solsken idag.,ett
+språk,language,school,Svenska är ett vackert språk.,ett
+stund,moment,time,Vänta en liten stund så kommer jag snart.,en
+svar,answer,school,Jag väntar fortfarande på ett svar.,ett
+system,system,technology,Det nya systemet fungerar mycket bättre.,ett
+substantiv,noun,school,Ett substantiv är ett namn på något.,ett
+tabell,table (chart),science,Resultaten visas i en tabell.,en
+tanke,thought/idea,emotions,Det var en fin tanke av dig.,en
+tid,time,time,Jag har inte tid att prata just nu.,en
+tidning,newspaper,basic,Han läser tidningen varje morgon.,en
+tjej,girl/young woman,basic,Tjejen som satt bredvid mig var trevlig.,en
+tjänst,service,work,Företaget erbjuder en ny tjänst.,en
+tur,luck,basic,Vi hade tur med vädret idag.,en
+utveckling,development,work,Projektet är fortfarande under utveckling.,en
+vana,habit,basic,Det är en dålig vana att äta godis varje dag.,en
+version,version,technology,Det finns en ny version av appen.,en
+våning,floor/apartment,home,De bor på en våning nära centrum.,en
+vän,friend,family,Hon är min bästa vän.,en
+värld,world,places,Han har rest jorden runt och sett mycket av världen.,en
+värme,heat,weather,Jag älskar värmen på sommaren.,en
+växt,plant,nature,Den här växten behöver mycket vatten.,en
+yrke,profession,profession,Vad har du för yrke.,ett
+å,small river/creek,nature,Barnen lekte vid ån.,en
+ändring,change,basic,Vi behöver göra en liten ändring i planen.,en
+övning,exercise/practice,school,Den här övningen var svår.,en
